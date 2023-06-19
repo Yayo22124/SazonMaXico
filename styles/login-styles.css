@@ -1,0 +1,211 @@
+/* ############ TESTING INDENT CSS Styles ############ */
+
+/* General Styles */
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Main Styles (container) */
+.container {
+    /* size */
+    width: 100%;
+    height: 100vh;
+
+    /* display */
+    display: flex;
+    align-items: center;
+}
+
+
+/* Left Container (form) */
+.left-container {
+    /* size */
+    width: 50%;
+    height: 100vh;
+
+    /* header form styles */
+    & header {
+        /* size */
+        width: 100%;
+        height: 80px;
+
+        /* display */
+        display: flex;
+        align-items: center;
+
+        /* margin */
+        margin-bottom: 40px;
+
+        /* bg color */
+        background-color: #F9B338;
+
+        /* header return icon */
+        & img:nth-child(1) {
+            /* size */
+            width: 24px;
+            height: 24px;
+            
+            /* margin */
+            margin: 25px 0 25px 30px;
+            
+            /* effects */
+            cursor: pointer;
+
+            /* transition */
+            transition: transform .5s;
+        }
+
+        /* header return icon animation */
+        & img:nth-child(1):hover {
+            transform: scale(1.2);
+        }
+
+        /* header image */
+        & img:nth-child(2) {
+            /* size */
+            height: 80px;
+            transform: scale(1.4);
+
+            /* margin (to center) */
+            margin: 0 auto;
+            padding-top: 25px;
+
+            /* effects */
+            cursor: pointer;
+        }
+    }
+
+    /* phrase styles */
+    & h2 {
+        /* size */
+        max-width: 300px;
+
+        /* font */
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+
+        /* margin (to center) */
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    /* ####### Form Styles ####### */
+    & form {
+        /* size */
+        width: 300px;
+        height: 470px;
+
+        /* margin (to center) */
+        margin: 0 auto;
+        
+        /* form control */
+        & .form-control {
+            /* size */
+            max-width: 100%;
+
+            margin: 25px;
+            /* input styles */
+            & input {
+                /* size */
+                width: 100%;
+
+                /* border */
+                border: none;
+                outline: none;
+                border-bottom: 3px solid #432D1C;
+
+                /* padding/margin */
+                padding: 16px 0;
+                padding-left: 15px;
+
+                /* font */
+                color: #00000080;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 13px;
+
+            }
+
+            /* create account */
+            & span {
+
+                /* font */
+                color: #00000080;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 11px;
+                text-align: center;
+
+                /* margin */
+                margin: 0 auto;
+                margin-bottom: 40px;
+                
+
+                /* orange */
+                & b a {
+                    text-decoration: none;
+                    color: #F9B338;
+                }
+            }
+        }
+        
+        /* button */
+        & button[type="submit"] {
+            /* size */
+            width: 100%;
+
+            /* padding/margin */
+            padding: 13px;
+
+            /* bg color */
+            background-color: #F9B338;
+
+            /* border */
+            border-radius: 12px;
+            border: none;
+
+            /* font */
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: #FFFFFF;
+
+            /* effects */
+            cursor: pointer;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+        
+    }
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+/* Right Container (bg Image) */
+.right-container {
+    /* size */
+    width: 50%;
+    height: 100vh;
+
+    /* bg image */
+    background-image: url(/img/restaurant.png);
+    background-size: cover;
+    background-position: center;
+    
+    /* animation */
+    animation: fade-in 0.5s case-in-out;
+}
+
+    /* animation image */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
