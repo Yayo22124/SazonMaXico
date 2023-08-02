@@ -17,13 +17,11 @@
 ## Índice
 
 - [Introducción](#Introducción)
-- [Información del Proyecto](#Información del Proyecto)
+- [Información del Proyecto](#Información)
 - [Propósito](#Propósito)
-- [Tecnologías Utilizadas](#:white_check_mark:Tecnologías Utilizadas)
-- [Alcance del Producto / Software](#Alcance del Producto / Software)
-- [Funcionalidades del Producto](#:hammer: Funcionalidades del Producto)
-
-[TOC]
+- [Tecnologías Utilizadas](#Tecnologías)
+- [Alcance del Producto / Software](#Alcance)
+- [Funcionalidades del Producto](#Funcionalidades)
 
 ## Introducción
 
