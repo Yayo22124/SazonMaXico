@@ -1,0 +1,8 @@
+.parallax {
+    /* parallax */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:  bottom; /* Ajusta la altura según tus necesidades */
+    
+    filter: saturate(105%);
+}

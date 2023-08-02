@@ -1,0 +1,23 @@
+/* Estilos para la barra de desplazamiento lateral */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra */
+  }
+  
+  /* Fondo de la barra de desplazamiento */
+  ::-webkit-scrollbar-track {
+    background: #515151c5;
+  }
+  
+  /* Estilo del mango de la barra de desplazamiento */
+  ::-webkit-scrollbar-thumb {
+    background: #ffa407;
+    border-radius: 5px;
+    
+  }
+  
+  /* Cambio de color del mango de la barra de desplazamiento al pasar el cursor */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ec9600;
+    
+  }
+  

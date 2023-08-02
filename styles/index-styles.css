@@ -1,0 +1,413 @@
+/* Varianbles de color */
+:root {
+    /* Paleta de Estructura */
+    --main-blanco: #FFFFFF;
+    --main-cafe-oscuro: #432D1C;
+    --main-cafe-claro: #b8988b;
+    --main-cafe: #794531;
+    --main-mostaza: #F9B338;
+    --main-menu: #F9B338;
+
+    --nav-bg-beige: #F8F0D5;
+    --nav-active-bg-beige: #6D563A;
+    /* Paleta de Fuentes */
+    --font-cafe-medio: #6D563A;
+    --font-blanco: #FFFFFF;
+    --font-gris: #524A4A;
+    --font-negro: #000000;
+
+    /* Paleta de Extras */
+    --extra-cafe-medio: #6D563A;
+    --extra-blanco: #FFFFFF;
+    --shadow-cafe-oscuro: #432D1C;
+    --shadow-negro: #00000098;
+    
+
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    /* sizing */
+    width: 100%;
+    height: 65vh;
+
+    /* display */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    
+    /* background */
+    background-image: url('/img/index-img/Bg-restaurante.svg');
+    background-size: fill;
+    background-position: center;
+    filter: saturate(135%);
+
+    /* ---- Tittle Header (H1) ---- */
+    & > h1 {
+        /* font styles */
+        font-family: 'Pacifico';
+        font-size: 4em;
+        font-weight: 400;
+        color: var(--font-blanco);
+        text-shadow: 0px 6px 3px #432D1C;
+        
+        position: absolute;
+        top: 50%;
+        transform: translateY(-70%);
+
+        /* effects */
+        cursor: pointer;
+    }
+}
+
+/* ########## main (container) styles ########## */
+.container {
+    /* sizing */
+    width: 100%;
+
+    & .menu-container {
+        /* sizing */
+        width: 100%;
+
+        & .menu-del-dia {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* display */
+        display: flex;
+        justify-content: space-around;
+        align-items: center; 
+
+        /* menu horario styles */
+        & .menu-horario {
+            /* sizing */
+            max-width: 80%;
+            /* spacing */
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+
+
+            /* font styles */
+            font-family: 'Inter';
+            text-align: center;
+
+            /* line */
+            & > hr {
+                /* sizing */
+                width: -webkit-fill-available;
+                height: 4px;
+
+                /* properties */
+                background-color: var(--font-gris);
+            }
+
+            &  span:first-child{
+                /* font styles */
+                font-size: 1.3em;
+                font-weight: 400;
+                color: var(--font-negro);
+                line-height: 1.5;
+    
+                /* effects */
+                text-transform: uppercase;
+                overflow: hidden;
+                margin-bottom: 5px;
+                border-bottom: 3px solid var(--font-gris);
+            }
+            &  span:last-child{
+                /* font styles */
+                font-size: 0.7em;
+                font-weight: 400;
+                color: var(--font-gris);
+    
+            }
+        }
+        /* menu costo styles */
+        & .menu-costo {
+            /* sizing */
+            max-width: 100%;
+
+            /* display */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            /* info styles */
+            & > span {
+                /* font styles */
+                font-family: 'Inter';
+                font-size: 22px;
+                text-align: center;
+            }
+            & span:first-child {
+                border-bottom: 3px solid var(--font-gris);
+                margin-bottom: 5px;
+            }
+            /* line styles */
+            & hr {
+                height: 2px;
+                border: none;
+                background-color: var(--font-gris);
+            }
+        }
+    }
+
+
+    & .banquete-container {
+        /* sizing */
+        width: 100%;
+
+        /* spacing */
+        padding-inline: 2%;
+        
+        /* display */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        /* effects */
+        background-color: var(--main-cafe-oscuro);
+
+        /* banquete header styles */
+        & .banquete-header {
+            /* sizing */
+            width: -webkit-fill-available;
+
+            /* spacing */
+            margin-bottom: 60px;
+
+            /* display */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* h2 styles */
+            & > h2 {
+                /* font styles */
+                font-family: 'Bree Serif';
+                font-size: 48px;
+                font-weight: 400;
+                color: var(--font-blanco);
+            }
+        }
+
+        /* banquete scroll images */
+        & .banquete-scroll {
+            /* sizing */
+            width: 95%;
+            height: auto;
+
+            /* spacing */
+            padding: 15px 7px;
+            margin-bottom: 40px;
+
+            /* effects */
+            background-color: var(--main-mostaza);
+            border-radius: 15px;
+
+            /* display  */
+            display: flex;
+            justify-content: space-around;
+
+            & > img {
+                width: 19%;
+                height: auto;
+                object-fit: cover;
+
+                /* effects */
+                border-radius: 8px;
+            }
+        }
+
+        /* banquete info (p) styles */
+        & p {
+            /* font styles */
+            font-family: 'Gudea';
+            color: var(--font-blanco);
+            text-align: justify;
+            font-size: 1.2em;
+            font-weight: 400;
+
+            /* spacing */
+            margin-bottom: 45px;
+        }
+        /* banquete line styles */
+        & hr {
+            width: 100%;
+
+            margin-bottom: 30px;
+
+            border: none;
+            height: 10px;
+            border-radius: 10px;
+            background-color: var(--main-cafe-claro);
+        }
+    }
+
+    /* Section Combos Styles */
+    & .combos-container {
+        /* sizing */
+        width: 100%;
+        height: 600px;
+
+        /* display */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* effects */
+        background-color: var(--main-cafe-oscuro);
+        background-image: url("/img/index-img/combo-1-izquierda.jpg");
+
+        /* combos div styles */
+        & .combos {
+            /* sizing */
+            width: 40%;
+            height: 90%;
+
+            /* flexbox */
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+
+            /* effects */
+            background-color: var(--main-cafe-claro);
+            box-shadow: 4px 6px 4px var(--shadow-negro);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+            border-radius: 8px;
+
+            & .combos-aztecas {
+                /* spacing */
+                width: -webkit-fill-available;
+                /* height: 80vh; */
+
+                /* display */
+                padding: 5% 15%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                & > h1 {
+                    /* font styles */
+                    font-family: 'Pacifico';
+                    color: var(--font-cafe-medio);
+                    font-size: 55px;
+                    font-weight: 400;
+                    line-height: 120%;
+                    margin: 15px 0px;
+                    & span {
+                        color: var(--font-blanco);
+                    }
+                }
+
+                & > span {
+                    margin-bottom: 15px;
+                    /* font styles */
+                    font-family: 'Pacifico';
+                    color: var(--font-gris);
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+            /* borders */
+            & .combos-aztecas::before,
+            & .combos-aztecas::after {
+                content: "";
+                height: 10px;
+                border-radius: 4px;
+                width: 35%;
+            }
+            
+            & .combos-aztecas::before {
+                top: 0;
+                background-color: var(--extra-blanco);
+            }
+            & .combos-aztecas::after {
+                bottom: 0;
+                background-color: var(--extra-cafe-medio);
+            }
+
+            /* combos button */
+            & > button[type="button"] {
+                /* sizing */
+                width: 25%;
+                height: auto;
+                padding: 15px 0;
+                /* flexbox */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                /* effects */
+                box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25) inset;
+                background-color: var(--main-mostaza);
+                color: var(--font-blanco);
+                border: none;
+                border-radius: 16px;
+                cursor: pointer;
+
+                /* font styles */
+                font-family: 'Gudea';
+                font-style: italic;
+                font-weight: 600;
+                text-shadow: 1px 1px 6px var(--font-negro);
+                font-size: 18px;
+            }
+
+            & > button[type="button"]:hover {
+                transform: scale(1.1);
+                transition: transform 0.2s ease;
+            }
+
+        }
+    }
+    & .end-main {
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        background-color: var(--main-cafe-oscuro);
+
+
+        & > hr {
+            width: 95%;
+            border: none;
+            height: 10px;
+            border-radius: 10px;
+            background-color: var(--main-cafe-claro);
+        }
+    }
+
+}
+
+/* Extra Styles */
+.mb40 {
+    /* spacing */
+    margin-bottom: 40px;
+}
+
+/* ##### Responsive Styles */
