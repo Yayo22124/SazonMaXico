@@ -28,10 +28,12 @@
             <header>
                 <!-- icon (return) -->
                 <a href="/index.html">
-                    <img src="/img/return.svg" alt="">
+                    <img src="/img/return.svg" alt="back">
                 </a>
                 <!-- logo -->
-                <img src="/img/logo-header.svg" alt="">
+                <a href="/index.html">
+                    <img src="/img/logo-header.svg" alt="logo SazónMaXico">
+                </a>
             </header>
 
             <!-- phrase -->
@@ -41,17 +43,25 @@
             <form>
                 <!-- Email Input -->
                 <div class="form-control">
-                    <input type="Email" placeholder="Correo Electrónico">
+                    <!-- <input type="Email" placeholder="Correo Electrónico"> -->
+
+                    <input type="text" class="input" required="true" />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Correo Electrónico</label>
                 </div>
                 <!-- Password Input -->
                 <div class="form-control">
-                    <input type="password" placeholder="Contraseña">
-                    <span>¿No tienes cuenta? <b><a href="/">Crea una</a></b></span>
+                    <input class="input" type="password" required="true">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Contraseña</label>
                 </div>
                 <!-- register a -->
-
+                
                 <!-- sign in - button -->
                 <button type="submit">Iniciar Sesión</button>
+                <span class="create-account">¿No tienes cuenta? <b><a href="/">Crea una</a></b></span>
             </form>
         </div>
         <!-- right container (bg image) -->

@@ -1,4 +1,3 @@
-/* ############ TESTING INDENT CSS Styles ############ */
 
 /* General Styles */
 body {
@@ -33,6 +32,8 @@ body {
         /* display */
         display: flex;
         align-items: center;
+        justify-content: center;
+        position: relative;
 
         /* margin */
         margin-bottom: 40px;
@@ -41,38 +42,48 @@ body {
         background-color: #F9B338;
 
         /* header return icon */
-        & img:nth-child(1) {
+        & a:nth-child(1) {
             /* size */
             width: 24px;
             height: 24px;
             
             /* margin */
-            margin: 25px 0 25px 30px;
+            /* margin: 25px 0 25px 30px; */
+            position: absolute;
+            left: 5%;
+
+
             
             /* effects */
             cursor: pointer;
 
             /* transition */
-            transition: transform .5s;
+            transition: transform .5s ease all;
         }
 
         /* header return icon animation */
-        & img:nth-child(1):hover {
-            transform: scale(1.2);
+        & a:nth-child(1):hover {
+            transform: scale(1.1);
         }
+        
+        & a:nth-child(1):active {
+            transform: scale(0.91);
+        }
+        
 
         /* header image */
-        & img:nth-child(2) {
-            /* size */
-            height: 80px;
-            transform: scale(1.4);
-
+        & a:nth-child(2) {
+            
             /* margin (to center) */
             margin: 0 auto;
             padding-top: 25px;
-
+            
             /* effects */
             cursor: pointer;
+            
+            & > img {
+                height: 80px;
+            }
         }
     }
 
@@ -95,89 +106,174 @@ body {
     /* ####### Form Styles ####### */
     & form {
         /* size */
-        width: 300px;
-        height: 470px;
+        width: 60%;
+        height: 60vh;
 
+        /* flexbox */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         /* margin (to center) */
         margin: 0 auto;
-        
-        /* form control */
-        & .form-control {
-            /* size */
-            max-width: 100%;
-
-            margin: 25px;
-            /* input styles */
-            & input {
-                /* size */
-                width: 100%;
-
-                /* border */
-                border: none;
-                outline: none;
-                border-bottom: 3px solid #432D1C;
-
-                /* padding/margin */
-                padding: 16px 0;
-                padding-left: 15px;
-
-                /* font */
-                color: #00000080;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 700;
-                font-size: 13px;
-
-            }
-
-            /* create account */
-            & span {
-
-                /* font */
-                color: #00000080;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 700;
-                font-size: 11px;
-                text-align: center;
-
-                /* margin */
-                margin: 0 auto;
-                margin-bottom: 40px;
-                
-
-                /* orange */
-                & b a {
-                    text-decoration: none;
-                    color: #F9B338;
-                }
-            }
-        }
         
         /* button */
         & button[type="submit"] {
             /* size */
-            width: 100%;
-
+            width: 60%;
+            
             /* padding/margin */
             padding: 13px;
-
+            margin-bottom: 15px;
+            
             /* bg color */
             background-color: #F9B338;
-
+            
             /* border */
             border-radius: 12px;
             border: none;
-
+            
             /* font */
             font-family: 'Montserrat', sans-serif;
             font-size: 13px;
             font-weight: 700;
             color: #FFFFFF;
-
+            
             /* effects */
             cursor: pointer;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
         
+    }
+}
+
+/* create account */
+.create-account {
+
+    /* font */
+    color: #00000080;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    text-align: center;
+
+    /* margin */
+    margin: 0 auto;
+    margin-bottom: 40px;
+    
+
+    /* orange */
+    & b a {
+        text-decoration: none;
+        color: #F9B338;
+    }
+}
+/* Input animation */
+  /* form control */
+.form-control {
+    /* size */
+    width: 70%;
+    height: auto;
+    position: relative;
+    
+    /* font styles */
+    font-family: 'Montserrat';
+
+}
+
+
+
+.input {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 10px 10px 5px;
+    margin-bottom: 40px;
+    display: block;
+    border: none;
+    border-bottom: 2px solid #6c6c6c;
+    background: transparent;
+    color: black;
+}
+
+.input:focus {
+    outline: none;
+    border-bottom: 2px solid #F9B338;
+}
+
+.form-control > label {
+    color: #999999;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 10px;
+    transition: 0.4s ease all;
+    -moz-transition: 0.4s ease all;
+    -webkit-transition: 0.4s ease al;
+}
+
+.input:focus ~ label,
+.input:valid ~ label,
+.input:not(:empty) ~ label {
+    top: -20px;
+    font-size: 14px;
+}
+
+.bar {
+    position: relative;
+    font-size: 14px;
+    width: 200px;
+}
+
+.bar::after,
+.bar::before {
+    content: "";
+    height: 10px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    /* background: #0e94f4; */
+    transition: 0.4s ease all;
+    -moz-transition: 0.4s ease all;
+    -webkit-transition: 0.4s ease al;
+}
+
+.bar::before {
+    left: 50%;
+
+}
+
+.bar::after {
+    right: 50%;
+}
+
+.input:focus ~ .bar::before,
+.input:focus ~ .bar::after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    top: 50%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.input:focus ~.highlight {
+    animation: input-focus 0.5s ease;
+}
+
+@keyframes input-focus {
+    from {
+        background: #F9B338;
+    }
+    to {
+        width: 100%;
+        background: transparent;
     }
 }
 
