@@ -27,7 +27,7 @@ La aplicación web ***SazónMáXico*** está diseñada para el restaurante del m
 - - -
 
 ## Información del Proyecto
-<table style="display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+<table style="display:flex;align-items:center;justify-content:center;margin-bottom:20px;border-radius: 4px;">
     <tr>
         <th style="text-align: left;background-color:#d6d6d6;padding:15px;">Empresa / Orgnazación</th>
         <td>Universidad Tecnológica de Xicotepec de Júarez</td>
