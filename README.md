@@ -10,8 +10,6 @@
 
 ![Static Badge](https://img.shields.io/badge/stable%20version-%20-orange?style=for-the-badge)
 
-![GitHub contributors](https://img.shields.io/github/contributors/Yayo22124/SazonMaXico?style=for-the-badge&logo=github&color=ffffff)
-
 # Documentación del Proyecto
 
 ## Índice
@@ -78,6 +76,7 @@ _ _ _
 - CSS: 3
 - Python: 3.11
 - JavaScript
+- PHP
 - Figma
 - - -
 
