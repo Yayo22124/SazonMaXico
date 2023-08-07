@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px;
+  background-color: #F9B338;
+  text-align: center;
+  height: 150px;
+}
+
+#logo {
+  height: 120px;
+  width: 200px;
+  margin-left: 10px;
+}
+
+#titulo {
+  font-size: 70px;
+  flex-grow: 1;
+  text-align: center;
+  color: white;
+  text-shadow: 4px 4px #0F0F0F;
+  font-family: 'Pacifico', cursive;
+  margin-left: -200px;
+}
+
+/* !Arriba esta toda el diseño del header */
+
+nav ul {
+  margin-top: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+li {
+
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #0F0F0F;
+  list-style-type: none;
+  background-color: #F8F0D5;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #0F0F0F;
+}
+
+.icono {
+  margin: 5px;
+  width: 20%;
+}
+
+/* *Arriba esta todo el estilo de la barra de navegacion */
+
+#titulo_menu {
+  text-align: center;
+  font-size: 50px;
+}
+
+#fondo {
+  background-color: #432D1C;
+  padding: 20px;
+  width: 100%;
+}
+
+#carta {
+  margin: 2%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#fondo_blanco {
+  background-color: white;
+}
+
+#dia {
+  text-align: center;
+  font-size: 50px;
+}
+
+span {
+  color: #F9B338;
+}
+
+.circulo {
+  width: 75px;
+  height: 75px;
+  background-color: #F9B338;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+#uno {
+  font-size: 30px;
+  margin-left: 0px;
+}
+
+.title {
+  margin-top: -55px ;
+  margin-left: 120px;
+  font-size: 30px;
+  width: 800px;
+}
+
+.ultimo_titulo {
+  text-align: center;
+  font-size: 40px;
+}
+
+/* *Arriba esta todo el estilo del circulo y cosas variadas */
+
+/* !Aqui empieza todo lo que son las tarjetas */
+
+#contenedor {
+  margin-top: 50px;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px #0F0F0F;
+  margin-bottom: 20px;
+}
+
+.card .contenido {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+.card .contenido h3 {
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+.card .contenido .img .platillos {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px #0F0F0F;
+
+}
+
+.card .contenido .img .bebidas {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 0%;
+  object-fit: cover;
+}
+
+.card .contenido span {
+  position: absolute;
+  width: 350px;
+  height: 225px;
+  background: linear-gradient(to right, #432D1C, #F9B338);
+  transform: rotate(-0deg);
+  top: -50px;
+  left: -90px;
+}
+
+/* Arriba esta lo que va en las tarjetas */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #F9B338;
+}
+
+#derechos {
+  background-color: #F9B338;
+  text-align: center;
+  padding: 0;
+  margin: 0%;
+}
+
+#logo_footer {
+  width: 220px;
+  margin-left: 10%;
+}
+
+.footer {
+  font-size: 15px;
+  margin-left: 15%;
+}
+
+@media (max-width: 900px) {
+
+  #fondo{
+    display: block;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #fondo_blanco{
+    padding: 10px;
+  }
+
+  #titulo_menu{
+    font-size: 30px;
+  }
+
+  .circulo{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+
+#uno{
+  font-size: 120%;
+}
+
+  .title{
+    font-size: 23px;
+    margin-top: -60px;
+    margin-left: 60px;
+  }
+
+  #contenedor{
+    width: 55%;
+  }
+
+  #carta{
+    flex-direction: column;
+    margin-left: -10%;
+    background-color: #0f0f0f00;
+  }
+
+}
+
