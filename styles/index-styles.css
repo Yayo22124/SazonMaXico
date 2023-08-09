@@ -76,99 +76,100 @@ header {
     & .menu-container {
         /* sizing */
         width: 100%;
+        
+        /* flexbox */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
 
-        & .menu-del-dia {
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+    }
+    
+    & .menu-del-dia {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    /* menu horario styles */
+    & .menu-horario {
+        /* sizing */
+        max-width: 80%;
+        /* spacing */
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+
+
+        /* font styles */
+        font-family: 'Inter';
+        text-align: center;
+
+        /* line */
+        & > hr {
+            /* sizing */
+            width: -webkit-fill-available;
+            height: 4px;
+
+            /* properties */
+            background-color: var(--font-gris);
         }
+
+        &  span:first-child{
+            /* font styles */
+            font-size: 1.3em;
+            font-weight: 400;
+            color: var(--font-negro);
+            line-height: 1.5;
+
+            /* effects */
+            text-transform: uppercase;
+            overflow: hidden;
+            margin-bottom: 5px;
+            border-bottom: 3px solid var(--font-gris);
+        }
+        &  span:last-child{
+            /* font styles */
+            font-size: 0.7em;
+            font-weight: 400;
+            color: var(--font-gris);
+
+        }
+    }
+    /* menu costo styles */
+    & .menu-costo {
+        /* sizing */
+        max-width: 100%;
 
         /* display */
         display: flex;
-        justify-content: space-around;
-        align-items: center; 
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-        /* menu horario styles */
-        & .menu-horario {
-            /* sizing */
-            max-width: 80%;
-            /* spacing */
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-
-
-
+        /* info styles */
+        & > span {
             /* font styles */
             font-family: 'Inter';
+            font-size: 22px;
             text-align: center;
-
-            /* line */
-            & > hr {
-                /* sizing */
-                width: -webkit-fill-available;
-                height: 4px;
-
-                /* properties */
-                background-color: var(--font-gris);
-            }
-
-            &  span:first-child{
-                /* font styles */
-                font-size: 1.3em;
-                font-weight: 400;
-                color: var(--font-negro);
-                line-height: 1.5;
-    
-                /* effects */
-                text-transform: uppercase;
-                overflow: hidden;
-                margin-bottom: 5px;
-                border-bottom: 3px solid var(--font-gris);
-            }
-            &  span:last-child{
-                /* font styles */
-                font-size: 0.7em;
-                font-weight: 400;
-                color: var(--font-gris);
-    
-            }
         }
-        /* menu costo styles */
-        & .menu-costo {
-            /* sizing */
-            max-width: 100%;
-
-            /* display */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
-            /* info styles */
-            & > span {
-                /* font styles */
-                font-family: 'Inter';
-                font-size: 22px;
-                text-align: center;
-            }
-            & span:first-child {
-                border-bottom: 3px solid var(--font-gris);
-                margin-bottom: 5px;
-            }
-            /* line styles */
-            & hr {
-                height: 2px;
-                border: none;
-                background-color: var(--font-gris);
-            }
+        & span:first-child {
+            border-bottom: 3px solid var(--font-gris);
+            margin-bottom: 5px;
+        }
+        /* line styles */
+        & hr {
+            height: 2px;
+            border: none;
+            background-color: var(--font-gris);
         }
     }
-
 
     & .banquete-container {
         /* sizing */
@@ -278,111 +279,6 @@ header {
         background-image: url("/img/index-img/combo-1-izquierda.jpg");
 
         /* combos div styles */
-        & .combos {
-            /* sizing */
-            width: 40%;
-            height: 90%;
-
-            /* flexbox */
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-direction: column;
-
-            /* effects */
-            background-color: var(--main-cafe-claro);
-            box-shadow: 4px 6px 4px var(--shadow-negro);
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-            border-radius: 8px;
-
-            & .combos-aztecas {
-                /* spacing */
-                width: -webkit-fill-available;
-                /* height: 80vh; */
-
-                /* display */
-                padding: 5% 15%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-
-                & > h1 {
-                    /* font styles */
-                    font-family: 'Pacifico';
-                    color: var(--font-cafe-medio);
-                    font-size: 55px;
-                    font-weight: 400;
-                    line-height: 120%;
-                    margin: 15px 0px;
-                    & span {
-                        color: var(--font-blanco);
-                    }
-                }
-
-                & > span {
-                    margin-bottom: 15px;
-                    /* font styles */
-                    font-family: 'Pacifico';
-                    color: var(--font-gris);
-                    text-align: center;
-                    font-size: 20px;
-                    font-weight: 400;
-                    line-height: normal;
-                }
-            }
-            /* borders */
-            & .combos-aztecas::before,
-            & .combos-aztecas::after {
-                content: "";
-                height: 10px;
-                border-radius: 4px;
-                width: 35%;
-            }
-            
-            & .combos-aztecas::before {
-                top: 0;
-                background-color: var(--extra-blanco);
-            }
-            & .combos-aztecas::after {
-                bottom: 0;
-                background-color: var(--extra-cafe-medio);
-            }
-
-            /* combos button */
-            & > button[type="button"] {
-                /* sizing */
-                width: 25%;
-                height: auto;
-                padding: 15px 0;
-                /* flexbox */
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                /* effects */
-                box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25) inset;
-                background-color: var(--main-mostaza);
-                color: var(--font-blanco);
-                border: none;
-                border-radius: 16px;
-                cursor: pointer;
-
-                /* font styles */
-                font-family: 'Gudea';
-                font-style: italic;
-                font-weight: 600;
-                text-shadow: 1px 1px 6px var(--font-negro);
-                font-size: 18px;
-            }
-
-            & > button[type="button"]:hover {
-                transform: scale(1.1);
-                transition: transform 0.2s ease;
-            }
-
-        }
     }
     & .end-main {
         padding: 40px 0;
@@ -404,6 +300,111 @@ header {
 
 }
 
+.combos {
+    /* sizing */
+    width: 50%;
+    height: 90%;
+
+    /* flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    /* effects */
+    background-color: var(--main-cafe-claro);
+    box-shadow: 4px 6px 4px var(--shadow-negro);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 8px;
+
+    & .combos-aztecas {
+        /* spacing */
+        width: -webkit-fill-available;
+        /* height: 80vh; */
+
+        /* display */
+        padding: 5% 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        & > h1 {
+            /* font styles */
+            font-family: 'Pacifico';
+            color: var(--font-cafe-medio);
+            font-size: 55px;
+            font-weight: 400;
+            line-height: 120%;
+            margin: 15px 0px;
+            & span {
+                color: var(--font-blanco);
+            }
+        }
+
+        & > span {
+            margin-bottom: 15px;
+            /* font styles */
+            font-family: 'Pacifico';
+            color: var(--font-gris);
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+    /* borders */
+    & .combos-aztecas::before,
+    & .combos-aztecas::after {
+        content: "";
+        height: 10px;
+        border-radius: 4px;
+        width: 35%;
+    }
+    
+    & .combos-aztecas::before {
+        top: 0;
+        background-color: var(--extra-blanco);
+    }
+    & .combos-aztecas::after {
+        bottom: 0;
+        background-color: var(--extra-cafe-medio);
+    }
+
+    /* combos button */
+    & > button[type="button"] {
+        /* sizing */
+        width: 25%;
+        height: auto;
+        padding: 15px 0;
+        /* flexbox */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        /* effects */
+        box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25) inset;
+        background-color: var(--main-mostaza);
+        color: var(--font-blanco);
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+
+        /* font styles */
+        font-family: 'Gudea';
+        font-style: italic;
+        font-weight: 600;
+        text-shadow: 1px 1px 6px var(--font-negro);
+        font-size: 18px;
+    }
+
+    & > button[type="button"]:hover {
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
+    }
+
+}
 /* Extra Styles */
 .mb40 {
     /* spacing */
@@ -411,3 +412,47 @@ header {
 }
 
 /* ##### Responsive Styles */
+/* movil */
+@media screen and (max-width: 767px) {
+    /* Tu código CSS para pantallas de movil aquí */
+    .menu-container {
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 35px;
+    }
+    .combos {
+       width:  75%;
+    }
+    
+    .banquete-header img {
+        display: none;
+    }
+    .banquete-header {
+        margin-top: 25px;
+        
+    }
+    
+}
+
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Tu código CSS para pantallas de tablet aquí */
+    .menu-container {
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 35px;
+    }
+    .combos {
+       width:  65%;
+    }
+
+    .banquete-header img {
+        display: none;
+    }
+    .banquete-header {
+        margin-top: 25px;
+        
+    }
+}
+  
