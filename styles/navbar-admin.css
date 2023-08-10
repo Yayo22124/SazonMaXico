@@ -232,11 +232,3 @@ nav {
     transform: scale(0.95);
     background-color: #7945315e;
 }
-
-#activar-boton {
-    display: block;
-}
-
-#desactivar-boton {
-    display: none;
-}
