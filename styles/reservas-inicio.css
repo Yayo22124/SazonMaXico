@@ -1,6 +1,9 @@
 * {
   margin: 0;
   box-sizing: border-box;
+
+  /* Añadido por Haziel: Fuente */
+  font-family: 'Inter';
 }
 
 /* *Arriba esta todo el estilo de la barra de navegacion */
@@ -223,6 +226,25 @@ input:hover {
 }
 
 /* *---------------------------------------------------------*/
+
+/* Añadido por Haziel estilos numero de telefono*/
+.phone {
+  /* font styles */
+  color: #F9B338;
+  font-weight: 600;
+  font-size: 18px;
+  
+  /* animation */
+  transition: 0.5s ease-in-out all;
+}
+
+.phone:hover {
+  transform: scale(1.05);
+}
+
+.phone:active {
+  transform: scale(0.95);
+}
 
 @media (max-width: 900px) {
 
