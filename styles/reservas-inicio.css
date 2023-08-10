@@ -3,64 +3,6 @@
   box-sizing: border-box;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  padding: 0px;
-  background-color: #F9B338;
-  text-align: center;
-  height: 150px;
-}
-
-#logo {
-  height: 120px;
-  width: 200px;
-  margin-left: 10px;
-}
-
-#titulo {
-  font-size: 70px;
-  flex-grow: 1;
-  text-align: center;
-  color: white;
-  text-shadow: 4px 4px #0F0F0F;
-  font-family: 'Pacifico', cursive;
-  margin-left: -200px;
-}
-
-/* !Arriba esta toda el diseño del header */
-
-nav ul {
-  margin-top: 30px;
-  display: flex;
-  align-content: center;
-  justify-content: space-evenly;
-}
-
-li {
-  
-  border-radius: 10px;
-  border-style: solid;
-  border-color: #0F0F0F;
-  list-style-type: none;
-  background-color: #F8F0D5;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-a {
-  font-size: 20px;
-  text-decoration: none;
-  color: #0F0F0F;
-}
-
-.icono {
-  margin: 5px;
-  width: 20%;
-}
-
 /* *Arriba esta todo el estilo de la barra de navegacion */
 
 #fondo {
@@ -77,7 +19,7 @@ a {
 
 /* * */
 
-#title{
+#title {
   text-align: center;
   color: #F9B338;
   text-shadow: 1px 1px #432D1C;
@@ -85,12 +27,12 @@ a {
 
 }
 
-.sub_title{
+.sub_title {
   font-size: 30px;
   margin-left: 100px;
 }
 
-.texto{
+.texto {
   text-align: justify;
   margin-top: 40px;
   font-size: 23px;
@@ -101,17 +43,17 @@ a {
 /* !Arriba solo tenemos los textos de la parte de arriba de la pagina */
 /* * Mesas Circulares */
 
-#mesas{
+#mesas {
   display: flex;
 }
 
-.primera_linea_mesas{
+.primera_linea_mesas {
   margin-top: 5%;
   margin-left: 10%;
   width: 20%;
 }
 
-.cuadrado_uno{
+.cuadrado_uno {
   width: 70px;
   height: 70px;
   background-color: #ffffff;
@@ -121,14 +63,14 @@ a {
   margin-bottom: 15px;
 }
 
-.cuadrado{
+.cuadrado {
   width: 70px;
   height: 70px;
   background-color: #ffffff;
   border-style: solid;
 }
 
-.circulo{
+.circulo {
   width: 95px;
   height: 95px;
   background-color: #ffffff;
@@ -136,7 +78,7 @@ a {
   border-radius: 50%;
 }
 
-#centro{
+#centro {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -147,7 +89,7 @@ a {
 /* * Mesas Circulares */
 /* TODO: Mesas Rectangulares */
 
-.rectangulo{
+.rectangulo {
   width: 250px;
   height: 100px;
   background-color: #ffffff;
@@ -156,7 +98,7 @@ a {
   margin-left: 20px;
 }
 
-#mesas_rectangulares{
+#mesas_rectangulares {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -168,14 +110,14 @@ a {
   color: #F9B338;
 }
 
-.mesa_rectangular{
+.mesa_rectangular {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 10px;
 }
 
-#silla_izquierda{
+#silla_izquierda {
   width: 70px;
   height: 70px;
   background-color: #ffffff;
@@ -184,7 +126,7 @@ a {
   margin-left: -60px;
 }
 
-#silla_derecha{
+#silla_derecha {
   width: 70px;
   height: 70px;
   background-color: #ffffff;
@@ -192,9 +134,10 @@ a {
   margin-top: -70px;
   margin-left: 280px;
 }
+
 /* TODO: Mesas Rectangulares */
 
-#mesas_abajo{
+#mesas_abajo {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -204,19 +147,19 @@ a {
 /* ! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
 
 
-#solicitud{
+#solicitud {
   margin-top: 5%;
   text-align: center;
   font-size: 30px;
 }
 
-form{
+form {
   position: relative;
   width: 500px;
   margin: 50px auto 100px auto;
 }
 
-input{
+input {
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
   width: 470px;
@@ -230,11 +173,11 @@ input:hover {
   border-style: solid;
 }
 
-#registro{
+#registro {
   padding: 0;
   margin-top: 5%;
   margin-left: 40%;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
   width: 20%;
 
 
@@ -243,9 +186,9 @@ input:hover {
   color: #ffffff;
   background-color: #432D1C;
 
-  outline:none;
+  outline: none;
   cursor: pointer;
-  
+
   border: solid 1px #432D1C;
   border-top: none;
 }
@@ -258,7 +201,7 @@ input:hover {
 
 #submit {
   padding: 0;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
   margin-top: 10px;
 
   font-family: 'Lato', sans-serif;
@@ -266,9 +209,9 @@ input:hover {
   color: #ffffff;
   background-color: #432D1C;
 
-  outline:none;
+  outline: none;
   cursor: pointer;
-  
+
   border: solid 1px #432D1C;
   border-top: none;
 }
@@ -283,182 +226,177 @@ input:hover {
 
 @media (max-width: 900px) {
 
-  #fondo{
+  #fondo {
     display: block;
     flex-direction: column;
     width: 100%;
   }
 
-  .sub_title{
+  .sub_title {
     margin-left: 8px;
     font-size: 25px;
   }
 
-  .texto{
+  .texto {
     margin: 20px 10px;
     font-size: 20px;
   }
 
-/*                         */
+  /*                         */
 
-.primera_linea_mesas{
-  margin: 21px;
+  .primera_linea_mesas {
+    margin: 21px;
+  }
+
+  .cuadrado_uno {
+    width: 30px;
+    height: 30px;
+    margin: 5px 25px;
+    background-color: #ffffff;
+    border-style: solid;
+  }
+
+  .cuadrado {
+    width: 30px;
+    height: 30px;
+
+    background-color: #ffffff;
+    border-style: solid;
+  }
+
+  .circulo {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-radius: 50%;
+  }
+
+  #centro {
+    display: inline-flex;
+    margin-left: -10px;
+  }
+
+  /*                     */
+
+
+  /* TODO: Mesas Rectangulares */
+
+  .rectangulo {
+    width: 95px;
+    height: 40px;
+    background-color: #ffffff;
+    border-style: solid;
+    margin-left: -5px;
+  }
+
+  .mesa_rectangular {
+    display: inline-flex;
+    justify-content: space-evenly;
+  }
+
+  #silla_izquierda {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-style: solid;
+    margin-bottom: 20px;
+    margin-left: -40px;
+  }
+
+  #silla_derecha {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-style: solid;
+    display: inline-flex;
+    margin-left: 94px;
+    margin-bottom: 38px;
+
+  }
+
+  #mesas_abajo {
+    display: inline-flex;
+    margin-top: -100px;
+  }
+
+  /* TODO: Mesas Rectangulares */
+
+
+  #solicitud {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  form {
+    margin-left: 15%;
+  }
+
+
+
+
+  input {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    width: 240px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  input:hover {
+    border-color: #F9B338;
+    border-style: solid;
+  }
+
+  #registro {
+    padding: 0;
+    margin-top: 5%;
+    margin-left: 34%;
+    width: 35%;
+
+
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    color: #ffffff;
+    background-color: #432D1C;
+
+    outline: none;
+    cursor: pointer;
+
+    border: solid 1px #432D1C;
+    border-top: none;
+  }
+
+  #registro:hover {
+    color: #e2dedb;
+    border: solid 1px #F9B338;
+    background: #F9B338;
+  }
+
+  #submit {
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    color: #ffffff;
+    background-color: #432D1C;
+
+    outline: none;
+    cursor: pointer;
+
+    border: solid 1px #432D1C;
+    border-top: none;
+  }
+
+  #submit:hover {
+    color: #e2dedb;
+    border: solid 1px #F9B338;
+    background: #F9B338;
+  }
+
+
 }
-
-.cuadrado_uno{
-  width: 30px;
-  height: 30px;
-  margin: 5px 25px;
-  background-color: #ffffff;
-  border-style: solid;
-}
-
-.cuadrado{
-  width: 30px;
-  height: 30px;
-  
-  background-color: #ffffff;
-  border-style: solid;
-}
-
-.circulo{
-  width: 40px;
-  height: 40px;
-  background-color: #ffffff;
-  border-style: solid;
-  border-radius: 50%;
-}
-
-#centro{
-  display: inline-flex;
-  margin-left: -10px;
-}
-
-/*                     */
-
-
-/* TODO: Mesas Rectangulares */
-
-.rectangulo{
-  width: 95px;
-  height: 40px;
-  background-color: #ffffff;
-  border-style: solid;
-  margin-left: -5px;
-}
-
-.mesa_rectangular{
-  display: inline-flex;
-  justify-content: space-evenly;
-}
-
-#silla_izquierda{
-  display: inline-flex;
-  width: 30px;
-  height: 30px;
-  background-color: #ffffff;
-  border-style: solid;
-  margin-bottom: 20px;
-  margin-left: -40px;
-}
-
-#silla_derecha{
-  width: 30px;
-  height: 30px;
-  background-color: #ffffff;
-  border-style: solid;
-  display: inline-flex;
-  margin-left: 94px;
-  margin-bottom: 38px;
-
-}
-
-#mesas_abajo{
-  display: inline-flex;
-  margin-top: -100px;
-}
-/* TODO: Mesas Rectangulares */
-
-
-#solicitud{
-  margin-top: 5%;
-  text-align: center;
-  font-size: 30px;
-}
-
-form{
-  margin-left: 15%;
-}
-
-
-
-
-input{
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  width: 240px;
-  height: 50px;
-  margin-bottom: 15px;
-}
-
-input:hover {
-  border-color: #F9B338;
-  border-style: solid;
-}
-
-#registro{
-  padding: 0;
-  margin-top: 5%;
-  margin-left: 34%;
-  width: 35%;
-
-
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  color: #ffffff;
-  background-color: #432D1C;
-
-  outline:none;
-  cursor: pointer;
-  
-  border: solid 1px #432D1C;
-  border-top: none;
-}
-
-#registro:hover {
-  color: #e2dedb;
-  border: solid 1px #F9B338;
-  background: #F9B338;
-}
-
-#submit {
-  padding: 0;
-  margin-bottom: 20px;  
-  margin-top: 10px;
-
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  color: #ffffff;
-  background-color: #432D1C;
-
-  outline:none;
-  cursor: pointer;
-  
-  border: solid 1px #432D1C;
-  border-top: none;
-}
-
-#submit:hover {
-  color: #e2dedb;
-  border: solid 1px #F9B338;
-  background: #F9B338;
-}
-
-
-}
-
-
-
-
-
-

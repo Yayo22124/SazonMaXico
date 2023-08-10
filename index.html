@@ -32,16 +32,19 @@
             <li><a href="#">Carta</a></li>
             <li><a href="#">Menú del Día</a></li>
             <li><a href="#">Eventos</a></li>
-            <li><a href="#">Reservas</a></li>
+            <li><a href="/reservas-inicio.html">Reservas</a></li>
         </ul>
         <!-- Iniciar sesion button -->
         <a href="/login.html" class="login">Iniciar Sesión</a>
         <!-- Dropdown button -->
-        <img src="/img/navbar-icons/menu.png
-        " alt="menu" class="dropdown">
+        <div class="dropdown-button-container">
+            <img src="/img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
+
+            <img src="/img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
+        </div>
 
         <!-- dropdown menu -->
-        <ul class="dropdown-menu active">
+        <ul class="dropdown-menu active" id="dropdown-menu">
             <li class="dropdown-nav"><a href="/index.html">Inicio</a></li>
             <li class="dropdown-nav"><a href="#">Carta</a></li>
             <li class="dropdown-nav"><a href="#">Menú del Día</a></li>
@@ -126,7 +129,7 @@
             <!-- left list -->
             <ul class="footer-list-left">
                 <li><a href="#">Carta</a></li>
-                <li><a href="#">Reserva</a></li>
+                <li><a href="/reservas-inicio.html">Reserva</a></li>
                 <li><a href="#">Política de Privacidad</a></li>
             </ul>
             <!-- center logo -->
@@ -179,6 +182,6 @@
     </footer>
 
     <!-- Scripts JS -->
-
+    <script src="/js/nav-bar.js"></script>
 </body>
 </html>
