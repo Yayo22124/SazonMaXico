@@ -6,70 +6,7 @@ body{
   margin: 0;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  padding: 15px;
-  background-color: #F9B338;
-  text-align: center;
-  height: 150px;
-}
 
-#logo {
-  height: 120px;
-  width: 200px;
-  margin-left: 10px;
-}
-
-#titulo {
-  font-size: 70px;
-  flex-grow: 1;
-  text-align: center;
-  color: white;
-  text-shadow: 4px 4px #0F0F0F;
-  font-family: 'Pacifico', cursive;
-  margin-left: -200px;
-}
-
-/* !Arriba esta toda el diseño del header */
-
-nav ul {
-  margin-top: 30px;
-  display: flex;
-  align-content: center;
-  justify-content: space-evenly;
-}
-
-li {
-
-  border-radius: 10px;
-  border-style: solid;
-  border-color: #0F0F0F;
-  list-style-type: none;
-  background-color: #F8F0D5;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-a {
-  font-size: 20px;
-  text-decoration: none;
-  color: #0F0F0F;
-}
-
-.icono {
-  margin: 5px;
-  width: 20%;
-}
-
-/* *Arriba esta todo el estilo de la barra de navegacion */
-
-#titulo_menu {
-  text-align: center;
-  font-size: 50px;
-}
 
 #fondo {
   background-color: #432D1C;
