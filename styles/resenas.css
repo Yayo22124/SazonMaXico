@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#fondo {
+  margin-top: 25px;
+  background-color: #432D1C;
+  padding: 20px;
+  width: 100%;
+}
+
+#fondo_blanco {
+  background-color: white;
+  margin: 0%;
+
+}
+
+.inicio{
+  margin: 15px 10%;
+  font-size: 18px;
+}
+
+header {
+  /* sizing */
+  width: 100%;
+  height: 65vh;
+
+  /* display */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  
+  /* background */
+  background-image: url('/img/index-img/Bg-restaurante.svg');
+  background-size: fill;
+  background-position: center;
+  filter: saturate(135%);
+
+  /* ---- Tittle Header (H1) ---- */
+  & > h1 {
+      /* font styles */
+      font-family: 'Pacifico';
+      font-size: 4em;
+      font-weight: 400;
+      color: white;
+      text-shadow: 0px 6px 3px #432D1C;
+      
+      position: absolute;
+      top: 50%;
+      transform: translateY(-70%);
+
+      /* effects */
+      cursor: pointer;
+      
+  }
+}
+
+.contenedor{
+  width: 1205px;
+  border: #432D1C;
+  border-style: solid;
+  margin-left: 10% ;
+  margin-top: -40px;
+  background-color: white;
+  position: relative;
+}
+
+.links{
+  margin: 10px 10px;
+}
+
+.links a{
+  margin: 10px 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.links a:hover{
+  color: #F9B338;
+}
+
+#title{
+  margin-left: 20px;
+}
+
+.linea{
+  height: 3px;
+  margin: 0px 15px;
+  background-color: rgba(131, 131, 131, 0.364);
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#contenedor-resena{
+  margin-top: -20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.puntuacion{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.estrella {
+  font-size: 24px;
+  color: gray;
+  cursor: pointer;
+  margin-left: 10px;
+
+}
+
+.estrella.pintada {
+  color: yellow;
+}
+
+.reseña textarea {
+  width: 95%;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.reseña button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #432D1C;
+  margin-left: 10px;
+  color: white;
+}
+
+.reseña button:hover{
+  background-color: #F9B338;
+  border-color: white;
+}
+
+#content {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+#expand-button {
+  cursor: pointer;
+  color: blue;
+}
+
+#expand-button{
+  margin: 0 120px;
+}
+
+#expand-button:hover{
+  color: #F9B338;
+}
+
