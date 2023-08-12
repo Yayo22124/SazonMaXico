@@ -1,0 +1,441 @@
+/* General Styles */
+body {
+    margin: 0;
+}
+
+/* Main Styles (container) */
+.container {
+    /* size */
+    width: 100%;
+    height: 100vh;
+
+    /* display */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+/* Left Container (form) */
+.left-container {
+    /* size */
+    width: 50%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+
+    /* header form styles */
+    & header {
+        /* size */
+        width: 100%;
+        height: 80px;
+
+        /* display */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        /* margin */
+        margin-bottom: 40px;
+
+        /* bg color */
+        background-color: #F9B338;
+
+        /* header return icon */
+        & a:nth-child(1) {
+            /* size */
+            width: 24px;
+            height: 24px;
+
+            /* margin */
+            /* margin: 25px 0 25px 30px; */
+            position: absolute;
+            left: 5%;
+
+
+
+            /* effects */
+            cursor: pointer;
+
+            /* transition */
+            transition: transform .5s ease all;
+        }
+
+        /* header return icon animation */
+        & a:nth-child(1):hover {
+            transform: scale(1.1);
+        }
+
+        & a:nth-child(1):active {
+            transform: scale(0.91);
+        }
+
+
+        /* header image */
+        & a:nth-child(2) {
+
+            /* margin (to center) */
+            margin: 0 auto;
+            padding-top: 25px;
+
+            /* effects */
+            cursor: pointer;
+
+            &>img {
+                height: 80px;
+            }
+        }
+    }
+
+    /* phrase styles */
+    & h2 {
+        /* size */
+        max-width: 300px;
+
+        /* font */
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+
+        /* margin (to center) */
+        margin: 0 auto;
+        margin-bottom: 80px;
+    }
+
+    /* ####### Form Styles ####### */
+    & form {
+        /* size */
+        width: 60%;
+        height: 60vh;
+
+        /* flexbox */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* margin (to center) */
+        margin: 0 auto;
+
+
+    }
+}
+
+/* Ocultar la barra de desplazamiento en navegadores basados en WebKit */
+.left-container::-webkit-scrollbar {
+    width: 0;
+    /* Ancho de la barra de desplazamiento */
+    background-color: transparent;
+    /* Color de fondo de la barra de desplazamiento */
+}
+
+.left-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    /* Color del pulgar (scrollbar handle) */
+}
+
+.left-container::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Color de la pista de la barra de desplazamiento */
+}
+
+/* button */
+button[type="submit"] {
+    /* size */
+    width: 60%;
+
+    /* padding/margin */
+    padding: 13px;
+    margin-bottom: 15px;
+
+    /* bg color */
+    background-color: #F9B338;
+
+    /* border */
+    border-radius: 12px;
+    border: none;
+
+    /* font */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #FFFFFF;
+
+    /* effects */
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 0.5s ease-in-out all;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+/* create account */
+.create-account {
+
+    /* font */
+    color: #00000080;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    text-align: center;
+
+    /* margin */
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+
+    /* orange */
+    & b a {
+        text-decoration: none;
+        color: #F9B338;
+    }
+}
+
+/* Input animation */
+/* form control */
+.form-control {
+    /* size */
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+
+    /* font styles */
+    font-family: 'Montserrat';
+
+}
+
+
+
+
+.input {
+    width: -webkit-fill-available;
+    font-size: 14px;
+    padding: 10px 10px 10px 5px;
+    margin-bottom: 40px;
+    display: block;
+    border: none;
+    border-bottom: 2px solid #6c6c6c;
+    background: transparent;
+    color: black;
+    /* effects */
+    transition: all 0.2s ease-in-out;
+}
+
+.input:focus {
+    outline: none;
+    border-bottom: 2px solid #F9B338;
+}
+
+.input:hover {
+    border-bottom: 2px solid #F9B338;
+}
+.form-control>label {
+    color: #999999;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 10px;
+    transition: 0.4s ease all;
+    -moz-transition: 0.4s ease all;
+    -webkit-transition: 0.4s ease al;
+}
+
+.input:focus~label,
+.input:valid~label,
+.input:not(:empty)~label {
+    top: -20px;
+    font-size: 14px;
+}
+
+.bar {
+    position: relative;
+    font-size: 14px;
+    width: 200px;
+}
+
+.bar::after,
+.bar::before {
+    content: "";
+    height: 10px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    /* background: #0e94f4; */
+    transition: 0.4s ease all;
+    -moz-transition: 0.4s ease all;
+    -webkit-transition: 0.4s ease al;
+}
+
+.bar::before {
+    left: 50%;
+
+}
+
+.bar::after {
+    right: 50%;
+}
+
+.input:focus~.bar::before,
+.input:focus~.bar::after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    top: 50%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.input:focus~.highlight {
+    animation: input-focus 0.5s ease;
+}
+
+.passwd {
+    position: relative;
+}
+
+.passwd > input {
+    padding-right: 34px;
+}
+
+.mostrar-ocultar {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transform: translate(0px, 50%);
+    bottom: 75%;
+    display: flex;
+    align-items: center;
+    right: 5px;
+}
+
+.mostrar-ocultar img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    /* effects */
+    transition: 0.3s all ease-in-out;
+}
+
+.mostrar-ocultar img:hover {
+    transform: scale(1.05);
+}
+
+.mostrar-ocultar img:active {
+    transform: scale(0.95);
+}
+
+#ocultar {
+    display: none;
+}
+
+#ver {
+    display: block;
+}
+
+@keyframes input-focus {
+    from {
+        background: #F9B338;
+    }
+
+    to {
+        width: 100%;
+        background: transparent;
+    }
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.pd60 {
+    padding-bottom: 60px;
+}
+
+/* Right Container (bg Image) */
+.right-container {
+    /* size */
+    width: 50%;
+    height: 100vh;
+
+    /* bg image */
+    background-image: url(/img/restaurant.png);
+    background-size: cover;
+    background-position: center;
+
+    /* animation */
+    animation: fade-in 0.5s case-in-out;
+}
+
+/* animation image */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+/* movil */
+@media screen and (max-width: 767px) {
+
+    .left-container {
+        width: 100%;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .right-container {
+        display: none;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .left-container {
+        width: 100%;
+    }
+
+    .form-control {
+        width: 80%;
+    }
+
+    .right-container {
+        display: none;
+    }
+
+    button[type="submit"] {
+        width: 70%;
+    }
+}
