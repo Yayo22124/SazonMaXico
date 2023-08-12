@@ -1,0 +1,137 @@
+--------------------------------------------------------------------
+
+CREATE TABLE `bdsazonmaxico`.`tbb_personas` (
+  `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(255) NOT NULL,
+  `Genero` ENUM('F', 'M') NOT NULL,
+  `Correo_Electronico` VARCHAR(255) NOT NULL,
+  `Numero_Telefono` VARCHAR(45) NULL,
+  `Fecha_Nacimiento` DATE NOT NULL,
+  `Fecha_Registro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Fecha_Ultima_Actualizacion` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`ID`));
+
+--------------------------------------------------------------------
+
+CREATE TABLE `bdsazonmaxico`.`tbb_usuarios` (
+  `Persona_ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(255) NOT NULL,
+  `Tipo` ENUM('Administrador ', 'Cliente') NOT NULL DEFAULT 'Cliente',
+  `Edad` INT NOT NULL,
+  `Estatus` ENUM('Activo', 'Inactivo') NOT NULL DEFAULT 'Inactivo',
+  `Historial_Reservas` VARCHAR(255) NULL DEFAULT NULL,
+  `Fecha_Registro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Fecha_Ultima_Actualizacion` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`Persona_ID`));
+------------------------------------------------------------------------
+CREATE TABLE `bdsazonmaxico`.`tbb_eventos` (
+  `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Usuario_ID` INT UNSIGNED NULL,
+  `Area_ID` INT UNSIGNED NULL,
+  `Nombre` VARCHAR(255) NOT NULL,
+  `Estatus` BIT NOT NULL,
+  `Descripcion` TEXT NULL DEFAULT NULL,
+  `Horario_General_ID` INT UNSIGNED NULL,
+  `Horario_Especifico_ID` INT UNSIGNED NULL,
+  `Fecha_Registro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE INDEX `Horario_Especifico_ID_UNIQUE` (`Horario_Especifico_ID` ASC) VISIBLE,
+  UNIQUE INDEX `Horario_General_ID_UNIQUE` (`Horario_General_ID` ASC) VISIBLE);
+--------------------------------------------------------------------------
+CREATE TABLE `bdsazonmaxico`.`tbc_tipo_area` (
+  `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(255) NOT NULL,
+  `Descripcion` VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`ID`));
+-------------------------------------------------------------------------
+CREATE TABLE `bdsazonmaxico`.`tbb_ubicaciones` (
+  `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Espacio_ID` INT UNSIGNED NULL,
+  `Nombre` VARCHAR(255) NOT NULL,
+  `Direccion` VARCHAR(255) NOT NULL,
+  `Descripcion` TEXT NULL DEFAULT NULL,
+  `Fecha_Regitro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Fecha_Ultima_Actualizacion` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`ID`));
+------------------------------------------------------------------------
+CREATE TABLE `bdsazonmaxico`.`tbb_platillos` (
+  `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Categoria_ID` INT UNSIGNED NOT NULL,
+  `Puntuacion_ID` INT UNSIGNED NOT NULL,
+  `Nombre` VARCHAR(255) NOT NULL,
+  `Precio` INT NOT NULL,
+  `Estatus` BIT NOT NULL DEFAULT b'1',
+  `Descripcion` TEXT NULL DEFAULT NULL,
+  PRIMARY KEY (`ID`));
+------------------------------------------------------------------------
+CREATE TABLE `bdsazonmaxico`.`tbc_categorias_platillos` (
+  `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(255) NOT NULL,
+  `Descripcion` TEXT NOT NULL,
+  `Fecha_Registro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Fecha_Ultima_Actualizacion` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`ID`));
+----------------------------------------------------------------------
+CREATE TABLE `bdsazonmaxico`.`tbb_puntuacion` (
+  `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Usuario_ID` INT UNSIGNED NOT NULL,
+  `Calificacion` INT NULL,
+  `Comentario` TEXT NULL,
+  `Fecha_Registro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Fecha_Ultima_Actualizacion` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`ID`));
+----------------------------------------------------------------------
+CREATE TABLE `bdsazonmaxico`.`tbb_areas` (
+  `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Tipo_Area_ID` INT UNSIGNED NOT NULL,
+  `Nombre` VARCHAR(255) NOT NULL,
+  `Descripcion` TEXT NULL DEFAULT NULL,
+  `Estatus` BIT NOT NULL DEFAULT b'1',
+  `Fecha_Registro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Fecha_Ultima_Actualizacion` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`ID`));
+---------------------------------------------------------------
+CREATE TABLE `bdsazonmaxico`.`tbb_espacios` (
+  `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(255) NOT NULL,
+  `Tipo_ID` INT UNSIGNED NOT NULL,
+  `Area_ID` INT UNSIGNED NOT NULL,
+  `Descripcion` TEXT NULL DEFAULT NULL,
+  `Estatus` BIT NOT NULL DEFAULT b'1',
+  `Observaciones` TEXT NULL DEFAULT NULL,
+  `Capacidad` INT NOT NULL,
+  `Fecha_Registro` DATETIME NOT NULL,
+  `Fecha_Ultima_Actualizacion` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`ID`));
+-------------------------------------------------------------
+mysql> CREATE TABLE `bdsazonmaxico`.`tbb_horario_especifico` (
+    -> `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    -> `Estatus` BIT NOT NULL DEFAULT b'1',
+    -> `Espacio_ID` INT UNSIGNED NOT NULL,
+    -> `Descripcion` TEXT NULL DEFAULT NULL,
+    -> `Fecha_Inicio` DATETIME NOT NULL,
+    -> `Fecha_Registro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    -> `Fecha_Ultima_Actualizacion` DATETIME NULL DEFAULT NULL,
+    -> PRIMARY KEY (`ID`));
+Query OK, 0 rows affected (0.07 sec)
+----------------------------------------------------
+mysql>  CREATE TABLE `bdsazonmaxico`.`tbb_horario_general` (
+    -> `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    -> `Horario_Especifico_ID` INT NOT NULL,
+    -> `Estatus` BIT NOT NULL DEFAULT b'1',
+    -> `Espacio_ID` INT UNSIGNED NOT NULL,
+    -> `Descripcion` TEXT NULL DEFAULT NULL,
+    -> `Fecha` DATE NOT NULL,
+    -> `Fecha_Registro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    -> PRIMARY KEY (`ID`));
+Query OK, 0 rows affected (0.07 sec)
+-------------------------------------------------------
+mysql> CREATE TABLE `bdsazonmaxico`.`tbb_reservas` (
+    -> `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    -> `Horario_ID` INT UNSIGNED NOT NULL,
+    -> `Mesa_Asignada` INT UNSIGNED NOT NULL,
+    -> `Cantidad_Personas` INT UNSIGNED NOT NULL,
+    -> `Estatus` BIT NOT NULL DEFAULT b'1',
+    -> PRIMARY KEY (`ID`));
+Query OK, 0 rows affected (0.07 sec)
+-----------------------------------------------------

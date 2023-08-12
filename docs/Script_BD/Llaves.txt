@@ -1,0 +1,122 @@
+ALTER TABLE `bdsazonmaxico`.`tbb_areas` 
+ADD CONSTRAINT `fn_tipo_area`
+  FOREIGN KEY (`ID`)
+  REFERENCES `bdsazonmaxico`.`tbc_tipo_area` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+-------------------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_espacios` 
+ADD INDEX `fn_tipo_area_idx` (`Area_ID` ASC) VISIBLE;
+;
+ALTER TABLE `bdsazonmaxico`.`tbb_espacios` 
+ADD CONSTRAINT `fn_areas`
+  FOREIGN KEY (`Area_ID`)
+  REFERENCES `bdsazonmaxico`.`tbb_areas` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+------------------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_eventos` 
+ADD INDEX `fn_usuarios_idx` (`Usuario_ID` ASC) VISIBLE;
+;
+ALTER TABLE `bdsazonmaxico`.`tbb_eventos` 
+ADD CONSTRAINT `fn_usuarios`
+  FOREIGN KEY (`Usuario_ID`)
+  REFERENCES `bdsazonmaxico`.`tbb_usuarios` (`Persona_ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+--------------------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_eventos` 
+ADD INDEX `fn_area3_idx` (`Area_ID` ASC) VISIBLE;
+;
+ALTER TABLE `bdsazonmaxico`.`tbb_eventos` 
+ADD CONSTRAINT `fn_area3`
+  FOREIGN KEY (`Area_ID`)
+  REFERENCES `bdsazonmaxico`.`tbb_areas` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+---------------------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_horario_especifico` 
+ADD INDEX `fn_espacios_horario_idx` (`Espacio_ID` ASC) VISIBLE;
+;
+ALTER TABLE `bdsazonmaxico`.`tbb_horario_especifico` 
+ADD CONSTRAINT `fn_espacios_horario`
+  FOREIGN KEY (`Espacio_ID`)
+  REFERENCES `bdsazonmaxico`.`tbb_espacios` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+--------------------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_horario_general` 
+ADD INDEX `fn_horario_reservado_idx` (`Horario_Especifico_ID` ASC) VISIBLE;
+;
+ALTER TABLE `bdsazonmaxico`.`tbb_horario_general` 
+ADD CONSTRAINT `fn_horario_reservado`
+  FOREIGN KEY (`Horario_Especifico_ID`)
+  REFERENCES `bdsazonmaxico`.`tbb_horario_especifico` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+------------------------------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_platillos` 
+ADD INDEX `fn_clasificacion_platillo_idx` (`Categoria_ID` ASC) VISIBLE;
+;
+ALTER TABLE `bdsazonmaxico`.`tbb_platillos` 
+ADD CONSTRAINT `fn_clasificacion_platillo`
+  FOREIGN KEY (`Categoria_ID`)
+  REFERENCES `bdsazonmaxico`.`tbc_categorias_platillos` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+------------------------------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_platillos` 
+ADD INDEX `fn_puntuacion_platillo_idx` (`Puntuacion_ID` ASC) VISIBLE;
+;
+ALTER TABLE `bdsazonmaxico`.`tbb_platillos` 
+ADD CONSTRAINT `fn_puntuacion_platillo`
+  FOREIGN KEY (`Puntuacion_ID`)
+  REFERENCES `bdsazonmaxico`.`tbb_puntuacion` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+----------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_puntuacion` 
+ADD INDEX `fn_usuario_idx` (`Usuario_ID` ASC) VISIBLE;
+;
+ALTER TABLE `bdsazonmaxico`.`tbb_puntuacion` 
+ADD CONSTRAINT `fn_usuario`
+  FOREIGN KEY (`Usuario_ID`)
+  REFERENCES `bdsazonmaxico`.`tbb_usuarios` (`Persona_ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+----------------------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_reservas` 
+ADD INDEX `fn_horario_reservado_idx` (`Horario_ID` ASC) VISIBLE;
+;
+ALTER TABLE `bdsazonmaxico`.`tbb_reservas` 
+ADD CONSTRAINT `fn_horario_reservado`
+  FOREIGN KEY (`Horario_ID`)
+  REFERENCES `bdsazonmaxico`.`tbb_horario_general` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+-------------------------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_reservas` 
+ADD CONSTRAINT `fn_reserva_horario`
+  FOREIGN KEY (`Horario_ID`)
+  REFERENCES `bdsazonmaxico`.`tbb_horario_general` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+-----------------------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_ubicaciones` 
+ADD INDEX `fn_espacio_ubicado_idx` (`Espacio_ID` ASC) VISIBLE;
+;
+ALTER TABLE `bdsazonmaxico`.`tbb_ubicaciones` 
+ADD CONSTRAINT `fn_espacio_ubicado`
+  FOREIGN KEY (`Espacio_ID`)
+  REFERENCES `bdsazonmaxico`.`tbb_espacios` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+--------------------------------------------------------------
+ALTER TABLE `bdsazonmaxico`.`tbb_usuarios` 
+ADD CONSTRAINT `fn_persona_usuario`
+  FOREIGN KEY (`Persona_ID`)
+  REFERENCES `bdsazonmaxico`.`tbb_personas` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+-------------------------------------------------------------
+
