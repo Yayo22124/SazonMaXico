@@ -437,3 +437,32 @@ input:hover {
 
 
 }
+
+#fecha_reserva{
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  margin-bottom: 25px;
+}
+
+#fecha_reserva:hover {
+  border-color: #F9B338;
+  border-style: solid;
+}
+
+#hora_reserva{
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  margin-bottom: 25px;
+}
+
+#hora_reserva:hover {
+  border-color: #F9B338;
+  border-style: solid;
+}
+/* Agrega estilos adicionales según tus necesidades */

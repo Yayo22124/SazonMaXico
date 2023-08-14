@@ -10,14 +10,16 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Gudea:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Pacifico&display=swap"
     rel="stylesheet">
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- links CSS -->
   <!-- <link rel="stylesheet" href="/Normalize.css"> #### da algunos fallos-->
   <link rel="stylesheet" href="/styles/reservas-inicio.css">
   <link rel="stylesheet" href="/styles/footer-styles.css">
   <link rel="stylesheet" href="/styles/navbar.css">
   <link rel="stylesheet" href="/styles/scroll-styles.css">
-    
+
   <!-- favicon -->
   <link rel="shortcut icon" href="/img/Xicote.svg" type="image/x-icon">
 
@@ -79,7 +81,9 @@
           <div class="cuadrado_uno"></div>
           <div id="centro">
             <div class="cuadrado"></div>
-            <div class="circulo"><p class="numeros">1</p></div>
+            <div class="circulo">
+              <p class="numeros">1</p>
+            </div>
             <div class="cuadrado"></div>
           </div>
           <div class="cuadrado_uno"></div>
@@ -89,7 +93,9 @@
           <div class="cuadrado_uno"></div>
           <div id="centro">
             <div class="cuadrado"></div>
-            <div class="circulo"><p class="numeros">2</p></div>
+            <div class="circulo">
+              <p class="numeros">2</p>
+            </div>
             <div class="cuadrado"></div>
           </div>
           <div class="cuadrado_uno"></div>
@@ -99,7 +105,9 @@
           <div class="cuadrado_uno"></div>
           <div id="centro">
             <div class="cuadrado"></div>
-            <div class="circulo"><p class="numeros">3</p></div>
+            <div class="circulo">
+              <p class="numeros">3</p>
+            </div>
             <div class="cuadrado"></div>
           </div>
           <div class="cuadrado_uno"></div>
@@ -114,7 +122,9 @@
             <div class="cuadrado"></div>
             <div class="cuadrado"></div>
           </div>
-          <div class="rectangulo"><p class="numeros2">4</p></div>
+          <div class="rectangulo">
+            <p class="numeros2">4</p>
+          </div>
           <div id="silla_izquierda"></div>
           <div id="silla_derecha"></div>
           <div id="mesas_abajo">
@@ -132,7 +142,9 @@
             <div class="cuadrado"></div>
             <div class="cuadrado"></div>
           </div>
-          <div class="rectangulo"><p class="numeros2">5</p></div>
+          <div class="rectangulo">
+            <p class="numeros2">5</p>
+          </div>
           <div id="silla_izquierda"></div>
           <div id="silla_derecha"></div>
           <div id="mesas_abajo">
@@ -154,7 +166,9 @@
             <div class="cuadrado"></div>
             <div class="cuadrado"></div>
           </div>
-          <div class="rectangulo"><p class="numeros2">6</p></div>
+          <div class="rectangulo">
+            <p class="numeros2">6</p>
+          </div>
           <div id="silla_izquierda"></div>
           <div id="silla_derecha"></div>
           <div id="mesas_abajo">
@@ -172,7 +186,9 @@
             <div class="cuadrado"></div>
             <div class="cuadrado"></div>
           </div>
-          <div class="rectangulo"><p class="numeros2">7</p></div>
+          <div class="rectangulo">
+            <p class="numeros2">7</p>
+          </div>
           <div id="silla_izquierda"></div>
           <div id="silla_derecha"></div>
           <div id="mesas_abajo">
@@ -190,7 +206,9 @@
           <div class="cuadrado_uno"></div>
           <div id="centro">
             <div class="cuadrado"></div>
-            <div class="circulo"><p class="numeros">8</p></div>
+            <div class="circulo">
+              <p class="numeros">8</p>
+            </div>
             <div class="cuadrado"></div>
           </div>
           <div class="cuadrado_uno"></div>
@@ -199,7 +217,9 @@
           <div class="cuadrado_uno"></div>
           <div id="centro">
             <div class="cuadrado"></div>
-            <div class="circulo"><p class="numeros">9</p></div>
+            <div class="circulo">
+              <p class="numeros">9</p>
+            </div>
             <div class="cuadrado"></div>
           </div>
           <div class="cuadrado_uno"></div>
@@ -208,29 +228,47 @@
           <div class="cuadrado_uno"></div>
           <div id="centro">
             <div class="cuadrado"></div>
-            <div class="circulo"><p class="numeros1">10</p></div>
+            <div class="circulo">
+              <p class="numeros1">10</p>
+            </div>
             <div class="cuadrado"></div>
           </div>
           <div class="cuadrado_uno"></div>
         </div>
       </div>
       <!-- !Primeras mesas de la parte de abajo -->
-      <input id="registro" type="submit" value="Registrate Aqui!">
-      <h2 id="solicitud">O envíenos una solicitud por correo electrónico</h2>
       <p class="texto">Siempre estamos listos para satisfacer todas sus necesidades y requerimientos durante su comida
-        especial. Llame al <a href="tel:+52 764 764 3687" class="phone">+52 764-764-3687</a> o complete el formulario de contacto y nos comunicaremos con usted lo antes
-        posible.</p>
-      <form action="">
+        especial. Llame al <a href="tel:+52 764 764 3687" class="phone">+52 764-764-3687</a> o llene los siguientes
+        campos para darle una reserva de nuestras diferentes mesas y revisar su disponibilidad y el numero de mesa o
+        mesas y sobre todo de personas que tendra la mesa</p>
+      <h1>Reserva de Mesas</h1>
+      <form id="reservation-form">
         <label for="nombre">Tu nombre:</label><br>
         <input type="text" id="nombre" name="nombre" placeholder="Juan Pedro"><br>
+
+        <label for="apellido">Tu apellido/s:</label><br>
+        <input type="text" id="apellido" name="apellido" placeholder="Juan Pedro"><br>
 
         <label for="telefono">Tu teléfono:</label><br>
         <input type="number" id="telefono" name="telefono" placeholder="555-555-555"><br>
 
-        <label for="correo">Tu correo electronico:</label><br>
+        <label for="correo">Tu correo electrónico:</label><br>
         <input type="email" id="correo" name="correo" placeholder="persona_falsa@hotmail.com" required><br>
-        <input id="submit" type="submit" value="¡Enviar!">
+
+        <label for="num_mesa">Número de mesa:</label><br>
+        <input type="number" id="num_mesa" name="num_mesa" placeholder="Número de mesa" required><br>
+
+        <label for="fecha_reserva">Fecha de reserva:</label><br>
+        <input type="date" id="fecha_reserva" name="fecha_reserva" placeholder="Selecciona una fecha" required max="<?php echo date('Y-m-d'); ?>" readonly><br>
+        
+    
+        <label for="hora_reserva">Hora de reserva:</label><br>
+        <input type="time" id="hora_reserva" name="hora_reserva" required><br>
+    
+        <input id="submit" type="submit" value="¡Reservar!">
       </form>
+      <div id="confirmacion"></div>
+      <script src="reserva_horario.js"></script>
     </div>
   </div>
 
