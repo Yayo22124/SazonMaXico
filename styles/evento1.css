@@ -10,27 +10,6 @@
 body {
   margin: 0;
 }
-/* *Arriba esta todo el estilo de la barra de navegacion */
-
-#fondo {
-  margin-top: 25px;
-  background-color: #432D1C;
-  padding: 20px;
-  width: 100%;
-}
-
-#fondo_blanco {
-  background-color: white;
-  margin-top: 10px;
-}
-
-#fondo2 {
-  margin-top: 4%;
-  margin-left: 4%;
-  margin-right: 4%;
-  background-color: rgb(255, 255, 255);
-  margin-top: -110px;
-}
 
 /* * */
 
@@ -245,33 +224,6 @@ input:hover {
   color: white;
   text-shadow: 4px 4px #0F0F0F;
   font-family: 'Pacifico', cursive;
-}
-
-/* !Arriba esta toda el diseño del header */
-
-nav ul {
-  margin-top: 30px;
-  display: flex;
-  align-content: center;
-  justify-content: space-evenly;
-}
-
-li {
-
-  border-radius: 10px;
-  border-style: solid;
-  border-color: #0F0F0F;
-  list-style-type: none;
-  background-color: #F8F0D5;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-a {
-  font-size: 20px;
-  text-decoration: none;
-  color: #0F0F0F;
 }
 
 .icono {
