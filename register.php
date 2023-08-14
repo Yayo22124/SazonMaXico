@@ -22,7 +22,7 @@
 
 <body>
     <!-- Conexion a la BD -->
-    <?php include "/php/conexion.php" ?>
+    <?php include "conexion.php" ?>
 
     <!-- Envio de datos PHP -->
     <?php
@@ -36,8 +36,12 @@
         $segundoA = $_POST["segundo_apellido"];
         // Obtener Correo
         $correo = $_POST["correo"];
+        // Obtener Fecha Nacimiento
+        $fechaN = $_POST["date"];
+        // Obtener Genero
+        $genero = $_POST["genero"];
         // Obtener Contraseña
-        $passwd = $_POST["contrasenia"];
+        $passwd = $_POST["passwd"];
 
         // Encriptar la contraseña
         $hash_passwd = password_hash($passwd, PASSWORD_DEFAULT);
@@ -53,13 +57,17 @@
                 echo "Ya existe una cuenta con este correo. Por favor, elige otro correo.";
             } else {
                 // consulta SQL para registrar los datos
-                $sql = "INSERT INTO tbb_usuarios (Nombre, Correo, Passwd) VALUES ('$nombre', '$correo', '$hash_passwd')";
+                $sql = "INSERT INTO tbb_personas VALUES (default, $nombre, $primerA, $segundoA, $genero, $fechaN, default, default)";
+                $consulta_id_persona = "SELECT ID FROM tbb_personas ORDER BY DESC ID LIMIT 1";
+                $id_persona = $conn->query($consulta_id_persona);
+                $sql_usuarios = "INSERT INTO tbb_usuarios VALUES ($id_persona, $nombre, $correo, default, fn_calcula_edad($fechaN), default, default, default )";
+
 
 
 
                 // Verificar consulta
                 if ($conn->query($sql) === TRUE) {
-                    header("Location: login.php"); // Redirigir a la página de confirmación
+                    header("Location: login.html"); // Redirigir a la página de confirmación
                     $resultado = true;
                     exit;
                 } else {
@@ -120,10 +128,23 @@
                 <!-- Email Input -->
                 <div class="form-control">
                     <!-- <input type="Email" placeholder="Correo Electrónico"> -->
-                    <input type="text" class="input" name="correo"  required="true" />
+                    <input type="text" class="input" name="correo" required="true" />
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Correo Electrónico</label>
+                </div>
+                <!-- Fecha Nacimiento  -->
+                <div class="form-control date">
+                    <label for="birth">Fecha de Nacimiento</label>
+                    <input type="date" id="birth" name="date">
+                </div>
+                <!-- Genero -->
+                <div class="form-control genero">
+                    <label for="genero">Genero</label>
+                    <select name="genero" id="genero">
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
                 </div>
                 <!-- Password Input -->
                 <div class="form-control passwd">
