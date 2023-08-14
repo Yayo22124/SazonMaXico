@@ -45,7 +45,7 @@ header {
     position: relative;
     
     /* background */
-    background-image: url('/img/index-img/Bg-restaurante.svg');
+    background-image: url('/sazonmaxico/img/index-img/Bg-restaurante.svg');
     background-size: fill;
     background-position: center;
     filter: saturate(135%);
