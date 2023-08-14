@@ -104,7 +104,7 @@ body {
 
         /* margin (to center) */
         margin: 0 auto;
-        margin-bottom: 80px;
+        margin-bottom: 140px;
     }
 
     /* ####### Form Styles ####### */
@@ -215,9 +215,6 @@ button[type="submit"]:active {
 
 }
 
-
-
-
 .input {
     width: -webkit-fill-available;
     font-size: 14px;
@@ -251,6 +248,68 @@ button[type="submit"]:active {
     transition: 0.4s ease all;
     -moz-transition: 0.4s ease all;
     -webkit-transition: 0.4s ease al;
+}
+
+.date, .genero {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 22px;
+}
+
+.date > input {
+    padding: 4px;
+    width: -webkit-fill-available;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid #6c6c6c;
+    background: transparent;
+    color: black;
+    /* effects */
+    transition: all 0.2s ease-in-out;
+}
+
+.date > input:focus {
+    outline: none;
+    border-bottom: 2px solid #F9B338;
+}
+
+.date > input:hover {
+    border-bottom: 2px solid #F9B338;
+}
+
+.date > label {
+    position: static;
+    padding-left: 12px;
+}
+
+.genero > select {
+    padding: 4px;
+    width: -webkit-fill-available;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 1px;
+    border-bottom: 2px solid #6c6c6c;
+    background: transparent;
+    color: black;
+    /* effects */
+    transition: all 0.2s ease-in-out;
+}
+
+.genero > select:focus {
+    outline: none;
+    border-bottom: 2px solid #F9B338;
+}
+
+.genero > select:hover {
+    border-bottom: 2px solid #F9B338;
+}
+
+
+.genero > label {
+    position: static;
+    padding-left: 12px;
 }
 
 .input:focus~label,
