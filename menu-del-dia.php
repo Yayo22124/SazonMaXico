@@ -329,18 +329,23 @@
 <script>
   // Agregar un evento al botón para activar la generación del PDF
   document.getElementById('downloadPdfButton').addEventListener('click', () => {
-    // Crear una instancia de jsPDF
-    const doc = new jsPDF();
+        // URL del archivo PDF que deseas descargar
+        const pdfUrl = '/sazonmaxico/pdf/menu-del-dia.pdf';
 
-    // Obtener el contenido del div
-    const contentDiv = document.getElementById('contentToConvert');
+        // Crea un enlace temporal
+        const downloadLink = document.createElement('a');
+        downloadLink.href = pdfUrl;
 
-    // Generar el PDF a partir del contenido del div
-    doc.fromHTML(contentDiv, 15, 15);
+        // Establece el nombre del archivo que se descargará
+        downloadLink.download = 'menu-del-dia-pdf.pdf';
 
-    // Descargar el PDF con un nombre específico
-    doc.save('menu_del_dia.pdf');
-  });
+        // Agrega el enlace al documento y haz clic en él para iniciar la descarga
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+
+        // Elimina el enlace temporal del documento
+        document.body.removeChild(downloadLink);
+    });
 </script>
 
 </html>
