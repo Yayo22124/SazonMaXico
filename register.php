@@ -181,7 +181,8 @@
             notificationDiv.classList.add("notification", notificationData.status);
             notificationDiv.textContent = notificationData.message;
 
-            notificationContainer.style.maxHeight = "auto"
+            notificationContainer.style.maxHeight = "auto";
+            notificationContainer.style.display = "block";
             notificationContainer.appendChild(notificationDiv);
 
             setTimeout(function () {
