@@ -104,7 +104,7 @@ body {
 
         /* margin (to center) */
         margin: 0 auto;
-        margin-bottom: 140px;
+        margin-bottom: 160px;
     }
 
     /* ####### Form Styles ####### */
@@ -256,7 +256,7 @@ button[type="submit"]:active {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
 }
 
 .date>input {
