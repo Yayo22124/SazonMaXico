@@ -183,6 +183,7 @@
 
             notificationContainer.style.maxHeight = "auto";
             notificationContainer.style.display = "block";
+            notificationDiv.style.display = "block";
             notificationContainer.appendChild(notificationDiv);
 
             setTimeout(function () {
