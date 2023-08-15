@@ -91,11 +91,11 @@
             <header>
                 <!-- icon (return) -->
                 <a href="/sazonmaxico/index.html">
-                    <img src="/img/return.svg" alt="back">
+                    <img src="/sazonmaxico/img/return.svg" alt="back">
                 </a>
                 <!-- logo -->
                 <a href="/sazonmaxico/index.html">
-                    <img src="/img/logo-header.svg" alt="logo SazónMaXico">
+                    <img src="/sazonmaxico/img/logo-header.svg" alt="logo SazónMaXico">
                 </a>
             </header>
 
