@@ -366,7 +366,6 @@ body {
         conic-gradient(from 150deg at 50% 33%, #0000, #FA6900 .5deg 60deg, #0000 60.5deg) calc(var(--s)/2) calc(var(--s)/1.4),
         conic-gradient(from -30deg at 50% 66%, #0000, #D95B43 .5deg 60deg, #ECD078 60.5deg);
     background-size: var(--s) calc(var(--s)/1.154);
-    background-position: center;
 
     /* animation */
     animation: fade-in 0.5s case-in-out;

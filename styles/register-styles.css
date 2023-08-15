@@ -450,7 +450,7 @@ button[type="submit"]:active {
         conic-gradient(from -30deg at 50% 66%, #0000, #D95B43 .5deg 60deg, #ECD078 60.5deg);
     background-size: var(--s) calc(var(--s)/1.154);
 
-    background-position: center;
+    /* background-position: center; */
 
     /* animation */
     animation: fade-in 0.5s case-in-out;
