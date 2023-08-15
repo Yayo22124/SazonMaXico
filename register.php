@@ -12,10 +12,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
-    <link rel="shortcut icon" href="/img/Xicote.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/sazonmaxico/img/Xicote.svg" type="image/x-icon">
     <!-- CSS link -->
-    <link rel="stylesheet" href="/styles/register-styles.css">
-    <link rel="stylesheet" href="/styles/scroll-styles.css">
+    <link rel="stylesheet" href="/sazonmaxico/styles/register-styles.css">
+    <link rel="stylesheet" href="/sazonmaxico/styles/scroll-styles.css">
 
     <title>SazónMáXico | Crear Cuenta</title>
 </head>
@@ -67,7 +67,7 @@
 
                 // Verificar consulta
                 if ($conn->query($sql) === TRUE) {
-                    header("Location: login.html"); // Redirigir a la página de confirmación
+                    header("Location: /sazonmaxico/login.html"); // Redirigir a la página de confirmación
                     $resultado = true;
                     exit;
                 } else {
@@ -154,10 +154,10 @@
                     <label>Contraseña</label>
                     <div class="mostrar-ocultar">
                         <!-- ver contraseña -->
-                        <img src="/img/login-register-img/ver.svg" alt="ver contraseña" id="ver"
+                        <img src="/sazonmaxico/img/login-register-img/ver.svg" alt="ver contraseña" id="ver"
                             onclick="verContrasenia()">
                         <!-- ocultar contraseña -->
-                        <img src="/img/login-register-img/ocultar.svg" alt="Ocultar contraseña" id="ocultar"
+                        <img src="/sazonmaxico/img/login-register-img/ocultar.svg" alt="Ocultar contraseña" id="ocultar"
                             onclick="ocultarContrasenia()">
                     </div>
                 </div>
@@ -165,7 +165,7 @@
 
                 <!-- sign in - button -->
                 <button type="submit">Crear Cuenta</button>
-                <span class="create-account">¿Ya tienes cuenta? <b class="pd60"><a href="/login.html">Inicia
+                <span class="create-account">¿Ya tienes cuenta? <b class="pd60"><a href="/sazonmaxico/login.html">Inicia
                             Sesión</a></b></span>
             </form>
         </div>
@@ -176,6 +176,6 @@
     </main>
 </body>
 <!-- scripts -->
-<script src="/js/see-password.js"></script>
+<script src="/sazonmaxico/js/see-password.js"></script>
 
 </html>
