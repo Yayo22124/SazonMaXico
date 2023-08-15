@@ -26,61 +26,43 @@
 
     <!-- Envio de datos PHP -->
     <?php
-    // Obtener datos del Formularios
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Obtener Nombre
+        // Obtener los datos del formulario
         $nombre = $_POST["nombre"];
-        // Obtener Primer Apellido
-        $primerA = $_POST["primer_apellido"];
-        // Obtener Segundo Apellido
-        $segundoA = $_POST["segundo_apellido"];
-        // Obtener Correo
+        $primer_apellido = $_POST["primer_apellido"];
+        $segundo_apellido = $_POST["segundo_apellido"];
         $correo = $_POST["correo"];
-        // Obtener Fecha Nacimiento
-        $fechaN = $_POST["date"];
-        // Obtener Genero
+        $fecha_nacimiento = $_POST["date"];
         $genero = $_POST["genero"];
-        // Obtener Contraseña
-        $passwd = $_POST["passwd"];
+        $password = $_POST["passwd"];
 
-        // Encriptar la contraseña
-        $hash_passwd = password_hash($passwd, PASSWORD_DEFAULT);
+        // Aquí puedes hacer validaciones y sanitización de datos
+    
+        // Insertar datos en la tabla tbb_personas
+        $insert_persona_query = "INSERT INTO tbb_personas (Nombre, Primer_Apellido, Segundo_Apellido, Genero, Fecha_Nacimiento) VALUES ('$nombre', '$primer_apellido', '$segundo_apellido', '$genero', '$fecha_nacimiento')";
+        $result_persona = mysqli_query($conn, $insert_persona_query);
 
-        $consulta_correo = "SELECT COUNT(*) AS total FROM tbb_usuarios WHERE Correo = '$correo'";
-        $resultado_consulta = $conn->query($consulta_correo);
+        if ($result_persona) {
+            // Obtener el ID de la persona recién insertada
+            $persona_id = mysqli_insert_id($conn);
 
-        if ($resultado_consulta) {
-            $fila = $resultado_consulta->fetch_assoc();
-            $total = $fila["total"];
+            // Insertar datos en la tabla tbb_usuarios
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hashear la contraseña
+            $insert_usuario_query = "INSERT INTO tbb_usuarios (Persona_ID, Nombre_Usuario, Email, Password) VALUES ('$persona_id', '$nombre', '$correo', '$hashed_password')";
+            $result_usuario = mysqli_query($conn, $insert_usuario_query);
 
-            if ($total > 0) {
-                echo "Ya existe una cuenta con este correo. Por favor, elige otro correo.";
+            if ($result_usuario) {
+                // Registro exitoso, redirigir o mostrar un mensaje de éxito
+                echo "Registro exitoso!";
             } else {
-                // consulta SQL para registrar los datos
-                $sql = "INSERT INTO tbb_personas VALUES (default, $nombre, $primerA, $segundoA, $genero, default,$fechaN, default, default)";
-                $consulta_id_persona = "SELECT ID FROM tbb_personas ORDER BY DESC ID LIMIT 1";
-                $id_persona = $conn->query($consulta_id_persona);
-                $sql_usuarios = "INSERT INTO tbb_usuarios VALUES ($id_persona, $nombre, $correo, default, fn_calcula_edad($fechaN), default, default, default )";
-
-
-
-
-                // Verificar consulta
-                if ($conn->query($sql) === TRUE) {
-                    header("Location: /sazonmaxico/login.html"); // Redirigir a la página de confirmación
-                    $resultado = true;
-                    exit;
-                } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
-                    $resultado = false;
-                }
+                echo "Error al registrar el usuario: " . mysqli_error($conn);
             }
         } else {
-            echo "Error en la consulta: " . $conn->error;
+            echo "Error al registrar la persona: " . mysqli_error($conn);
         }
 
-        $conn->close();
-
+        // Cerrar la conexión
+        mysqli_close($conn);
     }
 
     ?>
