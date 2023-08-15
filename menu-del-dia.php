@@ -35,8 +35,8 @@
     <ul class="links">
       <li><a href="/sazonmaxico/index.php">Inicio</a></li>
       <li><a href="/sazonmaxico/carta.html">Carta</a></li>
-      <li><a href="/sazonmaxico/sazonmaxico/menu-del-dia.php">Menú del Día</a></li>
-      <li><a href="#">Eventos</a></li>
+      <li><a href="/sazonmaxico/menu-del-dia.php">Menú del Día</a></li>
+      <li><a href="/sazonmaxico/evento1.html">Eventos</a></li>
       <li><a href="/sazonmaxico/reservas-inicio.html">Reservas</a></li>
     </ul>
     <!-- Iniciar sesion button -->
