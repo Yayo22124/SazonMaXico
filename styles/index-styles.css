@@ -46,10 +46,10 @@ header {
 
     background: linear-gradient(90deg, rgba(139, 0, 0, 0.6) 50%, transparent 0),
         linear-gradient(rgba(139, 0, 0, 0.6) 50%, transparent 0);
-    background-size: 50px 50px;
+    /* background-size: 50px 50px; */
     /* background */
     /* background-image: url('/sazonmaxico/img/index-img/Bg-restaurante.svg'); */
-    /* background-size: fill; */
+    background-size: fill;
     /* filter: saturate(135%); */
 
     /* ---- Tittle Header (H1) ---- */
