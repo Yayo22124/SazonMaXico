@@ -1,0 +1,20 @@
+/* Agrega aquí tus estilos CSS */
+.notification {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'Inter';
+}
+
+.success {
+    background-color: #4CAF50;
+    color: white;
+    font-family: 'Inter';
+}
+
+.error {
+    background-color: #FF5733;
+    color: white;
+    font-family: 'Inter';
+}
