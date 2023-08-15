@@ -35,7 +35,7 @@
         $password = $_POST["password"]; // Asegúrate de tener un campo 'password' en tu formulario
     
         // Verificar las credenciales del usuario en la base de datos
-        $check_user_query = "SELECT ID, Email, Password FROM tbb_usuarios WHERE Email = '$correo'";
+        $check_user_query = "SELECT Persona_ID, Email, Password FROM tbb_usuarios WHERE Email = '$correo'";
         $result_user = mysqli_query($conn, $check_user_query);
         $user_data = mysqli_fetch_assoc($result_user);
 
@@ -97,14 +97,14 @@
                 <div class="form-control">
                     <!-- <input type="Email" placeholder="Correo Electrónico"> -->
 
-                    <input type="text" class="input" required="true" />
+                    <input type="text" class="input" required="true" name="correo" id="correo"/>
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Correo Electrónico</label>
                 </div>
                 <!-- Password Input -->
                 <div class="form-control passwd">
-                    <input class="input" type="password" required="true" id="password-input">
+                    <input class="input" type="password" required="true" id="password-input" name="password">
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Contraseña</label>
