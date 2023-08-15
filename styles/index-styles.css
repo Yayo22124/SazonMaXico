@@ -44,13 +44,13 @@ header {
     flex-direction: column;
     position: relative;
 
-    background: linear-gradient(90deg, rgba(139, 0, 0, 0.6) 50%, transparent 0),
+    /* background: linear-gradient(90deg, rgba(139, 0, 0, 0.6) 50%, transparent 0),
         linear-gradient(rgba(139, 0, 0, 0.6) 50%, transparent 0);
-    background-size: 5px 5px;
+    background-size: 5px 5px; */
     /* background */
-    /* background-image: url('/sazonmaxico/img/index-img/Bg-restaurante.svg'); */
-    /* background-size: contain; */
-    /* filter: saturate(135%); */
+    background-image: url('/sazonmaxico/img/index-img/Bg-restaurante.svg');
+    background-size: contain;
+    filter: saturate(135%);
 
     /* ---- Tittle Header (H1) ---- */
     &>h1 {
