@@ -32,14 +32,22 @@
         <img src="/sazonmaxico/img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
         <!-- Links Menu -->
         <ul class="links">
-            <li><a href="/sazonmaxico/index.html">Inicio</a></li>
+            <li><a href="/sazonmaxico/index.php">Inicio</a></li>
             <li><a href="/sazonmaxico/carta.html">Carta</a></li>
             <li><a href="/sazonmaxico/menu-del-dia.html">Menú del Día</a></li>
             <li><a href="/sazonmaxico/evento1.html">Eventos</a></li>
             <li><a href="/sazonmaxico/reservas-inicio.html">Reservas</a></li>
         </ul>
         <!-- Iniciar sesion button -->
-        <a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a>
+        <!-- <a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a> -->
+        <?php
+        include "auth_check.php"; // Incluir el archivo auth
+        if (isLoggedIn()) {
+            echo '<a href="/sazonmaxico/logout.php" class="login">Cerrar Sesión</a>';
+        } else {
+            echo '<a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a>';
+        }
+        ?>
         <!-- Dropdown button -->
         <div class="dropdown-button-container">
             <img src="/sazonmaxico/img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
@@ -51,7 +59,7 @@
 
         <!-- dropdown menu -->
         <ul class="dropdown-menu active" id="dropdown-menu">
-            <li class="dropdown-nav"><a href="/sazonmaxico/index.html">Inicio</a></li>
+            <li class="dropdown-nav"><a href="/sazonmaxico/index.php">Inicio</a></li>
             <li class="dropdown-nav"><a href="/sazonmaxico/carta.html">Carta</a></li>
             <li class="dropdown-nav"><a href="/sazonmaxico/menu-del-dia.html">Menú del Día</a></li>
             <li class="dropdown-nav"><a href="/sazonmaxico/evento1.html">Eventos</a></li>
@@ -147,7 +155,7 @@
                 <li><a href="#">Política de Privacidad</a></li>
             </ul>
             <!-- center logo -->
-            <a href="/sazonmaxico/index.html">
+            <a href="/sazonmaxico/index.php">
                 <img loading="lazy" src="/sazonmaxico/img/index-img/logo-footer.svg" alt="logo SazónMáXico">
             </a>
             <!-- list right -->
