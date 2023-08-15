@@ -54,14 +54,24 @@
                 // Obtener el ID de la persona recién insertada
                 $persona_id = mysqli_insert_id($conn);
 
+                // Calcular la edad utilizando la función fn_calcula_edad
+                $edad_query = "SELECT fn_calcula_edad('$fecha_nacimiento') AS edad";
+                $result_edad = mysqli_query($conn, $edad_query);
+                $edad_data = mysqli_fetch_assoc($result_edad);
+                $edad = $edad_data['edad'];
+
                 // Insertar datos en la tabla tbb_usuarios
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hashear la contraseña
-                $insert_usuario_query = "INSERT INTO tbb_usuarios (Persona_ID, Nombre_Usuario, Email, Password) VALUES ('$persona_id', '$nombre', '$correo', '$hashed_password')";
+                $insert_usuario_query = "INSERT INTO tbb_usuarios (Persona_ID, Nombre_Usuario, Email, Password, Edad) VALUES ('$persona_id', '$nombre', '$correo', '$hashed_password', '$edad')";
                 $result_usuario = mysqli_query($conn, $insert_usuario_query);
 
                 if ($result_usuario) {
                     // Registro exitoso
                     $notification = array("status" => "success", "message" => "Registro exitoso!");
+
+                    // Redirigir a la página de inicio de sesión
+                    header("Location: /sazonmaxico/login.php");
+                    exit();
                 } else {
                     $notification = array("status" => "error", "message" => "Error al registrar el usuario: " . mysqli_error($conn));
                 }
