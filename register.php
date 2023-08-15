@@ -103,7 +103,7 @@
             <h2><i>Crea una cuenta y accede a más funciones</i></h2>
 
             <!-- ######## form ######## -->
-            <form>
+            <form method="POST">
                 <!-- Name Input -->
                 <div class="form-control">
                     <input type="text" class="input" name="nombre" required="true" />
