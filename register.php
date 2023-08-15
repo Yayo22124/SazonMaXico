@@ -75,6 +75,7 @@
     }
 
     ?>
+    <div class="notification" id="notification"></div>
     <main class="container">
         <!-- left container (form) -->
         <div class="left-container">
