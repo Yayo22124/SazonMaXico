@@ -1,7 +1,7 @@
 /* Agrega aquí tus estilos CSS */
 .notification {
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 20px;
+    margin: 10px auto;
     border-radius: 4px;
     font-weight: bold;
     font-family: 'Inter';
@@ -18,6 +18,7 @@
     color: white;
     font-family: 'Inter';
     z-index: 55;
+    margin:auto;
 }
 
 .error {
@@ -25,4 +26,5 @@
     color: white;
     font-family: 'Inter';
     z-index: 55;
+    margin:auto;
 }
