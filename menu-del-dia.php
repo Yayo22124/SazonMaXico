@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="/sazonmaxico/styles/footer-styles.css">
   <link rel="stylesheet" href="/sazonmaxico/styles/navbar.css">
   <link rel="stylesheet" href="/sazonmaxico/styles/menu-del-dia.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> -->
 
   <!-- Tittle Page -->
   <title>SazónMáXico | Menú del Día</title>
