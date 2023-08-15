@@ -79,6 +79,17 @@
                         alt="help">Ayuda</a></li>
         </ul>
     </nav>
+    <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
+    include "auth_check.php";
+    if (isLoggedIn()) {
+        echo '<a href="/sazonmaxico/logout.php" class="login">Cerrar Sesión</a>';
+    } else {
+        echo '<a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a>';
+    }
+    ?>
     <header class="parallax">
         <h1>Sázon MáXico</h1>
     </header>
