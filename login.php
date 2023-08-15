@@ -50,7 +50,7 @@
                 $expiration_time = date('Y-m-d H:i:s', strtotime('+1 hour')); // Una hora después de la creación
     
                 // Insertar el token en la tabla tb_keyring
-                $user_id = $user_data['ID'];
+                $user_id = $user_data['Persona_ID'];
                 $insert_token_query = "INSERT INTO tb_keyring (user_id, token, fecha_creacion, fecha_expiracion) VALUES ($user_id, '$token', '$creation_time', '$expiration_time')";
                 $result_token = mysqli_query($conn, $insert_token_query);
 
