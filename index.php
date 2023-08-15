@@ -41,7 +41,7 @@
         <!-- Iniciar sesion button -->
         <!-- <a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a> -->
         <?php
-        include "auth_check.php"; // Incluir el archivo auth
+        include "/sazonmaxico/auth_check.php";
         if (isLoggedIn()) {
             echo '<a href="/sazonmaxico/logout.php" class="login">Cerrar Sesión</a>';
         } else {
