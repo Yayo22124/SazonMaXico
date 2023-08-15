@@ -92,11 +92,11 @@
             <!-- Header of Form -->
             <header>
                 <!-- icon (return) -->
-                <a href="/sazonmaxico/index.html">
+                <a href="/sazonmaxico/index.php">
                     <img src="/sazonmaxico/img/return.svg" alt="back">
                 </a>
                 <!-- logo -->
-                <a href="/sazonmaxico/index.html">
+                <a href="/sazonmaxico/index.php">
                     <img src="/sazonmaxico/img/logo-header.svg" alt="logo SazónMaXico">
                 </a>
             </header>
@@ -167,7 +167,7 @@
 
                 <!-- sign in - button -->
                 <button type="submit">Crear Cuenta</button>
-                <span class="create-account">¿Ya tienes cuenta? <b class="pd60"><a href="/sazonmaxico/login.html">Inicia
+                <span class="create-account">¿Ya tienes cuenta? <b class="pd60"><a href="/sazonmaxico/login.php">Inicia
                             Sesión</a></b></span>
             </form>
         </div>
