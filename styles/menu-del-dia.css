@@ -14,16 +14,17 @@ body{
   justify-content: center;
 }
 
-.downloadPdfButton {
+#downloadPdfButton {
   background-color: #F9B338;
   border: none;
   border-radius: 12px;
   padding: 15px;
 }
-.downloadPdfButton:hover {
+
+#downloadPdfButton:hover {
   transform: scale(1.05);
 }
-.downloadPdfButton:focus {
+#downloadPdfButton:focus {
   transform: scale(0.93);
 }
 
