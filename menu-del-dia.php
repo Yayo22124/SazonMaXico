@@ -261,7 +261,7 @@
     </div>
   </div>
   <div class="boton-container">
-    <button id="downloadPdfButton">Descargar PDF</button>
+    <button id="downloadPdfButton">Descargar Menu</button>
 
   </div>
   <!-- footer page -->
