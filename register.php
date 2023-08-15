@@ -36,29 +36,37 @@
         $genero = $_POST["genero"];
         $password = $_POST["passwd"];
 
-        // Aquí puedes hacer validaciones y sanitización de datos
-    
-        // Insertar datos en la tabla tbb_personas
-        $insert_persona_query = "INSERT INTO tbb_personas (Nombre, Primer_Apellido, Segundo_Apellido, Genero, Fecha_Nacimiento) VALUES ('$nombre', '$primer_apellido', '$segundo_apellido', '$genero', '$fecha_nacimiento')";
-        $result_persona = mysqli_query($conn, $insert_persona_query);
+        // Verificar si el correo ya existe en la tabla tbb_usuarios
+        $check_email_query = "SELECT COUNT(*) AS count FROM tbb_usuarios WHERE Email = '$correo'";
+        $result_email = mysqli_query($conn, $check_email_query);
+        $email_data = mysqli_fetch_assoc($result_email);
 
-        if ($result_persona) {
-            // Obtener el ID de la persona recién insertada
-            $persona_id = mysqli_insert_id($conn);
-
-            // Insertar datos en la tabla tbb_usuarios
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hashear la contraseña
-            $insert_usuario_query = "INSERT INTO tbb_usuarios (Persona_ID, Nombre_Usuario, Email, Password) VALUES ('$persona_id', '$nombre', '$correo', '$hashed_password')";
-            $result_usuario = mysqli_query($conn, $insert_usuario_query);
-
-            if ($result_usuario) {
-                // Registro exitoso, redirigir o mostrar un mensaje de éxito
-                echo "Registro exitoso!";
-            } else {
-                echo "Error al registrar el usuario: " . mysqli_error($conn);
-            }
+        if ($email_data['count'] > 0) {
+            // El correo ya está registrado, mostrar un mensaje de error
+            echo "Este correo ya está registrado. Por favor, elige otro correo.";
         } else {
-            echo "Error al registrar la persona: " . mysqli_error($conn);
+            // Insertar datos en la tabla tbb_personas
+            $insert_persona_query = "INSERT INTO tbb_personas (Nombre, Primer_Apellido, Segundo_Apellido, Genero, Fecha_Nacimiento) VALUES ('$nombre', '$primer_apellido', '$segundo_apellido', '$genero', '$fecha_nacimiento')";
+            $result_persona = mysqli_query($conn, $insert_persona_query);
+
+            if ($result_persona) {
+                // Obtener el ID de la persona recién insertada
+                $persona_id = mysqli_insert_id($conn);
+
+                // Insertar datos en la tabla tbb_usuarios
+                $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hashear la contraseña
+                $insert_usuario_query = "INSERT INTO tbb_usuarios (Persona_ID, Nombre_Usuario, Email, Password) VALUES ('$persona_id', '$nombre', '$correo', '$hashed_password')";
+                $result_usuario = mysqli_query($conn, $insert_usuario_query);
+
+                if ($result_usuario) {
+                    // Registro exitoso, redirigir o mostrar un mensaje de éxito
+                    echo "Registro exitoso!";
+                } else {
+                    echo "Error al registrar el usuario: " . mysqli_error($conn);
+                }
+            } else {
+                echo "Error al registrar la persona: " . mysqli_error($conn);
+            }
         }
 
         // Cerrar la conexión
