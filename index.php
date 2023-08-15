@@ -27,6 +27,7 @@
 
 <body>
     <?php include "auth_check.php" ?>
+    <?php include "conexion.php" ?>
     <!-- Nav Bar -->
     <nav class="bar">
         <!-- Logo -->
@@ -44,7 +45,7 @@
         <?php
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
-        if (isLoggedIn()) {
+        if (isLoggedIn($conn)) {
             echo '<a href="/sazonmaxico/logout.php" class="login">Cerrar Sesión</a>';
         } else {
             echo '<a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a>';
