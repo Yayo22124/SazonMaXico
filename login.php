@@ -76,11 +76,11 @@
             <!-- Header of Form -->
             <header>
                 <!-- icon (return) -->
-                <a href="/sazonmaxico/index.html">
+                <a href="/sazonmaxico/index.php">
                     <img src="/sazonmaxico/img/return.svg" alt="back">
                 </a>
                 <!-- logo -->
-                <a href="/sazonmaxico/index.html">
+                <a href="/sazonmaxico/index.php">
                     <img src="/sazonmaxico/img/logo-header.svg" alt="logo SazónMaXico">
                 </a>
             </header>
