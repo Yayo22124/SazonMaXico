@@ -27,6 +27,9 @@
     <!-- Envio de datos PHP -->
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        error_reporting(E_ALL);
+        ini_set('display_errors', '1');
+
         // Obtener los datos del formulario
         $correo = $_POST["correo"];
         $password = $_POST["password"]; // Asegúrate de tener un campo 'password' en tu formulario
