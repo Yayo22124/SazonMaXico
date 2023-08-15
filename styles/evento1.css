@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   box-sizing: border-box;
-  
+
   /* Añadido por Haziel: Fuente */
   font-family: 'Inter';
 }
@@ -217,7 +217,7 @@ input:hover {
   background: #F9B338;
 }
 
-*/ #titulo2 {
+#titulo2 {
   font-size: 70px;
   flex-grow: 1;
   text-align: center;
