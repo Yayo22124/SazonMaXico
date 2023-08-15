@@ -44,7 +44,7 @@ header {
     flex-direction: column;
     position: relative;
 
-    --s: 120px;
+    --s: 20px;
     /* control the size */
 
     background:
