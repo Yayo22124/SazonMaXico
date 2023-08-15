@@ -41,6 +41,9 @@
         <!-- Iniciar sesion button -->
         <!-- <a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a> -->
         <?php
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+
         include "/sazonmaxico/auth_check.php";
         if (isLoggedIn()) {
             echo '<a href="/sazonmaxico/logout.php" class="login">Cerrar Sesión</a>';
@@ -66,11 +69,14 @@
             <li class="dropdown-nav"><a href="/sazonmaxico/reservas-inicio.html">Reservas</a></li>
             <!-- settings -->
             <hr class="dropdown-line">
-            <li class="settings"><a href="/sazonmaxico/login.php"><img src="/sazonmaxico/img/navbar-icons/usuario.png" alt="user"> Iniciar
+            <li class="settings"><a href="/sazonmaxico/login.php"><img src="/sazonmaxico/img/navbar-icons/usuario.png"
+                        alt="user"> Iniciar
                     Sesión</a></li>
-            <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/documento.png" alt="user">Política y
+            <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/documento.png" alt="user">Política
+                    y
                     Privacidad</a></li>
-            <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+            <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/interrogatorio.png"
+                        alt="help">Ayuda</a></li>
         </ul>
     </nav>
     <header class="parallax">
