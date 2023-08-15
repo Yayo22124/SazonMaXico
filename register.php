@@ -169,6 +169,25 @@
 </body>
 <!-- scripts -->
 <script src="/sazonmaxico/js/see-password.js"></script>
-<script src="/sazonmaxico/js/notification.js"></script>
+<!-- notifications -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var notificationData = <?php echo json_encode($notification); ?>;
+
+        if (notificationData) {
+            var notificationContainer = document.getElementById("notification");
+            var notificationDiv = document.createElement("div");
+
+            notificationDiv.classList.add("notification", notificationData.status);
+            notificationDiv.textContent = notificationData.message;
+
+            notificationContainer.appendChild(notificationDiv);
+
+            setTimeout(function () {
+                notificationDiv.style.display = "none";
+            }, 5000); // Ocultar la notificación después de 5 segundos
+        }
+    });
+</script>
 
 </html>
