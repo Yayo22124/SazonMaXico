@@ -26,46 +26,62 @@
 
     <!-- Envio de datos PHP -->
     <?php
-    error_reporting(E_ALL);
-    ini_set('display_errors', '1');
-    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Obtener los datos del formulario
         $correo = $_POST["correo"];
         $password = $_POST["password"]; // Asegúrate de tener un campo 'password' en tu formulario
     
         // Verificar las credenciales del usuario en la base de datos
-        $check_user_query = "SELECT Persona_ID, Email, Password FROM tbb_usuarios WHERE Email = '$correo'";
-        $result_user = mysqli_query($conn, $check_user_query);
-        $user_data = mysqli_fetch_assoc($result_user);
+        $check_user_query = "SELECT Persona_ID, Email, Password FROM tbb_usuarios WHERE Email = ?";
+        $stmt = mysqli_prepare($conn, $check_user_query);
 
-        if ($user_data) {
-            // Verificar la contraseña
-            if (password_verify($password, $user_data['Password'])) {
-                // Generar un token único
-                $token = bin2hex(random_bytes(32)); // Genera un token hexadecimal de 64 caracteres
-    
-                // Calcular las fechas de creación y expiración
-                $creation_time = date('Y-m-d H:i:s');
-                $expiration_time = date('Y-m-d H:i:s', strtotime('+1 hour')); // Una hora después de la creación
-    
-                // Insertar el token en la tabla tb_keyring
-                $user_id = $user_data['Persona_ID'];
-                $insert_token_query = "INSERT INTO tb_keyring (user_id, token, fecha_creacion, fecha_expiracion) VALUES ($user_id, '$token', '$creation_time', '$expiration_time')";
-                $result_token = mysqli_query($conn, $insert_token_query);
+        if ($stmt) {
+            mysqli_stmt_bind_param($stmt, "s", $correo);
+            mysqli_stmt_execute($stmt);
+            $result_user = mysqli_stmt_get_result($stmt);
+            $user_data = mysqli_fetch_assoc($result_user);
 
-                if ($result_token) {
-                    // Redirigir al usuario a su página de inicio o al panel
-                    header("Location: /sazonmaxico/index.php"); // Cambia la URL a la página deseada
-                    exit();
+            if ($user_data) {
+                // Verificar la contraseña
+                if (password_verify($password, $user_data['Password'])) {
+                    // Generar un token único
+                    $token = bin2hex(random_bytes(32)); // Genera un token hexadecimal de 64 caracteres
+    
+                    // Calcular las fechas de creación y expiración
+                    $creation_time = date('Y-m-d H:i:s');
+                    $expiration_time = date('Y-m-d H:i:s', strtotime('+1 hour')); // Una hora después de la creación
+    
+                    // Insertar el token en la tabla tb_keyring
+                    $user_id = $user_data['Persona_ID'];
+                    $insert_token_query = "INSERT INTO tb_keyring (user_id, token, fecha_creacion, fecha_expiracion) VALUES (?, ?, ?, ?)";
+                    $stmt_insert = mysqli_prepare($conn, $insert_token_query);
+
+                    if ($stmt_insert) {
+                        mysqli_stmt_bind_param($stmt_insert, "isss", $user_id, $token, $creation_time, $expiration_time);
+                        $result_token = mysqli_stmt_execute($stmt_insert);
+
+                        if ($result_token) {
+                            // Redirigir al usuario a su página de inicio o al panel
+                            header("Location: /sazonmaxico/index.php"); // Cambia la URL a la página deseada
+                            exit();
+                        } else {
+                            $notification = array("status" => "error", "message" => "Error al generar el token: " . mysqli_error($conn));
+                        }
+
+                        mysqli_stmt_close($stmt_insert);
+                    } else {
+                        $notification = array("status" => "error", "message" => "Error en la preparación de la consulta: " . mysqli_error($conn));
+                    }
                 } else {
-                    $notification = array("status" => "error", "message" => "Error al generar el token: " . mysqli_error($conn));
+                    $notification = array("status" => "error", "message" => "Contraseña incorrecta.");
                 }
             } else {
-                $notification = array("status" => "error", "message" => "Contraseña incorrecta.");
+                $notification = array("status" => "error", "message" => "Usuario no encontrado.");
             }
+
+            mysqli_stmt_close($stmt);
         } else {
-            $notification = array("status" => "error", "message" => "Usuario no encontrado.");
+            $notification = array("status" => "error", "message" => "Error en la preparación de la consulta: " . mysqli_error($conn));
         }
 
         // Cerrar la conexión
@@ -97,7 +113,7 @@
                 <div class="form-control">
                     <!-- <input type="Email" placeholder="Correo Electrónico"> -->
 
-                    <input type="text" class="input" required="true" name="correo" id="correo"/>
+                    <input type="text" class="input" required="true" name="correo" id="correo" />
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label>Correo Electrónico</label>
