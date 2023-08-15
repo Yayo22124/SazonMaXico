@@ -44,7 +44,7 @@
 
         if ($email_data['count'] > 0) {
             // El correo ya está registrado, mostrar un mensaje de error
-            echo "Este correo ya está registrado. Por favor, elige otro correo.";
+            $notification = array("status" => "error", "message" => "Este correo ya está registrado. Por favor, elige otro correo.");
         } else {
             // Insertar datos en la tabla tbb_personas
             $insert_persona_query = "INSERT INTO tbb_personas (Nombre, Primer_Apellido, Segundo_Apellido, Genero, Fecha_Nacimiento) VALUES ('$nombre', '$primer_apellido', '$segundo_apellido', '$genero', '$fecha_nacimiento')";
@@ -60,13 +60,13 @@
                 $result_usuario = mysqli_query($conn, $insert_usuario_query);
 
                 if ($result_usuario) {
-                    // Registro exitoso, redirigir o mostrar un mensaje de éxito
-                    echo "Registro exitoso!";
+                    // Registro exitoso
+                    $notification = array("status" => "success", "message" => "Registro exitoso!");
                 } else {
-                    echo "Error al registrar el usuario: " . mysqli_error($conn);
+                    $notification = array("status" => "error", "message" => "Error al registrar el usuario: " . mysqli_error($conn));
                 }
             } else {
-                echo "Error al registrar la persona: " . mysqli_error($conn);
+                $notification = array("status" => "error", "message" => "Error al registrar la persona: " . mysqli_error($conn));
             }
         }
 
