@@ -12,10 +12,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
-    <link rel="shortcut icon" href="/img/Xicote.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/sazonmaxico/img/Xicote.svg" type="image/x-icon">
     <!-- CSS link -->
-    <link rel="stylesheet" href="/styles/register-styles.css">
-    <link rel="stylesheet" href="/styles/scroll-styles.css">
+    <link rel="stylesheet" href="/sazonmaxico/styles/register-styles.css">
+    <link rel="stylesheet" href="/sazonmaxico/styles/scroll-styles.css">
+    <link rel="stylesheet" href="/sazonmaxico/styles/notification.css">
 
     <title>SazónMáXico | Crear Cuenta</title>
 </head>
@@ -26,76 +27,77 @@
 
     <!-- Envio de datos PHP -->
     <?php
-    // Obtener datos del Formularios
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Obtener Nombre
+        // Obtener los datos del formulario
         $nombre = $_POST["nombre"];
-        // Obtener Primer Apellido
-        $primerA = $_POST["primer_apellido"];
-        // Obtener Segundo Apellido
-        $segundoA = $_POST["segundo_apellido"];
-        // Obtener Correo
+        $primer_apellido = $_POST["primer_apellido"];
+        $segundo_apellido = $_POST["segundo_apellido"];
         $correo = $_POST["correo"];
-        // Obtener Fecha Nacimiento
-        $fechaN = $_POST["date"];
-        // Obtener Genero
+        $fecha_nacimiento = $_POST["date"];
         $genero = $_POST["genero"];
-        // Obtener Contraseña
-        $passwd = $_POST["passwd"];
+        $password = $_POST["passwd"];
 
-        // Encriptar la contraseña
-        $hash_passwd = password_hash($passwd, PASSWORD_DEFAULT);
+        // Verificar si el correo ya existe en la tabla tbb_usuarios
+        $check_email_query = "SELECT COUNT(*) AS count FROM tbb_usuarios WHERE Email = '$correo'";
+        $result_email = mysqli_query($conn, $check_email_query);
+        $email_data = mysqli_fetch_assoc($result_email);
 
-        $consulta_correo = "SELECT COUNT(*) AS total FROM tbb_usuarios WHERE Correo = '$correo'";
-        $resultado_consulta = $conn->query($consulta_correo);
-
-        if ($resultado_consulta) {
-            $fila = $resultado_consulta->fetch_assoc();
-            $total = $fila["total"];
-
-            if ($total > 0) {
-                echo "Ya existe una cuenta con este correo. Por favor, elige otro correo.";
-            } else {
-                // consulta SQL para registrar los datos
-                $sql = "INSERT INTO tbb_personas VALUES (default, $nombre, $primerA, $segundoA, $genero, $fechaN, default, default)";
-                $consulta_id_persona = "SELECT ID FROM tbb_personas ORDER BY DESC ID LIMIT 1";
-                $id_persona = $conn->query($consulta_id_persona);
-                $sql_usuarios = "INSERT INTO tbb_usuarios VALUES ($id_persona, $nombre, $correo, default, fn_calcula_edad($fechaN), default, default, default )";
-
-
-
-
-                // Verificar consulta
-                if ($conn->query($sql) === TRUE) {
-                    header("Location: login.html"); // Redirigir a la página de confirmación
-                    $resultado = true;
-                    exit;
-                } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
-                    $resultado = false;
-                }
-            }
+        if ($email_data['count'] > 0) {
+            // El correo ya está registrado, mostrar un mensaje de error
+            $notification = array("status" => "error", "message" => "Este correo ya está registrado. Por favor, elige otro correo.");
         } else {
-            echo "Error en la consulta: " . $conn->error;
+            // Insertar datos en la tabla tbb_personas
+            $insert_persona_query = "INSERT INTO tbb_personas (Nombre, Primer_Apellido, Segundo_Apellido, Genero, Fecha_Nacimiento) VALUES ('$nombre', '$primer_apellido', '$segundo_apellido', '$genero', '$fecha_nacimiento')";
+            $result_persona = mysqli_query($conn, $insert_persona_query);
+
+            if ($result_persona) {
+                // Obtener el ID de la persona recién insertada
+                $persona_id = mysqli_insert_id($conn);
+
+                // Calcular la edad utilizando la función fn_calcula_edad
+                $edad_query = "SELECT fn_calcula_edad('$fecha_nacimiento') AS edad";
+                $result_edad = mysqli_query($conn, $edad_query);
+                $edad_data = mysqli_fetch_assoc($result_edad);
+                $edad = $edad_data['edad'];
+
+                // Insertar datos en la tabla tbb_usuarios
+                $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hashear la contraseña
+                $insert_usuario_query = "INSERT INTO tbb_usuarios (Persona_ID, Nombre_Usuario, Email, Password, Edad) VALUES ('$persona_id', '$nombre', '$correo', '$hashed_password', '$edad')";
+                $result_usuario = mysqli_query($conn, $insert_usuario_query);
+
+                if ($result_usuario) {
+                    // Registro exitoso
+                    $notification = array("status" => "success", "message" => "Registro exitoso!");
+
+                    // Redirigir a la página de inicio de sesión
+                    header("Location: /sazonmaxico/login.php");
+                    exit();
+                } else {
+                    $notification = array("status" => "error", "message" => "Error al registrar el usuario: " . mysqli_error($conn));
+                }
+            } else {
+                $notification = array("status" => "error", "message" => "Error al registrar la persona: " . mysqli_error($conn));
+            }
         }
 
-        $conn->close();
-
+        // Cerrar la conexión
+        mysqli_close($conn);
     }
 
     ?>
+    <div class="notification" id="notification"></div>
     <main class="container">
         <!-- left container (form) -->
         <div class="left-container">
             <!-- Header of Form -->
             <header>
                 <!-- icon (return) -->
-                <a href="/index.html">
-                    <img src="/img/return.svg" alt="back">
+                <a href="/sazonmaxico/index.php">
+                    <img src="/sazonmaxico/img/return.svg" alt="back">
                 </a>
                 <!-- logo -->
-                <a href="/index.html">
-                    <img src="/img/logo-header.svg" alt="logo SazónMaXico">
+                <a href="/sazonmaxico/index.php">
+                    <img src="/sazonmaxico/img/logo-header.svg" alt="logo SazónMaXico">
                 </a>
             </header>
 
@@ -103,7 +105,7 @@
             <h2><i>Crea una cuenta y accede a más funciones</i></h2>
 
             <!-- ######## form ######## -->
-            <form>
+            <form method="POST">
                 <!-- Name Input -->
                 <div class="form-control">
                     <input type="text" class="input" name="nombre" required="true" />
@@ -154,10 +156,10 @@
                     <label>Contraseña</label>
                     <div class="mostrar-ocultar">
                         <!-- ver contraseña -->
-                        <img src="/img/login-register-img/ver.svg" alt="ver contraseña" id="ver"
+                        <img src="/sazonmaxico/img/login-register-img/ver.svg" alt="ver contraseña" id="ver"
                             onclick="verContrasenia()">
                         <!-- ocultar contraseña -->
-                        <img src="/img/login-register-img/ocultar.svg" alt="Ocultar contraseña" id="ocultar"
+                        <img src="/sazonmaxico/img/login-register-img/ocultar.svg" alt="Ocultar contraseña" id="ocultar"
                             onclick="ocultarContrasenia()">
                     </div>
                 </div>
@@ -165,7 +167,7 @@
 
                 <!-- sign in - button -->
                 <button type="submit">Crear Cuenta</button>
-                <span class="create-account">¿Ya tienes cuenta? <b class="pd60"><a href="/login.html">Inicia
+                <span class="create-account">¿Ya tienes cuenta? <b class="pd60"><a href="/sazonmaxico/login.php">Inicia
                             Sesión</a></b></span>
             </form>
         </div>
@@ -176,6 +178,31 @@
     </main>
 </body>
 <!-- scripts -->
-<script src="/js/see-password.js"></script>
+<script src="/sazonmaxico/js/see-password.js"></script>
+<!-- notifications -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var notificationData = <?php echo json_encode($notification); ?>;
+
+        if (notificationData) {
+            var notificationContainer = document.getElementById("notification");
+            var notificationDiv = document.createElement("div");
+
+            notificationDiv.classList.add("notification", notificationData.status);
+            notificationDiv.textContent = notificationData.message;
+
+            notificationContainer.style.maxHeight = "auto";
+            notificationContainer.style.display = "block";
+            notificationDiv.style.display = "block";
+            notificationContainer.appendChild(notificationDiv);
+
+            setTimeout(function () {
+                notificationDiv.style.display = "none";
+                notificationContainer.style.display = "none";
+                notificationContainer.style.maxHeight = "0";
+            }, 5000); // Ocultar la notificación después de 5 segundos
+        }
+    });
+</script>
 
 </html>

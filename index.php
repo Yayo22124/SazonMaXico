@@ -26,20 +26,31 @@
 </head>
 
 <body>
+    <?php include "auth_check.php" ?>
+    <?php include "conexion.php" ?>
     <!-- Nav Bar -->
     <nav class="bar">
         <!-- Logo -->
         <img src="/sazonmaxico/img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
         <!-- Links Menu -->
         <ul class="links">
-            <li><a href="/sazonmaxico/index.html">Inicio</a></li>
+            <li><a href="/sazonmaxico/index.php">Inicio</a></li>
             <li><a href="/sazonmaxico/carta.html">Carta</a></li>
-            <li><a href="/sazonmaxico/menu-del-dia.html">Menú del Día</a></li>
+            <li><a href="/sazonmaxico/menu-del-dia.php">Menú del Día</a></li>
             <li><a href="/sazonmaxico/evento1.html">Eventos</a></li>
             <li><a href="/sazonmaxico/reservas-inicio.html">Reservas</a></li>
         </ul>
         <!-- Iniciar sesion button -->
-        <a href="/sazonmaxico/login.html" class="login">Iniciar Sesión</a>
+        <!-- <a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a> -->
+        <?php
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+        if (isLoggedIn($conn)) {
+            echo '<a href="/sazonmaxico/logout.php" class="login">Cerrar Sesión</a>';
+        } else {
+            echo '<a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a>';
+        }
+        ?>
         <!-- Dropdown button -->
         <div class="dropdown-button-container">
             <img src="/sazonmaxico/img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
@@ -51,18 +62,21 @@
 
         <!-- dropdown menu -->
         <ul class="dropdown-menu active" id="dropdown-menu">
-            <li class="dropdown-nav"><a href="/sazonmaxico/index.html">Inicio</a></li>
+            <li class="dropdown-nav"><a href="/sazonmaxico/index.php">Inicio</a></li>
             <li class="dropdown-nav"><a href="/sazonmaxico/carta.html">Carta</a></li>
-            <li class="dropdown-nav"><a href="/sazonmaxico/menu-del-dia.html">Menú del Día</a></li>
+            <li class="dropdown-nav"><a href="/sazonmaxico/menu-del-dia.php">Menú del Día</a></li>
             <li class="dropdown-nav"><a href="/sazonmaxico/evento1.html">Eventos</a></li>
             <li class="dropdown-nav"><a href="/sazonmaxico/reservas-inicio.html">Reservas</a></li>
             <!-- settings -->
             <hr class="dropdown-line">
-            <li class="settings"><a href="/sazonmaxico/login.html"><img src="/sazonmaxico/img/navbar-icons/usuario.png" alt="user"> Iniciar
+            <li class="settings"><a href="/sazonmaxico/login.php"><img src="/sazonmaxico/img/navbar-icons/usuario.png"
+                        alt="user"> Iniciar
                     Sesión</a></li>
-            <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/documento.png" alt="user">Política y
+            <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/documento.png" alt="user">Política
+                    y
                     Privacidad</a></li>
-            <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+            <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/interrogatorio.png"
+                        alt="help">Ayuda</a></li>
         </ul>
     </nav>
     <header class="parallax">
@@ -147,7 +161,7 @@
                 <li><a href="#">Política de Privacidad</a></li>
             </ul>
             <!-- center logo -->
-            <a href="/sazonmaxico/index.html">
+            <a href="/sazonmaxico/index.php">
                 <img loading="lazy" src="/sazonmaxico/img/index-img/logo-footer.svg" alt="logo SazónMáXico">
             </a>
             <!-- list right -->

@@ -215,6 +215,7 @@ body {
 .input:hover {
     border-bottom: 2px solid #F9B338;
 }
+
 .input:focus {
     outline: none;
     border-bottom: 2px solid #F9B338;
@@ -292,7 +293,7 @@ body {
     position: relative;
 }
 
-.passwd > input {
+.passwd>input {
     padding-right: 34px;
 }
 
@@ -357,9 +358,14 @@ body {
     height: 100vh;
 
     /* bg image */
-    background-image: url(/img/restaurant.png);
-    background-size: cover;
-    background-position: center;
+    /* background-image: url(/img/restaurant.png); */
+    --s: 120px;
+    /* control the size */
+
+    background:
+        conic-gradient(from 150deg at 50% 33%, #0000, #FA6900 .5deg 60deg, #0000 60.5deg) calc(var(--s)/2) calc(var(--s)/1.4),
+        conic-gradient(from -30deg at 50% 66%, #0000, #D95B43 .5deg 60deg, #ECD078 60.5deg);
+    background-size: var(--s) calc(var(--s)/1.154);
 
     /* animation */
     animation: fade-in 0.5s case-in-out;
@@ -395,7 +401,7 @@ body {
     .left-container {
         width: 100%;
     }
-    
+
     .right-container {
         display: none;
     }

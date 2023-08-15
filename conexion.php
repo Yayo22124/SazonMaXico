@@ -1,11 +1,12 @@
-<?php 
-    $server = 'localhost';
-    $DB = 'bd_sazonmaxico';
-    $user = "root";
-    $password = '022124Haziel02#';
-    try {
-        $conexion = new PDO ("mysql:host=$server;dbname=$DB",$user,$password);
-    } catch (Exception $e) {
-        echo $e->getMessage();
-    }
+<?php
+$servername = "154.56.47.52";
+$username = "u117932138_raul";
+$password = "Raul53rrb53";
+$database = "u117932138_bdsazonmaxico";
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+if (!$conn) {
+    die("Conexión fallida: " . mysqli_connect_error());
+}
 ?>

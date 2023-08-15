@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Agrega aquí tus estilos CSS */
+.notification {
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'Inter';
+    max-height: 0;
+    display: none;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: fixed;
+    background-color: transparent;
+    z-index: 50;
+}
+
+.success {
+    background-color: #4CAF50;
+    color: white;
+    font-family: 'Inter';
+    z-index: 55;
+    margin:auto;
+}
+
+.error {
+    background-color: #FF5733;
+    color: white;
+    font-family: 'Inter';
+    z-index: 55;
+    margin:auto;
+}
