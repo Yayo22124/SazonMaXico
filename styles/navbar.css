@@ -263,6 +263,9 @@
 /* Responsive Design */
     /* smartphone */
 @media screen and (max-width: 767px) {
+    .dropdown-menu{
+        width: 80%;
+    }
     .links, .login {
         display: none;
     } 
