@@ -8,6 +8,8 @@
     max-height: 0;
     display: none;
     transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: fixed;
+    background-color: transparent;
 }
 
 .success {

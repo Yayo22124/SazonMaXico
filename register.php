@@ -187,6 +187,8 @@
 
             setTimeout(function () {
                 notificationDiv.style.display = "none";
+                notificationContainer.style.display = "none";
+                notificationContainer.style.maxHeight = "0";
             }, 5000); // Ocultar la notificación después de 5 segundos
         }
     });
