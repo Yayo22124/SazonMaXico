@@ -57,7 +57,7 @@
                 echo "Ya existe una cuenta con este correo. Por favor, elige otro correo.";
             } else {
                 // consulta SQL para registrar los datos
-                $sql = "INSERT INTO tbb_personas VALUES (default, $nombre, $primerA, $segundoA, $genero, $fechaN, default, default)";
+                $sql = "INSERT INTO tbb_personas VALUES (default, $nombre, $primerA, $segundoA, $genero, default,$fechaN, default, default)";
                 $consulta_id_persona = "SELECT ID FROM tbb_personas ORDER BY DESC ID LIMIT 1";
                 $id_persona = $conn->query($consulta_id_persona);
                 $sql_usuarios = "INSERT INTO tbb_usuarios VALUES ($id_persona, $nombre, $correo, default, fn_calcula_edad($fechaN), default, default, default )";
