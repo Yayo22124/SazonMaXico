@@ -359,7 +359,7 @@ body {
 
     /* bg image */
     /* background-image: url(/img/restaurant.png); */
-    --s: 64px;
+    --s: 256px;
     /* control the size */
     --c1: #EB6841;
     --c2: #EDC951;
