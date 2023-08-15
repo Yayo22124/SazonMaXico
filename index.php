@@ -44,7 +44,7 @@
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
 
-        include "/sazonmaxico/auth_check.php";
+        include "auth_check.php";
         if (isLoggedIn()) {
             echo '<a href="/sazonmaxico/logout.php" class="login">Cerrar Sesión</a>';
         } else {
