@@ -237,6 +237,7 @@ button[type="submit"]:active {
 .input:hover {
     border-bottom: 2px solid #F9B338;
 }
+
 .form-control>label {
     color: #999999;
     font-size: 16px;
@@ -250,14 +251,15 @@ button[type="submit"]:active {
     -webkit-transition: 0.4s ease al;
 }
 
-.date, .genero {
+.date,
+.genero {
     display: flex;
     flex-direction: column;
     gap: 7px;
     margin-bottom: 22px;
 }
 
-.date > input {
+.date>input {
     padding: 4px;
     width: -webkit-fill-available;
     font-size: 14px;
@@ -269,21 +271,21 @@ button[type="submit"]:active {
     transition: all 0.2s ease-in-out;
 }
 
-.date > input:focus {
+.date>input:focus {
     outline: none;
     border-bottom: 2px solid #F9B338;
 }
 
-.date > input:hover {
+.date>input:hover {
     border-bottom: 2px solid #F9B338;
 }
 
-.date > label {
+.date>label {
     position: static;
     padding-left: 12px;
 }
 
-.genero > select {
+.genero>select {
     padding: 4px;
     width: -webkit-fill-available;
     font-size: 14px;
@@ -297,17 +299,17 @@ button[type="submit"]:active {
     transition: all 0.2s ease-in-out;
 }
 
-.genero > select:focus {
+.genero>select:focus {
     outline: none;
     border-bottom: 2px solid #F9B338;
 }
 
-.genero > select:hover {
+.genero>select:hover {
     border-bottom: 2px solid #F9B338;
 }
 
 
-.genero > label {
+.genero>label {
     position: static;
     padding-left: 12px;
 }
@@ -370,7 +372,7 @@ button[type="submit"]:active {
     position: relative;
 }
 
-.passwd > input {
+.passwd>input {
     padding-right: 34px;
 }
 
@@ -448,6 +450,7 @@ button[type="submit"]:active {
     background:
         conic-gradient(from -45deg, var(--c1) 90deg, #0000 0 180deg, var(--c2) 0 270deg, #0000 0) 0 calc(var(--s)/2)/var(--s) var(--s),
         conic-gradient(from 135deg at 50% 0, var(--c1) 90deg, var(--c2) 0) 0 0/calc(2*var(--s)) var(--s);
+
 
     background-size: cover;
     background-position: center;
