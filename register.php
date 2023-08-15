@@ -16,6 +16,7 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="/sazonmaxico/styles/register-styles.css">
     <link rel="stylesheet" href="/sazonmaxico/styles/scroll-styles.css">
+    <link rel="stylesheet" href="/sazonmaxico/styles/notification.css">
 
     <title>SazónMáXico | Crear Cuenta</title>
 </head>
@@ -167,5 +168,6 @@
 </body>
 <!-- scripts -->
 <script src="/sazonmaxico/js/see-password.js"></script>
+<script src="/sazonmaxico/js/notification.js"></script>
 
 </html>
