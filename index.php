@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- icon page -->
-    <link rel="shortcut icon" href="/sazonmaxico/img/Xicote.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/Xicote.svg" type="image/x-icon">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +14,11 @@
         rel="stylesheet">
 
     <!-- CSS Link -->
-    <link rel="stylesheet" href="/sazonmaxico/styles/index-styles.css">
-    <link rel="stylesheet" href="/sazonmaxico/styles/scroll-styles.css">
-    <link rel="stylesheet" href="/sazonmaxico/styles/parallax.css">
-    <link rel="stylesheet" href="/sazonmaxico/styles/footer-styles.css">
-    <link rel="stylesheet" href="/sazonmaxico/styles/navbar.css">
+    <link rel="stylesheet" href="./styles/index-styles.css">
+    <link rel="stylesheet" href="./styles/scroll-styles.css">
+    <link rel="stylesheet" href="./styles/parallax.css">
+    <link rel="stylesheet" href="./styles/footer-styles.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
 
     <!-- Tittle Page -->
     <title>Sazón MáXico | Inicio</title>
@@ -31,51 +31,51 @@
     <!-- Nav Bar -->
     <nav class="bar">
         <!-- Logo -->
-        <img src="/sazonmaxico/img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
+        <img src="./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
         <!-- Links Menu -->
         <ul class="links">
-            <li><a href="/sazonmaxico/index.php">Inicio</a></li>
-            <li><a href="/sazonmaxico/carta.html">Carta</a></li>
-            <li><a href="/sazonmaxico/menu-del-dia.php">Menú del Día</a></li>
-            <li><a href="/sazonmaxico/evento1.html">Eventos</a></li>
-            <li><a href="/sazonmaxico/reservas-inicio.html">Reservas</a></li>
+            <li><a href="./index.php">Inicio</a></li>
+            <li><a href="./carta.html">Carta</a></li>
+            <li><a href="./menu-del-dia.php">Menú del Día</a></li>
+            <li><a href="./evento1.html">Eventos</a></li>
+            <li><a href="./reservas-inicio.html">Reservas</a></li>
         </ul>
         <!-- Iniciar sesion button -->
-        <!-- <a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a> -->
+        <!-- <a href="./login.php" class="login">Iniciar Sesión</a> -->
         <?php
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
         if (isLoggedIn($conn)) {
-            echo '<a href="/sazonmaxico/logout.php" class="login">Cerrar Sesión</a>';
+            echo '<a href="./logout.php" class="login">Cerrar Sesión</a>';
         } else {
-            echo '<a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a>';
+            echo '<a href="./login.php" class="login">Iniciar Sesión</a>';
         }
         ?>
         <!-- Dropdown button -->
         <div class="dropdown-button-container">
-            <img src="/sazonmaxico/img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
+            <img src="./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
                 onclick="mostrarMenu()">
 
-            <img src="/sazonmaxico/img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
+            <img src="./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
                 onclick="ocultarMenu()">
         </div>
 
         <!-- dropdown menu -->
         <ul class="dropdown-menu active" id="dropdown-menu">
-            <li class="dropdown-nav"><a href="/sazonmaxico/index.php">Inicio</a></li>
-            <li class="dropdown-nav"><a href="/sazonmaxico/carta.html">Carta</a></li>
-            <li class="dropdown-nav"><a href="/sazonmaxico/menu-del-dia.php">Menú del Día</a></li>
-            <li class="dropdown-nav"><a href="/sazonmaxico/evento1.html">Eventos</a></li>
-            <li class="dropdown-nav"><a href="/sazonmaxico/reservas-inicio.html">Reservas</a></li>
+            <li class="dropdown-nav"><a href="./index.php">Inicio</a></li>
+            <li class="dropdown-nav"><a href="./carta.html">Carta</a></li>
+            <li class="dropdown-nav"><a href="./menu-del-dia.php">Menú del Día</a></li>
+            <li class="dropdown-nav"><a href="./evento1.html">Eventos</a></li>
+            <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
             <!-- settings -->
             <hr class="dropdown-line">
-            <li class="settings"><a href="/sazonmaxico/login.php"><img src="/sazonmaxico/img/navbar-icons/usuario.png"
+            <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png"
                         alt="user"> Iniciar
                     Sesión</a></li>
-            <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/documento.png" alt="user">Política
+            <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política
                     y
                     Privacidad</a></li>
-            <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/interrogatorio.png"
+            <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png"
                         alt="help">Ayuda</a></li>
         </ul>
     </nav>
@@ -86,7 +86,7 @@
     <main class="container">
         <!-- Menu del Dia Section -->
         <section class="menu-container">
-            <img loading="lazy" src="/sazonmaxico/img/index-img/logo-amarillo.svg" alt="logo-SazónMáXico">
+            <img loading="lazy" src="./img/index-img/logo-amarillo.svg" alt="logo-SazónMáXico">
             <div class="menu-del-dia">
 
                 <!-- Menu del Día Dinámico (Horario) -->
@@ -107,17 +107,17 @@
         <section class="banquete-container">
             <!-- header -->
             <div class="banquete-header">
-                <img loading="lazy" src="/sazonmaxico/img/index-img/Azteca.svg" alt="Azteca image">
+                <img loading="lazy" src="./img/index-img/Azteca.svg" alt="Azteca image">
                 <h2>El Banquete Azteca</h2>
-                <img loading="lazy" src="/sazonmaxico/img/index-img/Azteca-invert.svg" alt="Azteca image invert">
+                <img loading="lazy" src="./img/index-img/Azteca-invert.svg" alt="Azteca image invert">
             </div>
 
             <!-- banquete scroll images -->
             <div class="banquete-scroll">
-                <img loading="lazy" src="/sazonmaxico/img/index-img/platillo-1-banquete.svg" alt="platillo 1">
-                <img loading="lazy" src="/sazonmaxico/img/index-img/platillo-2-banquete.svg" alt="platillo 2">
-                <img loading="lazy" src="/sazonmaxico/img/index-img/platillo-3-banquete.svg" alt="platillo 3">
-                <img loading="lazy" src="/sazonmaxico/img/index-img/platillo-4-banquete.svg" alt="platillo 4">
+                <img loading="lazy" src="./img/index-img/platillo-1-banquete.svg" alt="platillo 1">
+                <img loading="lazy" src="./img/index-img/platillo-2-banquete.svg" alt="platillo 2">
+                <img loading="lazy" src="./img/index-img/platillo-3-banquete.svg" alt="platillo 3">
+                <img loading="lazy" src="./img/index-img/platillo-4-banquete.svg" alt="platillo 4">
             </div>
             <!-- Banquete Info -->
             <p>El plato principal incluye una generosa porción de tamal de maíz, relleno de pollo en salsa verde y
@@ -156,13 +156,13 @@
         <div class="footer-top">
             <!-- left list -->
             <ul class="footer-list-left">
-                <li><a href="/sazonmaxico/carta.html">Carta</a></li>
-                <li><a href="/sazonmaxico/reservas-inicio.html">Reserva</a></li>
+                <li><a href="./carta.html">Carta</a></li>
+                <li><a href="./reservas-inicio.html">Reserva</a></li>
                 <li><a href="#">Política de Privacidad</a></li>
             </ul>
             <!-- center logo -->
-            <a href="/sazonmaxico/index.php">
-                <img loading="lazy" src="/sazonmaxico/img/index-img/logo-footer.svg" alt="logo SazónMáXico">
+            <a href="./index.php">
+                <img loading="lazy" src="./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
             </a>
             <!-- list right -->
             <ul class="footer-list-right">
@@ -193,18 +193,18 @@
             <span>© Copyright 2022 Sazón MáXico - Todos los Derechos Reservados</span>
             <ul class="social">
                 <li>
-                    <a href="https://www.facebook.com/sazonmaxico" target="_blank">
-                        <img loading="lazy" src="/sazonmaxico/img/footer-icons/facebook.png" alt="facebook">
+                    <a href="https://www.facebook.com." target="_blank">
+                        <img loading="lazy" src="./img/footer-icons/facebook.png" alt="facebook">
                     </a>
                 </li>
                 <li>
                     <a href="tel:764 764 3687" target="_blank">
-                        <img loading="lazy" src="/sazonmaxico/img/footer-icons/tel.png" alt="teléfono">
+                        <img loading="lazy" src="./img/footer-icons/tel.png" alt="teléfono">
                     </a>
                 </li>
                 <li>
                     <a href="mailto:restaurantesazonmaxico@outlook.com" target="_blank">
-                        <img loading="lazy" src="/sazonmaxico/img/footer-icons/mail.png" alt="correo">
+                        <img loading="lazy" src="./img/footer-icons/mail.png" alt="correo">
                     </a>
                 </li>
             </ul>
@@ -212,7 +212,7 @@
     </footer>
 
     <!-- Scripts JS -->
-    <script src="/sazonmaxico/js/nav-bar.js"></script>
+    <script src="./js/nav-bar.js"></script>
 </body>
 
 </html>
