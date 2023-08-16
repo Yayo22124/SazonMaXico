@@ -9,6 +9,7 @@
 /* *Arriba esta todo el estilo de la barra de navegacion */
 
 #lol{
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -16,6 +17,7 @@
   background-color: #432D1C;
   padding: 20px;
   width: 100%;
+
 }
 
 #fondo_blanco {
@@ -47,122 +49,68 @@
 }
 
 /* !Arriba solo tenemos los textos de la parte de arriba de la pagina */
-/* * Mesas Circulares */
 
-#mesas {
-  display: flex;
-}
-
-.primera_linea_mesas {
+#mesas{
   margin-top: 5%;
-  margin-left: 10%;
-  width: 20%;
-}
-
-.cuadrado_uno {
-  width: 70px;
-  height: 70px;
-  background-color: #ffffff;
-  border-style: solid;
-  margin-left: 38%;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.cuadrado {
-  width: 70px;
-  height: 70px;
-  background-color: #ffffff;
-  border-style: solid;
-}
-
-.circulo {
-  width: 95px;
-  height: 95px;
-  background-color: #ffffff;
-  border-style: solid;
-  border-radius: 50%;
-}
-
-#centro {
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
+  align-items: center;
 }
 
+.mesa_circular{
+  width: 30%;
+}
 
+#mesas_rectangulares{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
-/* * Mesas Circulares */
-/* TODO: Mesas Rectangulares */
-
-.rectangulo {
-  width: 250px;
+.circle {
+  width: 100px;
   height: 100px;
-  background-color: #ffffff;
-  border-style: solid;
-  margin-top: 10px;
-  margin-left: 20px;
-}
-
-#mesas_rectangulares {
+  background-color: #F9B338;
+  border-radius: 50%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  margin-left: -5%;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 50px;
 }
 
-.primera_linea_mesas:hover {
-  transform: scale(1.2);
-  color: #F9B338;
-}
-
-.mesa_rectangular {
+.circle2 {
+  width: 100px;
+  height: 100px;
+  background-color: #F9B338;
+  border-radius: 50%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
-  margin-top: 10px;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 80px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
-#silla_izquierda {
-  width: 70px;
-  height: 70px;
-  background-color: #ffffff;
-  border-style: solid;
-  margin-top: -85px;
-  margin-left: -60px;
+.number {
+  font-family: Arial, sans-serif;
 }
 
-#silla_derecha {
-  width: 70px;
-  height: 70px;
-  background-color: #ffffff;
-  border-style: solid;
-  margin-top: -70px;
-  margin-left: 280px;
-}
-
-/* TODO: Mesas Rectangulares */
-
-#mesas_abajo {
+#numeros {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 24px;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-bottom: -80px;
 }
 
-.numeros{
-  font-size: 30px;
-  margin: 30px 38px;
-}
-
-.numeros1{
-  font-size: 30px;
-  margin: 28px 28px;
-}
-
-.numeros2{
-  font-size: 30px;
-  margin: 30px 110px;
+#numeros2 {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-bottom: -80px;
 }
 
 /* ! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
@@ -282,83 +230,67 @@ input:hover {
     font-size: 20px;
   }
 
-  /*                         */
-
-  .primera_linea_mesas {
-    margin: 21px;
-  }
-
-  .cuadrado_uno {
-    width: 30px;
-    height: 30px;
-    margin: 5px 25px;
-    background-color: #ffffff;
-    border-style: solid;
-  }
-
-  .cuadrado {
-    width: 30px;
-    height: 30px;
-
-    background-color: #ffffff;
-    border-style: solid;
-  }
-
-  .circulo {
-    width: 40px;
-    height: 40px;
-    background-color: #ffffff;
-    border-style: solid;
-    border-radius: 50%;
-  }
-
-  #centro {
-    display: inline-flex;
-    margin-left: -10px;
-  }
-
-  /*                     */
-
-
-  /* TODO: Mesas Rectangulares */
-
-  .rectangulo {
-    width: 95px;
-    height: 40px;
-    background-color: #ffffff;
-    border-style: solid;
-    margin-left: -5px;
-  }
-
-  .mesa_rectangular {
-    display: inline-flex;
+  #mesas{
+    margin-top: 25%;
+    margin-left: 10px;
+    display: flex;
     justify-content: space-evenly;
+    align-items: center;
   }
-
-  #silla_izquierda {
-    display: inline-flex;
+  
+  .mesa_circular{
+    width: 30%;
+  }
+  
+  #mesas_rectangulares{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .circle {
     width: 30px;
     height: 30px;
-    background-color: #ffffff;
-    border-style: solid;
-    margin-bottom: 20px;
-    margin-left: -40px;
+    background-color: #F9B338;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #ffffff;    margin-bottom: 0px;
   }
-
-  #silla_derecha {
+  
+  .circle2 {
     width: 30px;
     height: 30px;
-    background-color: #ffffff;
-    border-style: solid;
-    display: inline-flex;
-    margin-left: 94px;
-    margin-bottom: 38px;
-
+    background-color: #F9B338;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 40px 105px; 
+  }
+  
+  .number {
+    font-family: Arial, sans-serif;
+  }
+  
+  #numeros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
-  #mesas_abajo {
-    display: inline-flex;
-    margin-top: -100px;
+  #numeros2 {
+  
+    margin-left: -75px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+  }
+  
+  .mesa_rectangular{
+    width: 30%;
   }
 
   /* TODO: Mesas Rectangulares */
@@ -373,9 +305,6 @@ input:hover {
   form {
     margin-left: 15%;
   }
-
-
-
 
   input {
     font-family: 'Lato', sans-serif;
@@ -441,31 +370,3 @@ input:hover {
 
 }
 
-#fecha_reserva{
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  width: 470px;
-  height: 50px;
-  padding: 0px 15px 0px 15px;
-  margin-bottom: 25px;
-}
-
-#fecha_reserva:hover {
-  border-color: #F9B338;
-  border-style: solid;
-}
-
-#hora_reserva{
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  width: 470px;
-  height: 50px;
-  padding: 0px 15px 0px 15px;
-  margin-bottom: 25px;
-}
-
-#hora_reserva:hover {
-  border-color: #F9B338;
-  border-style: solid;
-}
-/* Agrega estilos adicionales según tus necesidades */
