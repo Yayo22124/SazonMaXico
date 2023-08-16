@@ -12,11 +12,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
-    <link rel="shortcut icon" href="/sazonmaxico/img/Xicote.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/Xicote.svg" type="image/x-icon">
     <!-- CSS link -->
-    <link rel="stylesheet" href="/sazonmaxico/styles/register-styles.css">
-    <link rel="stylesheet" href="/sazonmaxico/styles/scroll-styles.css">
-    <link rel="stylesheet" href="/sazonmaxico/styles/notification.css">
+    <link rel="stylesheet" href="./styles/register-styles.css">
+    <link rel="stylesheet" href="./styles/scroll-styles.css">
+    <link rel="stylesheet" href="./styles/notification.css">
 
     <title>SazónMáXico | Crear Cuenta</title>
 </head>
@@ -70,7 +70,7 @@
                     $notification = array("status" => "success", "message" => "Registro exitoso!");
 
                     // Redirigir a la página de inicio de sesión
-                    header("Location: /sazonmaxico/login.php");
+                    header("Location: ./login.php");
                     exit();
                 } else {
                     $notification = array("status" => "error", "message" => "Error al registrar el usuario: " . mysqli_error($conn));
@@ -92,12 +92,12 @@
             <!-- Header of Form -->
             <header>
                 <!-- icon (return) -->
-                <a href="/sazonmaxico/index.php">
-                    <img src="/sazonmaxico/img/return.svg" alt="back">
+                <a href="./index.php">
+                    <img src="./img/return.svg" alt="back">
                 </a>
                 <!-- logo -->
-                <a href="/sazonmaxico/index.php">
-                    <img src="/sazonmaxico/img/logo-header.svg" alt="logo SazónMaXico">
+                <a href="./index.php">
+                    <img src="./img/logo-header.svg" alt="logo SazónMaXico">
                 </a>
             </header>
 
@@ -156,10 +156,10 @@
                     <label>Contraseña</label>
                     <div class="mostrar-ocultar">
                         <!-- ver contraseña -->
-                        <img src="/sazonmaxico/img/login-register-img/ver.svg" alt="ver contraseña" id="ver"
+                        <img src="./img/login-register-img/ver.svg" alt="ver contraseña" id="ver"
                             onclick="verContrasenia()">
                         <!-- ocultar contraseña -->
-                        <img src="/sazonmaxico/img/login-register-img/ocultar.svg" alt="Ocultar contraseña" id="ocultar"
+                        <img src="./img/login-register-img/ocultar.svg" alt="Ocultar contraseña" id="ocultar"
                             onclick="ocultarContrasenia()">
                     </div>
                 </div>
@@ -167,7 +167,7 @@
 
                 <!-- sign in - button -->
                 <button type="submit">Crear Cuenta</button>
-                <span class="create-account">¿Ya tienes cuenta? <b class="pd60"><a href="/sazonmaxico/login.php">Inicia
+                <span class="create-account">¿Ya tienes cuenta? <b class="pd60"><a href="./login.php">Inicia
                             Sesión</a></b></span>
             </form>
         </div>
@@ -178,7 +178,7 @@
     </main>
 </body>
 <!-- scripts -->
-<script src="/sazonmaxico/js/see-password.js"></script>
+<script src="./js/see-password.js"></script>
 <!-- notifications -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {

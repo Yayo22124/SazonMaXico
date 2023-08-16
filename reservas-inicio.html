@@ -15,13 +15,13 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- links CSS -->
   <!-- <link rel="stylesheet" href="/Normalize.css"> #### da algunos fallos-->
-  <link rel="stylesheet" href="/sazonmaxico/styles/reservas-inicio.css">
-  <link rel="stylesheet" href="/sazonmaxico/styles/footer-styles.css">
-  <link rel="stylesheet" href="/sazonmaxico/styles/navbar.css">
-  <link rel="stylesheet" href="/sazonmaxico/styles/scroll-styles.css">
+  <link rel="stylesheet" href="./styles/reservas-inicio.css">
+  <link rel="stylesheet" href="./styles/footer-styles.css">
+  <link rel="stylesheet" href="./styles/navbar.css">
+  <link rel="stylesheet" href="./styles/scroll-styles.css">
 
   <!-- favicon -->
-  <link rel="shortcut icon" href="/sazonmaxico/img/Xicote.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="./img/Xicote.svg" type="image/x-icon">
 
   <title>Reserva</title>
 </head>
@@ -30,38 +30,38 @@
   <!-- Nav Bar -->
   <nav class="bar">
     <!-- Logo -->
-    <img src="/sazonmaxico/img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
+    <img src="./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
     <!-- Links Menu -->
     <ul class="links">
-      <li><a href="/sazonmaxico/index.php">Inicio</a></li>
-      <li><a href="/sazonmaxico/carta.html">Carta</a></li>
-      <li><a href="/sazonmaxico/menu-del-dia.php">Menú del Día</a></li>
-      <li><a href="/sazonmaxico/evento1.html">Eventos</a></li>
-      <li><a href="/sazonmaxico/reservas-inicio.html">Reservas</a></li>
+      <li><a href="./index.php">Inicio</a></li>
+      <li><a href="./carta.html">Carta</a></li>
+      <li><a href="./menu-del-dia.php">Menú del Día</a></li>
+      <li><a href="./evento1.html">Eventos</a></li>
+      <li><a href="./reservas-inicio.html">Reservas</a></li>
     </ul>
     <!-- Iniciar sesion button -->
-    <a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a>
+    <a href="./login.php" class="login">Iniciar Sesión</a>
     <!-- Dropdown button -->
     <div class="dropdown-button-container">
-      <img src="/sazonmaxico/img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
+      <img src="./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
 
-      <img src="/sazonmaxico/img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
+      <img src="./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
     </div>
 
     <!-- dropdown menu -->
     <ul class="dropdown-menu active" id="dropdown-menu">
-      <li class="dropdown-nav"><a href="/sazonmaxico/index.php">Inicio</a></li>
-      <li class="dropdown-nav"><a href="/sazonmaxico/carta.html">Carta</a></li>
-      <li class="dropdown-nav"><a href="/sazonmaxico/menu-del-dia.php">Menú del Día</a></li>
-      <li class="dropdown-nav"><a href="/sazonmaxico/evento1.html">Eventos</a></li>
-      <li class="dropdown-nav"><a href="/sazonmaxico/reservas-inicio.html">Reservas</a></li>
+      <li class="dropdown-nav"><a href="./index.php">Inicio</a></li>
+      <li class="dropdown-nav"><a href="./carta.html">Carta</a></li>
+      <li class="dropdown-nav"><a href="./menu-del-dia.php">Menú del Día</a></li>
+      <li class="dropdown-nav"><a href="./evento1.html">Eventos</a></li>
+      <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="/sazonmaxico/login.php"><img src="/sazonmaxico/img/navbar-icons/usuario.png" alt="user"> Iniciar Sesión</a>
+      <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar Sesión</a>
       </li>
-      <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/documento.png" alt="user">Política y Privacidad</a>
+      <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política y Privacidad</a>
       </li>
-      <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+      <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
     </ul>
   </nav>
   <!-- ################ END NAV BAR #################-->
@@ -268,7 +268,7 @@
         <input id="submit" type="submit" value="¡Reservar!">
       </form>
       <div id="confirmacion"></div>
-      <script src="/sazonmaxico/reserva_horario.js"></script>
+      <script src="./reserva_horario.js"></script>
     </div>
   </div>
 
@@ -277,13 +277,13 @@
     <div class="footer-top">
       <!-- left list -->
       <ul class="footer-list-left">
-        <li><a href="/sazonmaxico/carta.html">Carta</a></li>
-        <li><a href="/sazonmaxico/reservas-inicio.html">Reserva</a></li>
+        <li><a href="./carta.html">Carta</a></li>
+        <li><a href="./reservas-inicio.html">Reserva</a></li>
         <li><a href="#">Política de Privacidad</a></li>
       </ul>
       <!-- center logo -->
-      <a href="/sazonmaxico/index.php">
-        <img loading="lazy" src="/sazonmaxico/img/index-img/logo-footer.svg" alt="logo SazónMáXico">
+      <a href="./index.php">
+        <img loading="lazy" src="./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
       </a>
       <!-- list right -->
       <ul class="footer-list-right">
@@ -314,24 +314,24 @@
       <span>© Copyright 2022 Sazón MáXico - Todos los Derechos Reservados</span>
       <ul class="social">
         <li>
-          <a href="https://www.facebook.com/sazonmaxico" target="_blank">
-            <img loading="lazy" src="/sazonmaxico/img/footer-icons/facebook.png" alt="facebook">
+          <a href="https://www.facebook.com." target="_blank">
+            <img loading="lazy" src="./img/footer-icons/facebook.png" alt="facebook">
           </a>
         </li>
         <li>
           <a href="tel:764 764 3687" target="_blank">
-            <img loading="lazy" src="/sazonmaxico/img/footer-icons/tel.png" alt="teléfono">
+            <img loading="lazy" src="./img/footer-icons/tel.png" alt="teléfono">
           </a>
         </li>
         <li>
           <a href="mailto:restaurantesazonmaxico@outlook.com" target="_blank">
-            <img loading="lazy" src="/sazonmaxico/img/footer-icons/mail.png" alt="correo">
+            <img loading="lazy" src="./img/footer-icons/mail.png" alt="correo">
           </a>
         </li>
       </ul>
     </div>
   </footer>
 </body>
-<script src="/sazonmaxico/js/nav-bar.js"></script>
+<script src="./js/nav-bar.js"></script>
 
 </html>

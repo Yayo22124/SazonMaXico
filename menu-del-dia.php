@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- icon page -->
-  <link rel="shortcut icon" href="/sazonmaxico/img/Xicote.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="./img/Xicote.svg" type="image/x-icon">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +14,12 @@
     rel="stylesheet">
 
   <!-- CSS Link -->
-  <link rel="stylesheet" href="/sazonmaxico/styles/index-styles.css">
-  <link rel="stylesheet" href="/sazonmaxico/styles/scroll-styles.css">
-  <link rel="stylesheet" href="/sazonmaxico/styles/parallax.css">
-  <link rel="stylesheet" href="/sazonmaxico/styles/footer-styles.css">
-  <link rel="stylesheet" href="/sazonmaxico/styles/navbar.css">
-  <link rel="stylesheet" href="/sazonmaxico/styles/menu-del-dia.css">
+  <link rel="stylesheet" href="./styles/index-styles.css">
+  <link rel="stylesheet" href="./styles/scroll-styles.css">
+  <link rel="stylesheet" href="./styles/parallax.css">
+  <link rel="stylesheet" href="./styles/footer-styles.css">
+  <link rel="stylesheet" href="./styles/navbar.css">
+  <link rel="stylesheet" href="./styles/menu-del-dia.css">
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> -->
 
   <!-- Tittle Page -->
@@ -30,42 +30,42 @@
   <!-- Nav Bar -->
   <nav class="bar">
     <!-- Logo -->
-    <img src="/sazonmaxico/img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
+    <img src="./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
     <!-- Links Menu -->
     <ul class="links">
-      <li><a href="/sazonmaxico/index.php">Inicio</a></li>
-      <li><a href="/sazonmaxico/carta.html">Carta</a></li>
-      <li><a href="/sazonmaxico/menu-del-dia.php">Menú del Día</a></li>
-      <li><a href="/sazonmaxico/evento1.html">Eventos</a></li>
-      <li><a href="/sazonmaxico/reservas-inicio.html">Reservas</a></li>
+      <li><a href="./index.php">Inicio</a></li>
+      <li><a href="./carta.html">Carta</a></li>
+      <li><a href="./menu-del-dia.php">Menú del Día</a></li>
+      <li><a href="./evento1.html">Eventos</a></li>
+      <li><a href="./reservas-inicio.html">Reservas</a></li>
     </ul>
     <!-- Iniciar sesion button -->
-    <a href="/sazonmaxico/login.php" class="login">Iniciar Sesión</a>
+    <a href="./login.php" class="login">Iniciar Sesión</a>
     <!-- Dropdown button -->
     <div class="dropdown-button-container">
-      <img src="/sazonmaxico/img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
+      <img src="./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
         onclick="mostrarMenu()">
 
-      <img src="/sazonmaxico/img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
+      <img src="./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
         onclick="ocultarMenu()">
     </div>
 
     <!-- dropdown menu -->
     <ul class="dropdown-menu active" id="dropdown-menu">
-      <li class="dropdown-nav"><a href="/sazonmaxico/index.php">Inicio</a></li>
-      <li class="dropdown-nav"><a href="/sazonmaxico/carta.html">Carta</a></li>
-      <li class="dropdown-nav"><a href="/sazonmaxico/menu-del-dia.php">Menú del Día</a></li>
-      <li class="dropdown-nav"><a href="/sazonmaxico/evento1.html">Eventos</a></li>
-      <li class="dropdown-nav"><a href="/sazonmaxico/reservas-inicio.html">Reservas</a></li>
+      <li class="dropdown-nav"><a href="./index.php">Inicio</a></li>
+      <li class="dropdown-nav"><a href="./carta.html">Carta</a></li>
+      <li class="dropdown-nav"><a href="./menu-del-dia.php">Menú del Día</a></li>
+      <li class="dropdown-nav"><a href="./evento1.html">Eventos</a></li>
+      <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="/sazonmaxico/login.php"><img src="/sazonmaxico/img/navbar-icons/usuario.png"
+      <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png"
             alt="user"> Iniciar Sesión</a>
       </li>
-      <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/documento.png" alt="user">Política y
+      <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política y
           Privacidad</a>
       </li>
-      <li class="settings"><a href="#"><img src="/sazonmaxico/img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a>
+      <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a>
       </li>
     </ul>
   </nav>
@@ -88,7 +88,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="/sazonmaxico/img/img-reservas-platillos/pechugas.png" alt="" class="platillos">
+                  <img src="./img/img-reservas-platillos/pechugas.png" alt="" class="platillos">
                 </div>
                 <h3>Pechuga Empanizada</h3>
                 <p style="margin-top: 20px;">Con arroz a la mexicana, ensalada de lechuga con jitomate. (160 g)</p>
@@ -102,7 +102,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="/sazonmaxico/img/img-reservas-platillos/enmoladas.png" alt="" class="platillos">
+                  <img src="./img/img-reservas-platillos/enmoladas.png" alt="" class="platillos">
                 </div>
                 <h3>Enchiladas Caseras</h3>
                 <p style="margin-top: 20px;">Rellenas de cerdo guisado, bañadas con salsa pasilla, verde o roja,
@@ -120,7 +120,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="/sazonmaxico/img/img-reservas-platillos/tostadas.png" alt="" class="platillos">
+                  <img src="./img/img-reservas-platillos/tostadas.png" alt="" class="platillos">
                 </div>
                 <h3>TOSTADAS CON CHORIZO</h3>
                 <p style="margin-top: 20px;">Con salsas incluidas y mas condimentos al gusto del cliente(5 piezas)</p>
@@ -141,7 +141,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="/sazonmaxico/img/img-reservas-platillos/sopa_caldo.png" alt="" class="platillos">
+                  <img src="./img/img-reservas-platillos/sopa_caldo.png" alt="" class="platillos">
                 </div>
                 <h3>Consomé con arroz y pollo</h3>
                 <p style="margin-top: 20px;">Aceite de oliva,
@@ -164,7 +164,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="/sazonmaxico/img/img-reservas-platillos/sopa.png" alt="" class="platillos">
+                  <img src="./img/img-reservas-platillos/sopa.png" alt="" class="platillos">
                 </div>
                 <h3>Sopa de fideos</h3>
                 <p style="margin-top: 20px;">Aceite de oliva,
@@ -186,7 +186,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="/sazonmaxico/img/img-reservas-platillos/sopa_letras.png" alt="" class="platillos">
+                  <img src="./img/img-reservas-platillos/sopa_letras.png" alt="" class="platillos">
                 </div>
                 <h3>Sopa de letras</h3>
                 <p style="margin-top: 20px;">Cebolla,
@@ -215,7 +215,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="/sazonmaxico/img/img-reservas-platillos/refrescos.png" alt="" class="bebidas">
+                  <img src="./img/img-reservas-platillos/refrescos.png" alt="" class="bebidas">
                 </div>
                 <h3>Refrescos</h3>
                 <p style="margin-top: 20px;">Todos tu refrescos favoritos estan aqui </p>
@@ -229,7 +229,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="/sazonmaxico/img/img-reservas-platillos/limonada.png" alt="" class="bebidas">
+                  <img src="./img/img-reservas-platillos/limonada.png" alt="" class="bebidas">
                 </div>
                 <h3>Limonada</h3>
                 <p style="margin-top: 20px;">La limonada es una refrescante y deliciosa bebida cítrica, perfecta para
@@ -245,7 +245,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="/sazonmaxico/img/img-reservas-platillos/naranjada.png" alt="" class="bebidas">
+                  <img src="./img/img-reservas-platillos/naranjada.png" alt="" class="bebidas">
                 </div>
                 <h3>Naranjada</h3>
                 <p style="margin-top: 20px;">La naranjada es una refrescante y vibrante bebida de origen cítrico que
@@ -269,13 +269,13 @@
     <div class="footer-top">
       <!-- left list -->
       <ul class="footer-list-left">
-        <li><a href="/sazonmaxico/carta.html">Carta</a></li>
-        <li><a href="/sazonmaxico/reservas-inicio.html">Reserva</a></li>
+        <li><a href="./carta.html">Carta</a></li>
+        <li><a href="./reservas-inicio.html">Reserva</a></li>
         <li><a href="#">Política de Privacidad</a></li>
       </ul>
       <!-- center logo -->
-      <a href="/sazonmaxico/index.php">
-        <img loading="lazy" src="/sazonmaxico/img/index-img/logo-footer.svg" alt="logo SazónMáXico">
+      <a href="./index.php">
+        <img loading="lazy" src="./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
       </a>
       <!-- list right -->
       <ul class="footer-list-right">
@@ -306,18 +306,18 @@
       <span>© Copyright 2022 Sazón MáXico - Todos los Derechos Reservados</span>
       <ul class="social">
         <li>
-          <a href="https://www.facebook.com/sazonmaxico" target="_blank">
-            <img loading="lazy" src="/sazonmaxico/img/footer-icons/facebook.png" alt="facebook">
+          <a href="https://www.facebook.com." target="_blank">
+            <img loading="lazy" src="./img/footer-icons/facebook.png" alt="facebook">
           </a>
         </li>
         <li>
           <a href="tel:764 764 3687" target="_blank">
-            <img loading="lazy" src="/sazonmaxico/img/footer-icons/tel.png" alt="teléfono">
+            <img loading="lazy" src="./img/footer-icons/tel.png" alt="teléfono">
           </a>
         </li>
         <li>
           <a href="mailto:restaurantesazonmaxico@outlook.com" target="_blank">
-            <img loading="lazy" src="/sazonmaxico/img/footer-icons/mail.png" alt="correo">
+            <img loading="lazy" src="./img/footer-icons/mail.png" alt="correo">
           </a>
         </li>
       </ul>
@@ -325,12 +325,12 @@
   </footer>
 </body>
 <!-- Scripts -->
-<script src="/sazonmaxico/js/nav-bar.js"></script>
+<script src="./js/nav-bar.js"></script>
 <script>
   // Agregar un evento al botón para activar la generación del PDF
   document.getElementById('downloadPdfButton').addEventListener('click', () => {
         // URL del archivo PDF que deseas descargar
-        const pdfUrl = '/sazonmaxico/pdf/menu-del-dia.pdf';
+        const pdfUrl = './pdf/menu-del-dia.pdf';
 
         // Crea un enlace temporal
         const downloadLink = document.createElement('a');

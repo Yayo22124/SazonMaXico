@@ -12,10 +12,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
-    <link rel="shortcut icon" href="/sazonmaxico/img/Xicote.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/Xicote.svg" type="image/x-icon">
     <!-- CSS link -->
-    <link rel="stylesheet" href="/sazonmaxico/styles/notification.css">
-    <link rel="stylesheet" href="/sazonmaxico/styles/login-styles.css">
+    <link rel="stylesheet" href="./styles/notification.css">
+    <link rel="stylesheet" href="./styles/login-styles.css">
 
     <title>SazónMáXico | Iniciar Sesión</title>
 </head>
@@ -65,7 +65,7 @@
 
                         if ($result_token) {
                             // Redirigir al usuario a su página de inicio o al panel
-                            header("Location: /sazonmaxico/index.php"); // Cambia la URL a la página deseada
+                            header("Location: ./index.php"); // Cambia la URL a la página deseada
                             exit();
                         } else {
                             $notification = array("status" => "error", "message" => "Error al generar el token: " . mysqli_error($conn));
@@ -98,12 +98,12 @@
             <!-- Header of Form -->
             <header>
                 <!-- icon (return) -->
-                <a href="/sazonmaxico/index.php">
-                    <img src="/sazonmaxico/img/return.svg" alt="back">
+                <a href="./index.php">
+                    <img src="./img/return.svg" alt="back">
                 </a>
                 <!-- logo -->
-                <a href="/sazonmaxico/index.php">
-                    <img src="/sazonmaxico/img/logo-header.svg" alt="logo SazónMaXico">
+                <a href="./index.php">
+                    <img src="./img/logo-header.svg" alt="logo SazónMaXico">
                 </a>
             </header>
 
@@ -129,17 +129,17 @@
                     <label>Contraseña</label>
                     <div class="mostrar-ocultar">
                         <!-- ver contraseña -->
-                        <img src="/sazonmaxico/img/login-register-img/ver.svg" alt="ver contraseña" id="ver"
+                        <img src="./img/login-register-img/ver.svg" alt="ver contraseña" id="ver"
                             onclick="verContrasenia()">
                         <!-- ocultar contraseña -->
-                        <img src="/sazonmaxico/img/login-register-img/ocultar.svg" alt="Ocultar contraseña" id="ocultar"
+                        <img src="./img/login-register-img/ocultar.svg" alt="Ocultar contraseña" id="ocultar"
                             onclick="ocultarContrasenia()">
                     </div>
                 </div>
                 <!-- sign in - button -->
                 <button type="submit" class="login">Iniciar Sesión</button>
                 <!-- register a -->
-                <span class="create-account">¿No tienes cuenta? <b><a href="/sazonmaxico/register.php">Crea
+                <span class="create-account">¿No tienes cuenta? <b><a href="./register.php">Crea
                             una</a></b></span>
             </form>
         </div>
@@ -150,7 +150,7 @@
     </main>
 </body>
 <!-- scripts -->
-<script src="/sazonmaxico/js/see-password.js"></script>
+<script src="./js/see-password.js"></script>
 <!-- notifications -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
