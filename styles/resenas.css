@@ -4,7 +4,6 @@
 }
 
 #fondo {
-  margin-top: 25px;
   background-color: #432D1C;
   padding: 20px;
   width: 100%;
@@ -37,7 +36,7 @@ header {
   background-size: fill;
   background-position: center;
   filter: saturate(135%);
-
+}
   /* ---- Tittle Header (H1) ---- */
   & > h1 {
       /* font styles */
@@ -55,7 +54,7 @@ header {
       cursor: pointer;
       
   }
-}
+
 
 .contenedor{
   width: 1205px;
