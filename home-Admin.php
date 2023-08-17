@@ -106,12 +106,27 @@
         valueAxis.min = 0;
         valueAxis.max = 10;
 
+        // Título lateral
+        chart.leftAxesContainer.layout = "vertical";
+        var title = chart.leftAxesContainer.createChild(am4core.Label);
+        title.text = "Número de reservas";
+        title.fontSize = 14;
+        title.align = "center";
+
         // Crear la serie de columnas
         var series = chart.series.push(new am4charts.ColumnSeries());
         series.dataFields.valueY = "frecuencia";
         series.dataFields.categoryX = "cliente";
         series.name = "Total Reservas";
         series.columns.template.tooltipText = "Cliente: {categoryX}\nTotal Reservas: {valueY}";
+
+        // Etiqueta sobre las columnas
+        var labelBullet = series.bullets.push(new am4charts.LabelBullet());
+        labelBullet.label.text = "{valueY}";
+        labelBullet.label.dy = -10;
+        labelBullet.label.fontSize = 12;
+        labelBullet.label.fill = am4core.color("#FFFFFF");
+        labelBullet.label.hideOversized = false;
 
         // Configurar etiquetas en las columnas
         series.columns.template.width = am4core.percent(50);
