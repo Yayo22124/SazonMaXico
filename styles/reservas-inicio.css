@@ -14,7 +14,6 @@
 }
 
 #fondo {
-  margin: 0;
   background-color: #432D1C;
   padding: 20px;
   width: 100%;
@@ -309,11 +308,10 @@ input:hover {
   input {
     font-family: 'Lato', sans-serif;
     font-size: 0.875em;
-    width: 100%;
+    width: 240px;
     height: 50px;
     margin-bottom: 15px;
   }
-
 
   input:hover {
     border-color: #F9B338;
