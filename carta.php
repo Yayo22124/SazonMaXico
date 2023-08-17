@@ -33,7 +33,7 @@
   <!-- Nav Bar -->
   <nav class="bar">
     <!-- Logo -->
-    <img src="./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
+    <img src="./image.php?src=./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
     <!-- Links Menu -->
     <ul class="links">
       <li><a href="./index.php">Inicio</a></li>
@@ -46,9 +46,9 @@
     <a href="./login.php" class="login">Iniciar Sesión</a>
     <!-- Dropdown button -->
     <div class="dropdown-button-container">
-      <img src="./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
+      <img src="./image.php?src=./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
 
-      <img src="./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
+      <img src="./image.php?src=./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
     </div>
 
     <!-- dropdown menu -->
@@ -60,11 +60,11 @@
       <li class="dropdown-nav"><a href="./reservas-inicio.php">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar Sesión</a>
+      <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png" alt="user"> Iniciar Sesión</a>
       </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política y Privacidad</a>
+      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/documento.png" alt="user">Política y Privacidad</a>
       </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
     </ul>
   </nav>
   <!-- END NAV BAR -->
@@ -73,13 +73,13 @@
 
       <div class="imagenes">
         <div class="reboso"> <img
-            src="./img/carta-desayuno/750e6aa8ed4747450cb2b08ea329e89e-removebg-preview (1) 3Reboso.svg" alt=""></div>
-        <div class="menu1"><img src="./img/carta-desayuno/menu.svg" alt=""></div>
+            src="./image.php?src=./img/carta-desayuno/750e6aa8ed4747450cb2b08ea329e89e-removebg-preview (1) 3Reboso.svg" alt=""></div>
+        <div class="menu1"><img src="./image.php?src=./img/carta-desayuno/menu.svg" alt=""></div>
 
       </div>
 
       <div class="menu">
-        <img src="./img/carta-desayuno/Hamburguesa.svg" class="hamburguesa" />
+        <img src="./image.php?src=./img/carta-desayuno/Hamburguesa.svg" class="hamburguesa" />
         <div class="menu2">
           <p class="encabezado">Bebidas</p>
           <div class="linea"></div>
@@ -104,11 +104,11 @@
           <div class="platillos1">Tacos al pastor $</div>
           <div class="platillos1">Estofado de cerdo $</div>
         </div>
-        <img src="./img/carta-desayuno/Mole.svg" alt="" class="plato1">
+        <img src="./image.php?src=./img/carta-desayuno/Mole.svg" alt="" class="plato1">
       </div>
 
       <div class="postres">
-        <img src="./img/carta-desayuno/burrito.svg" alt="" class="platillo1">
+        <img src="./image.php?src=./img/carta-desayuno/burrito.svg" alt="" class="platillo1">
         <div class="postres2">
           <div class="encabezado">Postres</div>
           <div class="linea3"></div>
@@ -121,9 +121,9 @@
       </div>
 
       <div class="imgultimas">
-        <img src="./img/carta-desayuno/gorro-de-cocinero 2.svg" alt="" class="img1">
-        <img src="./img/carta-desayuno/postre_chocolate_avellana 2.svg" alt="" class="img2">
-        <img src="./img/carta-desayuno/750e6aa8ed4747450cb2b08ea329e89e-removebg-preview (1) 3Reboso.svg" alt=""
+        <img src="./image.php?src=./img/carta-desayuno/gorro-de-cocinero 2.svg" alt="" class="img1">
+        <img src="./image.php?src=./img/carta-desayuno/postre_chocolate_avellana 2.svg" alt="" class="img2">
+        <img src="./image.php?src=./img/carta-desayuno/750e6aa8ed4747450cb2b08ea329e89e-removebg-preview (1) 3Reboso.svg" alt=""
           class="img3">
       </div>
 
@@ -143,7 +143,7 @@
       </ul>
       <!-- center logo -->
       <a href="./index.php">
-        <img loading="lazy" src="./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
+        <img loading="lazy" src="./image.php?src=./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
       </a>
       <!-- list right -->
       <ul class="footer-list-right">
@@ -175,17 +175,17 @@
       <ul class="social">
         <li>
           <a href="https://www.facebook.com." target="_blank">
-            <img loading="lazy" src="./img/footer-icons/facebook.png" alt="facebook">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/facebook.png" alt="facebook">
           </a>
         </li>
         <li>
           <a href="tel:764 764 3687" target="_blank">
-            <img loading="lazy" src="./img/footer-icons/tel.png" alt="teléfono">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/tel.png" alt="teléfono">
           </a>
         </li>
         <li>
           <a href="mailto:restaurantesazonmaxico@outlook.com" target="_blank">
-            <img loading="lazy" src="./img/footer-icons/mail.png" alt="correo">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/mail.png" alt="correo">
           </a>
         </li>
       </ul>
