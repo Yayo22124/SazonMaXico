@@ -35,7 +35,7 @@
         $password = $_POST["password"]; // Asegúrate de tener un campo 'password' en tu formulario
     
         // Verificar las credenciales del usuario en la base de datos
-        $check_user_query = "SELECT Persona_ID, Email, Password FROM tbb_usuarios WHERE Email = ?";
+        $check_user_query = "SELECT Persona_ID, Email, Password, Tipo FROM tbb_usuarios WHERE Email = ?";
         $stmt = mysqli_prepare($conn, $check_user_query);
 
         if ($stmt) {
@@ -64,9 +64,16 @@
                         $result_token = mysqli_stmt_execute($stmt_insert);
 
                         if ($result_token) {
-                            // Redirigir al usuario a su página de inicio o al panel
-                            header("Location: ./index.php"); // Cambia la URL a la página deseada
-                            exit();
+                            // Redirigir según el tipo de usuario
+                            if ($user_data['Tipo'] === 'Cliente') {
+                                header("Location: index.php"); // Redirigir a la página de clientes
+                                exit();
+                            } elseif ($user_data['Tipo'] === 'Administrador') {
+                                header("Location: home-admin.php"); // Redirigir a la página de administradores
+                                exit();
+                            } else {
+                                $notification = array("status" => "error", "message" => "Tipo de usuario desconocido.");
+                            }
                         } else {
                             $notification = array("status" => "error", "message" => "Error al generar el token: " . mysqli_error($conn));
                         }
@@ -132,8 +139,8 @@
                         <img src="./image.php?src=./img/login-register-img/ver.svg" alt="ver contraseña" id="ver"
                             onclick="verContrasenia()">
                         <!-- ocultar contraseña -->
-                        <img src="./image.php?src=./img/login-register-img/ocultar.svg" alt="Ocultar contraseña" id="ocultar"
-                            onclick="ocultarContrasenia()">
+                        <img src="./image.php?src=./img/login-register-img/ocultar.svg" alt="Ocultar contraseña"
+                            id="ocultar" onclick="ocultarContrasenia()">
                     </div>
                 </div>
                 <!-- sign in - button -->
