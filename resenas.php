@@ -26,12 +26,63 @@
   <link rel="stylesheet" href="./styles/parallax.css">
   <link rel="stylesheet" href="./styles/footer-styles.css">
   <link rel="stylesheet" href="./styles/navbar.css">
+  <link rel="stylesheet" href="./styles/politica.css">
 
   <!-- Tittle Page -->
   <title>SazónMáXico | Carta</title>
 </head>
 
 <body>
+  <div id="privacy-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <h2>Política de Privacidad</h2>
+      <p>
+        Esta Política de Privacidad describe cómo se recopilan y utilizan los datos personales que proporcionas
+        en
+        nuestra aplicación web. Al utilizar esta aplicación, aceptas los términos descritos en esta política.
+      </p>
+      <h3>Datos Recopilados</h3>
+      <p>
+        Recopilamos los siguientes datos personales:
+      <ul>
+        <li>Nombre completo</li>
+        <li>Correo electrónico</li>
+        <li>Edad</li>
+        <li>Fecha de nacimiento</li>
+        <li>Historial en la aplicación</li>
+      </ul>
+      </p>
+      <h3>Uso de Datos</h3>
+      <p>
+        Utilizamos los datos recopilados para:
+      <ul>
+        <li>Personalizar tu experiencia en la aplicación</li>
+        <li>Proporcionar servicios y funciones solicitadas</li>
+        <li>Mejorar nuestros servicios y comunicaciones</li>
+      </ul>
+      </p>
+      <h3>Confidencialidad y Seguridad</h3>
+      <p>
+        Mantenemos tus datos personales confidenciales y aplicamos medidas de seguridad para protegerlos de
+        acceso no
+        autorizado.
+      </p>
+      <h3>Consentimiento</h3>
+      <p>
+        Al utilizar esta aplicación, das tu consentimiento para la recopilación y uso de tus datos personales
+        según lo
+        descrito en esta política.
+      </p>
+    </div>
+  </div>
+  <!-- conexion a BD -->
+  <?php include "conexion.php" ?>
+  <!-- usuarios logueados -->
+  <?php
+  // Incluye la verificación de sesión
+  include "check_session.php";
+  ?>
   <!-- Nav Bar -->
   <nav class="bar">
     <!-- Logo -->
@@ -39,34 +90,50 @@
     <!-- Links Menu -->
     <ul class="links">
       <li><a href="./index.php">Inicio</a></li>
-      <li><a href="./carta.html">Carta</a></li>
+      <li><a href="./carta.php">Carta</a></li>
       <li><a href="./menu-del-dia.php">Menú del Día</a></li>
-      <li><a href="./evento1.htmls">Eventos</a></li>
-      <li><a href="./reservas-inicio.html">Reservas</a></li>
+      <li><a href="./evento1.php">Eventos</a></li>
+      <li><a href="./reservas-inicio.php">Reservas</a></li>
     </ul>
     <!-- Iniciar sesion button -->
-    <a href="./login.php" class="login">Iniciar Sesión</a>
+    <!-- <a href="./login.php" class="login">Iniciar Sesión</a> -->
+    <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    if (isset($_SESSION['user_id'])) {
+      echo '<a href="./logout.php" class="login">Cerrar Sesión</a>';
+    } else {
+      echo '<a href="./login.php" class="login">Iniciar Sesión</a>';
+    }
+    ?>
     <!-- Dropdown button -->
     <div class="dropdown-button-container">
-      <img src="/img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
+      <img src="./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
 
-      <img src="/img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
+      <img src="./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
     </div>
 
     <!-- dropdown menu -->
     <ul class="dropdown-menu active" id="dropdown-menu">
       <li class="dropdown-nav"><a href="./index.php">Inicio</a></li>
-      <li class="dropdown-nav"><a href="./carta.html">Carta</a></li>
+      <li class="dropdown-nav"><a href="./carta.php">Carta</a></li>
       <li class="dropdown-nav"><a href="./menu-del-dia.php">Menú del Día</a></li>
-      <li class="dropdown-nav"><a href="./evento1.html">Eventos</a></li>
-      <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
+      <li class="dropdown-nav"><a href="./evento1.php">Eventos</a></li>
+      <li class="dropdown-nav"><a href="./reservas-inicio.php">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar Sesión</a>
-      </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política y Privacidad</a>
-      </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+      <?php
+      if (isset($_SESSION['user_id'])) {
+        echo '<li class="settings"><a href="./logout.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Cerrar Sesión</a></li>';
+      } else {
+        echo '<li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar Sesión</a></li>';
+      }
+      ?>
+      <li class="settings"><a href="#" id="privacy-link"><img src="./img/navbar-icons/documento.png" alt="user">Política
+          y
+          Privacidad</a></li>
+      <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img src="./img/navbar-icons/interrogatorio.png"
+            alt="help">Ayuda</a></li>
     </ul>
   </nav>
   <!-- END NAV BAR -->
@@ -91,7 +158,7 @@
           <div id="content">
             <p class="inicio">"¡Bienvenidos a Nuestra Experiencia Gastronómica en Sazon MaXico!
 
-              En Sazon MaXico, nuestra pasión es ofrecer una fusión excepcional de sabores auténticos y creatividad
+              En Sazón MáXico, nuestra pasión es ofrecer una fusión excepcional de sabores auténticos y creatividad
               culinaria
               en cada platillo.
               Nuestra página de reseñas es el lugar donde tus sentidos encuentran su voz.
@@ -146,13 +213,13 @@
     <div class="footer-top">
       <!-- left list -->
       <ul class="footer-list-left">
-        <li><a href="./carta.html">Carta</a></li>
-        <li><a href="./reservas-inicio.html">Reserva</a></li>
-        <li><a href=".#">Política de Privacidad</a></li>
+        <li><a href="./carta.php">Carta</a></li>
+        <li><a href="./reservas-inicio.php">Reserva</a></li>
+        <li><a href="" id="privacy-link">Política de Privacidad</a></li>
       </ul>
       <!-- center logo -->
       <a href="./index.php">
-        <img loading="lazy" src="./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
+        <img loading="lazy" src="./image.php?src=./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
       </a>
       <!-- list right -->
       <ul class="footer-list-right">
@@ -160,17 +227,17 @@
           <h3>horario xicotepec de juarez</h3>
         </li>
         <li>
-          Lunes a Jueves
+          <strong>Lunes a Jueves</strong>
           <br>
           09:00 - 18:00h
         </li>
         <li>
-          Viernes a Sábado
+          <strong>Viernes a Sábado</strong>
           <br>
           10:00 - 20:00h
         </li>
         <li>
-          Domingo
+          <strong>Domingo</strong>
           <br>
           10:00 - 17:00h
           <br>
@@ -184,17 +251,17 @@
       <ul class="social">
         <li>
           <a href="https://www.facebook.com." target="_blank">
-            <img loading="lazy" src="./img/footer-icons/facebook.png" alt="facebook">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/facebook.png" alt="facebook">
           </a>
         </li>
         <li>
           <a href="tel:764 764 3687" target="_blank">
-            <img loading="lazy" src="./img/footer-icons/tel.png" alt="teléfono">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/tel.png" alt="teléfono">
           </a>
         </li>
         <li>
           <a href="mailto:restaurantesazonmaxico@outlook.com" target="_blank">
-            <img loading="lazy" src="./img/footer-icons/mail.png" alt="correo">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/mail.png" alt="correo">
           </a>
         </li>
       </ul>
@@ -203,5 +270,6 @@
 </body>
 <!-- Scripts -->
 <script src="./js/nav-bar.js"></script>
+<script src="./js/politica.js"></script>
 
 </html>

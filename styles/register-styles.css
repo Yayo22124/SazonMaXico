@@ -104,7 +104,7 @@ body {
 
         /* margin (to center) */
         margin: 0 auto;
-        margin-bottom: 160px;
+        margin-bottom: 180px;
     }
 
     /* ####### Form Styles ####### */
@@ -120,6 +120,7 @@ body {
         justify-content: center;
         /* margin (to center) */
         margin: 0 auto;
+        margin-top: 40px;
 
 
     }
@@ -151,6 +152,7 @@ button[type="submit"] {
     /* padding/margin */
     padding: 13px;
     margin-bottom: 15px;
+    margin-top: 20px;
 
     /* bg color */
     background-color: #F9B338;
@@ -415,11 +417,12 @@ button[type="submit"]:active {
     display: block;
 }
 
+
 @keyframes input-focus {
     from {
         background: #F9B338;
     }
-
+    
     to {
         width: 100%;
         background: transparent;
@@ -439,19 +442,19 @@ button[type="submit"]:active {
     /* size */
     width: 50%;
     height: 100vh;
-
+    
     /* bg image */
     /* background-image: url(/img/restaurant.png); */
     --s: 120px;
     /* control the size */
-
+    
     background:
-        conic-gradient(from 150deg at 50% 33%, #0000, #FA6900 .5deg 60deg, #0000 60.5deg) calc(var(--s)/2) calc(var(--s)/1.4),
-        conic-gradient(from -30deg at 50% 66%, #0000, #D95B43 .5deg 60deg, #ECD078 60.5deg);
+    conic-gradient(from 150deg at 50% 33%, #0000, #FA6900 .5deg 60deg, #0000 60.5deg) calc(var(--s)/2) calc(var(--s)/1.4),
+    conic-gradient(from -30deg at 50% 66%, #0000, #D95B43 .5deg 60deg, #ECD078 60.5deg);
     background-size: var(--s) calc(var(--s)/1.154);
 
     /* background-position: center; */
-
+    
     /* animation */
     animation: fade-in 0.5s case-in-out;
 }
@@ -461,7 +464,7 @@ button[type="submit"]:active {
     0% {
         opacity: 0;
     }
-
+    
     100% {
         opacity: 1;
     }
@@ -470,15 +473,15 @@ button[type="submit"]:active {
 /* Responsive Design */
 /* movil */
 @media screen and (max-width: 767px) {
-
+    
     .left-container {
         width: 100%;
     }
-
+    
     .form-control {
         width: 100%;
     }
-
+    
     .right-container {
         display: none;
     }
@@ -494,16 +497,34 @@ button[type="submit"]:active {
     .left-container {
         width: 100%;
     }
-
+    
     .form-control {
         width: 80%;
     }
-
+    
     .right-container {
         display: none;
     }
-
+    
     button[type="submit"] {
         width: 70%;
     }
+}
+
+.checkbox {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+.checkbox > span {
+    font-size: 12px !important;
+    position: static;
+}
+
+.check-text > a {
+    color: #F9B338;
 }

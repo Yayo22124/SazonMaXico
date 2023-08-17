@@ -1,13 +1,10 @@
 <?php
 session_start();
 
-// Elimina cualquier variable de sesión
-session_unset();
-
 // Destruye la sesión
 session_destroy();
 
-// Redirige al usuario a la página de inicio de sesión
-header("Location: ./login.php");
+// Redirige a la página de inicio
+header("Location: index.php");
 exit();
 ?>

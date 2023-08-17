@@ -212,6 +212,7 @@ header {
                 font-family: 'Bree Serif';
                 font-size: 48px;
                 font-weight: 400;
+                text-align: center;
                 color: var(--font-blanco);
             }
         }
@@ -232,15 +233,21 @@ header {
 
             /* display  */
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
-
+            gap: 15px;
+            align-items: center;
             &>img {
-                width: 19%;
+                width: 240px;
                 height: auto;
                 object-fit: cover;
 
                 /* effects */
                 border-radius: 8px;
+                transition: 0.3s all ease-in-out;
+            }
+            &>img:hover {
+                transform: scale(1.1);
             }
         }
 
@@ -435,7 +442,7 @@ header {
     }
 
     .combos {
-        width: 75%;
+        width: 90%;
     }
 
     .banquete-header img {
@@ -447,6 +454,13 @@ header {
 
     }
 
+    .banquete-container > p{
+        padding: 0 25px;
+    }
+
+    #redireccionarBtn {
+        width: 70%;
+    }
 }
 
 
