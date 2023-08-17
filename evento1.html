@@ -22,8 +22,8 @@
     rel="stylesheet">
 
   <!-- CSS Link -->
-  <link rel="stylesheet" href="./styles/evento1.css">
-  <link rel="stylesheet" href="./styles/reservas-inicio.css">
+  <link rel="stylesheet" href="./styles/evento.css">
+  <link rel="stylesheet" href="./styles/reservas.css">
   <link rel="stylesheet" href="./styles/scroll-styles.css">
   <link rel="stylesheet" href="./styles/footer-styles.css">
   <link rel="stylesheet" href="./styles/navbar.css">
@@ -49,9 +49,11 @@
     <a href="./login.php" class="login">Iniciar Sesión</a>
     <!-- Dropdown button -->
     <div class="dropdown-button-container">
-      <img src="./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
+      <img src="./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
+        onclick="mostrarMenu()">
 
-      <img src="./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
+      <img src="./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
+        onclick="ocultarMenu()">
     </div>
 
     <!-- dropdown menu -->
@@ -63,15 +65,17 @@
       <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar
-          Sesión</a>
+      <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png"
+            alt="user"> Iniciar Sesión</a>
       </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política y Privacidad</a>
+      <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política y
+          Privacidad</a>
       </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+      <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a>
+      </li>
     </ul>
   </nav>
-  <!-- END NAV BAR -->
+  <!-- ################ END NAV BAR #################-->
 
   <div id="fondo">
     <div id="fondo_blanco" style="background-color: rgb(255, 228, 196)">
@@ -118,35 +122,36 @@
         <h2>Envianos un correo electronico o llame <a href="tel:+52 764 764 3687" class="phone">+52
             764-764-3687</a> o agenda tu evento aquí mismo solo tienes que iniciar sesión.</h2>
 
-            <form id="reservation-form">
-              <label for="nombre">Tu nombre:</label><br>
-              <input type="text" id="nombre" name="nombre" placeholder="Juan Pedro"><br>
-      
-              <label for="correo">Tu correo electrónico:</label><br>
-              <input type="email" id="correo" name="correo" placeholder="persona_falsa@hotmail.com" required><br>
-      
-              <label for="num_mesa">Número de mesa:</label><br>
-              <input type="number" id="num_mesa" name="num_mesa" placeholder="Número de mesa" required><br>
-                
-              <input id="submit" type="submit" value="¡Reservar!">
-            </form>
-            <div id="confirmacion"></div>
-            <script src="./reserva_horario.js"></script>
+        <form id="reservation-form">
+          <label for="nombre">Tu nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" placeholder="Juan Pedro"><br>
+
+          <label for="correo">Tu correo electrónico:</label><br>
+          <input type="email" id="correo" name="correo" placeholder="persona_falsa@hotmail.com" required><br>
+
+          <label for="num_mesa">Número de mesa:</label><br>
+          <input type="number" id="num_mesa" name="num_mesa" placeholder="Número de mesa" required><br>
+
+          <input id="submit" type="submit" value="¡Reservar!">
+        </form>
+        <div id="confirmacion"></div>
+        <script src="./reserva_horario.js"></script>
       </div>
     </div>
 
 
+    <!-- footer page -->
     <footer>
       <div class="footer-top">
         <!-- left list -->
         <ul class="footer-list-left">
-          <li><a href="/carta.html">Carta</a></li>
-          <li><a href="/reservas-inicio.html">Reserva</a></li>
+          <li><a href="./carta.html">Carta</a></li>
+          <li><a href="./reservas-inicio.html">Reserva</a></li>
           <li><a href="#">Política de Privacidad</a></li>
         </ul>
         <!-- center logo -->
-        <a href="/index.html">
-          <img loading="lazy" src="/img/index-img/logo-footer.svg" alt="logo SazónMáXico">
+        <a href="./index.php">
+          <img loading="lazy" src="./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
         </a>
         <!-- list right -->
         <ul class="footer-list-right">
@@ -177,26 +182,25 @@
         <span>© Copyright 2022 Sazón MáXico - Todos los Derechos Reservados</span>
         <ul class="social">
           <li>
-            <a href="https://www.facebook.com/sazonmaxico" target="_blank">
-              <img loading="lazy" src="/img/footer-icons/facebook.png" alt="facebook">
+            <a href="https://www.facebook.com." target="_blank">
+              <img loading="lazy" src="./img/footer-icons/facebook.png" alt="facebook">
             </a>
           </li>
           <li>
             <a href="tel:764 764 3687" target="_blank">
-              <img loading="lazy" src="/img/footer-icons/tel.png" alt="teléfono">
+              <img loading="lazy" src="./img/footer-icons/tel.png" alt="teléfono">
             </a>
           </li>
           <li>
             <a href="mailto:restaurantesazonmaxico@outlook.com" target="_blank">
-              <img loading="lazy" src="/img/footer-icons/mail.png" alt="correo">
+              <img loading="lazy" src="./img/footer-icons/mail.png" alt="correo">
             </a>
           </li>
         </ul>
       </div>
     </footer>
-
-    <!-- Scripts JS -->
-    <script src="/js/nav-bar.js"></script>
+</body>
+<script src="./js/nav-bar.js"></script>
 </body>
 
 </html>
