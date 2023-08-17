@@ -37,7 +37,7 @@
       <li><a href="./carta.php">Carta</a></li>
       <li><a href="./menu-del-dia.php">Menú del Día</a></li>
       <li><a href="./evento1.php">Eventos</a></li>
-      <li><a href="./reservas-inicio.html">Reservas</a></li>
+      <li><a href="./reservas-inicio.php">Reservas</a></li>
     </ul>
     <!-- Iniciar sesion button -->
     <a href="./login.php" class="login">Iniciar Sesión</a>
@@ -56,7 +56,7 @@
       <li class="dropdown-nav"><a href="./carta.php">Carta</a></li>
       <li class="dropdown-nav"><a href="./menu-del-dia.php">Menú del Día</a></li>
       <li class="dropdown-nav"><a href="./evento1.php">Eventos</a></li>
-      <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
+      <li class="dropdown-nav"><a href="./reservas-inicio.php">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
       <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png"
@@ -270,7 +270,7 @@
       <!-- left list -->
       <ul class="footer-list-left">
         <li><a href="./carta.php">Carta</a></li>
-        <li><a href="./reservas-inicio.html">Reserva</a></li>
+        <li><a href="./reservas-inicio.php">Reserva</a></li>
         <li><a href="#">Política de Privacidad</a></li>
       </ul>
       <!-- center logo -->
