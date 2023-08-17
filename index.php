@@ -26,12 +26,15 @@
 </head>
 
 <body>
+    <!-- autenticacion de usuarios -->
     <?php include "auth_check.php" ?>
+    <!-- conexion a BD -->
     <?php include "conexion.php" ?>
+
     <!-- Nav Bar -->
     <nav class="bar">
         <!-- Logo -->
-        <img src="./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
+        <img src="image.php?src=./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
         <!-- Links Menu -->
         <ul class="links">
             <li><a href="./index.php">Inicio</a></li>
@@ -53,10 +56,10 @@
         ?>
         <!-- Dropdown button -->
         <div class="dropdown-button-container">
-            <img src="./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
+            <img src="image.php?src=./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
                 onclick="mostrarMenu()">
 
-            <img src="./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
+            <img src="image.php?src=./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
                 onclick="ocultarMenu()">
         </div>
 
@@ -69,14 +72,12 @@
             <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
             <!-- settings -->
             <hr class="dropdown-line">
-            <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png"
-                        alt="user"> Iniciar
+            <li class="settings"><a href="./login.php"><img src="image.php?src=./img/navbar-icons/usuario.png" alt="user"> Iniciar
                     Sesión</a></li>
-            <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política
+            <li class="settings"><a href="#"><img src="image.php?src=./img/navbar-icons/documento.png" alt="user">Política
                     y
                     Privacidad</a></li>
-            <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png"
-                        alt="help">Ayuda</a></li>
+            <li class="settings"><a href="#"><img src="image.php?src=./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
         </ul>
     </nav>
     <header class="parallax">
@@ -86,7 +87,7 @@
     <main class="container">
         <!-- Menu del Dia Section -->
         <section class="menu-container">
-            <img loading="lazy" src="./img/index-img/logo-amarillo.svg" alt="logo-SazónMáXico">
+            <img loading="lazy" src="image.php?src=./img/index-img/logo-amarillo.svg" alt="logo-SazónMáXico">
             <div class="menu-del-dia">
 
                 <!-- Menu del Día Dinámico (Horario) -->
@@ -107,17 +108,17 @@
         <section class="banquete-container">
             <!-- header -->
             <div class="banquete-header">
-                <img loading="lazy" src="./img/index-img/Azteca.svg" alt="Azteca image">
+                <img loading="lazy" src="image.php?src=./img/index-img/Azteca.svg" alt="Azteca image">
                 <h2>El Banquete Azteca</h2>
-                <img loading="lazy" src="./img/index-img/Azteca-invert.svg" alt="Azteca image invert">
+                <img loading="lazy" src="image.php?src=./img/index-img/Azteca-invert.svg" alt="Azteca image invert">
             </div>
 
             <!-- banquete scroll images -->
             <div class="banquete-scroll">
-                <img loading="lazy" src="./img/index-img/platillo-1-banquete.svg" alt="platillo 1">
-                <img loading="lazy" src="./img/index-img/platillo-2-banquete.svg" alt="platillo 2">
-                <img loading="lazy" src="./img/index-img/platillo-3-banquete.svg" alt="platillo 3">
-                <img loading="lazy" src="./img/index-img/platillo-4-banquete.svg" alt="platillo 4">
+                <img loading="lazy" src="image.php?src=./img/index-img/platillo-1-banquete.svg" alt="platillo 1">
+                <img loading="lazy" src="image.php?src=./img/index-img/platillo-2-banquete.svg" alt="platillo 2">
+                <img loading="lazy" src="image.php?src=./img/index-img/platillo-3-banquete.svg" alt="platillo 3">
+                <img loading="lazy" src="image.php?src=./img/index-img/platillo-4-banquete.svg" alt="platillo 4">
             </div>
             <!-- Banquete Info -->
             <p>El plato principal incluye una generosa porción de tamal de maíz, relleno de pollo en salsa verde y
@@ -162,7 +163,7 @@
             </ul>
             <!-- center logo -->
             <a href="./index.php">
-                <img loading="lazy" src="./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
+                <img loading="lazy" src="image.php?src=./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
             </a>
             <!-- list right -->
             <ul class="footer-list-right">
@@ -194,17 +195,17 @@
             <ul class="social">
                 <li>
                     <a href="https://www.facebook.com." target="_blank">
-                        <img loading="lazy" src="./img/footer-icons/facebook.png" alt="facebook">
+                        <img loading="lazy" src="image.php?src=./img/footer-icons/facebook.png" alt="facebook">
                     </a>
                 </li>
                 <li>
                     <a href="tel:764 764 3687" target="_blank">
-                        <img loading="lazy" src="./img/footer-icons/tel.png" alt="teléfono">
+                        <img loading="lazy" src="image.php?src=./img/footer-icons/tel.png" alt="teléfono">
                     </a>
                 </li>
                 <li>
                     <a href="mailto:restaurantesazonmaxico@outlook.com" target="_blank">
-                        <img loading="lazy" src="./img/footer-icons/mail.png" alt="correo">
+                        <img loading="lazy" src="image.php?src=./img/footer-icons/mail.png" alt="correo">
                     </a>
                 </li>
             </ul>
