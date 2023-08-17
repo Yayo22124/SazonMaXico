@@ -142,16 +142,16 @@
       <div class="imgevento1"><img src="./image.php?src=./img/img-enventos/image 23.svg" alt=""></div>
       <div class="fondo3">
         <p>
-          ¡Una gran opción para ti y para tu dia especial!
+          ¡Una gran opción para ti y para tu día especial!
         </p>
         <p class="texto">Manejamos gran variedad de eventos y podemos brindarte lo que necesites.
-          Para mas informacion y poder llevar acabo tu evento de una mejor forma.
-          Aqui estan nuestros diferentes contactos o acude a el restaurante y podremos ayudarte de una forma mucho mas
+          Para más información y poder llevar acabo tu evento de una mejor forma.
+          Aquí estan nuestros diferentes contactos o acude a el restaurante y podremos ayudarte de una forma mucho más
           precisa.
 
-          Numero de teléfono: 776-112-1211
+          Número de teléfono: <a href="tel:+527761121211">776-112-1211</a>
 
-          Correo Electronico: sazonmaxico@outlook.com</p> <br> <br>
+          Correo Electrónico: <a href="mailto:sazonmaxico@outlook.com">sazonmaxico@outlook.com</a></p> <br> <br>
       </div>
       <div class="imgevento1"><img src="./image.php?src=./img/img-enventos/image 25.svg" alt=""></div>
       <div class="recuadro1">
@@ -177,8 +177,8 @@
         <div class="familia2"><img src="./image.php?src=./img/img-enventos/FB_IMG_1687132314814.jpg" alt=""></div>
       </div>
       <div class="agendacion">
-        <p>¡agenda tu evento ya!</p>
-        <h2>Envianos un correo electronico o llame <a href="tel:+52 764 764 3687" class="phone">+52
+        <p>¡Agenda Tu Evento Ya!</p>
+        <h2>Envíanos un correo electrónico o llame <a href="tel:+52 764 764 3687" class="phone">+52
             764-764-3687</a> o agenda tu evento aquí mismo solo tienes que iniciar sesión.</h2>
 
         <form id="reservation-form">
@@ -218,17 +218,17 @@
             <h3>horario xicotepec de juarez</h3>
           </li>
           <li>
-            Lunes a Jueves
+            <strong>Lunes a Jueves</strong>
             <br>
             09:00 - 18:00h
           </li>
           <li>
-            Viernes a Sábado
+            <strong>Viernes a Sábado</strong>
             <br>
             10:00 - 20:00h
           </li>
           <li>
-            Domingo
+            <strong>Domingo</strong>
             <br>
             10:00 - 17:00h
             <br>

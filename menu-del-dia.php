@@ -136,11 +136,11 @@
 
     <div id="fondo">
       <div id="fondo_blanco">
-        <h1 id="titulo_menu" style="text-align: center; font-size: 50px;">MENU DEL DIA <span>LUNES</span></h1>
+        <h1 id="titulo_menu" style="text-align: center; font-size: 50px;">MENú DEL DÍA <span>LUNES</span></h1>
         <div class="circulo">
           <p id="uno">1</p>
         </div>
-        <h2 class="title">ELIJE UN PLATILLO</h2>
+        <h2 class="title">ELÍJE UN PLATILLO</h2>
 
 
         <div id="carta">
@@ -345,17 +345,17 @@
           <h3>horario xicotepec de juarez</h3>
         </li>
         <li>
-          Lunes a Jueves
+          <strong>Lunes a Jueves</strong>
           <br>
           09:00 - 18:00h
         </li>
         <li>
-          Viernes a Sábado
+          <strong>Viernes a Sábado</strong>
           <br>
           10:00 - 20:00h
         </li>
         <li>
-          Domingo
+          <strong>Domingo</strong>
           <br>
           10:00 - 17:00h
           <br>

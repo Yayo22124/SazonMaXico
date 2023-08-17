@@ -225,17 +225,18 @@
                     <h3>horario xicotepec de juarez</h3>
                 </li>
                 <li>
-                    Lunes a Jueves
+                    <strong>Lunes a Jueves</strong>
                     <br>
+
                     09:00 - 18:00h
                 </li>
                 <li>
-                    Viernes a Sábado
+                    <strong>Viernes a Sábado</strong>
                     <br>
                     10:00 - 20:00h
                 </li>
                 <li>
-                    Domingo
+                    <strong>Domingo</strong>
                     <br>
                     10:00 - 17:00h
                     <br>

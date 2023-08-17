@@ -217,8 +217,8 @@
       </div>
       <!-- !Primeras mesas de la parte de abajo -->
       <p class="texto">Siempre estamos listos para satisfacer todas sus necesidades y requerimientos durante su comida
-        especial. Llame al <a href="tel:+52 764 764 3687" class="phone">+52 764-764-3687</a> o llene los siguientes
-        campos para darle una reserva de nuestras diferentes mesas y revisar su disponibilidad y el numero de mesa o
+        especial. Llamé al <a href="tel:+52 764 764 3687" class="phone">+52 764-764-3687</a> o llene los siguientes
+        campos para darle una reserva de nuestras diferentes mesas y revisar su disponibilidad y el número de mesa o
         mesas y sobre todo de personas que tendra la mesa</p>
       <h1 id="lol">Reserva de Mesas</h1>
       <form id="reservation-form">
@@ -251,7 +251,7 @@
           <div id="content">
             <p class="inicio">"¡Bienvenidos a Nuestra Experiencia Gastronómica en Sazon MaXico!
 
-              En Sazon MaXico, nuestra pasión es ofrecer una fusión excepcional de sabores auténticos y creatividad
+              En Sazón MáXico, nuestra pasión es ofrecer una fusión excepcional de sabores auténticos y creatividad
               culinaria
               en cada platillo.
               Nuestra página de reseñas es el lugar donde tus sentidos encuentran su voz.
@@ -315,17 +315,17 @@
             <h3>horario xicotepec de juarez</h3>
           </li>
           <li>
-            Lunes a Jueves
+            <strong>Lunes a Jueves</strong>
             <br>
             09:00 - 18:00h
           </li>
           <li>
-            Viernes a Sábado
+            <strong>Viernes a Sábado</strong>
             <br>
             10:00 - 20:00h
           </li>
           <li>
-            Domingo
+            <strong>Domingo</strong>
             <br>
             10:00 - 17:00h
             <br>

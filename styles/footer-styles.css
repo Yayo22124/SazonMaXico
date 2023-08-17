@@ -83,6 +83,10 @@ footer ul {
         text-align: center;
         line-height: 22px;
     }
+
+    & li > strong {
+        color: #794531;
+    }
 }
 
 .footer-top {

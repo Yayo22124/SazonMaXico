@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- links -->
         <link rel="shortcut icon" href="./img/Xicote.svg" type="image/x-icon">
+        <link rel="shortcut icon" href="./img/Xicote.svg" type="image/x-icon">
         <link rel="stylesheet" href="./styles/home-admin.css">
         <link rel="stylesheet" href="./styles/scroll-styles.css">
         <link rel="stylesheet" href="./styles/parallax.css">

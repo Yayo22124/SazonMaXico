@@ -158,7 +158,7 @@
           <div id="content">
             <p class="inicio">"¡Bienvenidos a Nuestra Experiencia Gastronómica en Sazon MaXico!
 
-              En Sazon MaXico, nuestra pasión es ofrecer una fusión excepcional de sabores auténticos y creatividad
+              En Sazón MáXico, nuestra pasión es ofrecer una fusión excepcional de sabores auténticos y creatividad
               culinaria
               en cada platillo.
               Nuestra página de reseñas es el lugar donde tus sentidos encuentran su voz.
@@ -215,7 +215,7 @@
       <ul class="footer-list-left">
         <li><a href="./carta.php">Carta</a></li>
         <li><a href="./reservas-inicio.php">Reserva</a></li>
-        <li><a href="#" id="privacy-link">Política de Privacidad</a></li>
+        <li><a href="" id="privacy-link">Política de Privacidad</a></li>
       </ul>
       <!-- center logo -->
       <a href="./index.php">
@@ -227,17 +227,17 @@
           <h3>horario xicotepec de juarez</h3>
         </li>
         <li>
-          Lunes a Jueves
+          <strong>Lunes a Jueves</strong>
           <br>
           09:00 - 18:00h
         </li>
         <li>
-          Viernes a Sábado
+          <strong>Viernes a Sábado</strong>
           <br>
           10:00 - 20:00h
         </li>
         <li>
-          Domingo
+          <strong>Domingo</strong>
           <br>
           10:00 - 17:00h
           <br>
