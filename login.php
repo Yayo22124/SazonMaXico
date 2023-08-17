@@ -58,7 +58,7 @@
 
                 // Redirigir al home correspondiente (administrador o cliente)
                 if ($_SESSION['user_type'] === 'Administrador') {
-                    header("Location: admin_home.php");
+                    header("Location: home-Admin.php");
                 } else {
                     header("Location: index.php");
                 }
