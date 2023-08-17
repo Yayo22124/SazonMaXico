@@ -32,10 +32,10 @@
 
         // Obtener los datos del formulario
         $correo = $_POST["correo"];
-        $password = $_POST["password"]; // Asegúrate de tener un campo 'password' en tu formulario
+        $password = $_POST["password"];
     
         // Verificar las credenciales del usuario en la base de datos
-        $check_user_query = "SELECT Persona_ID, Email, Password, Tipo FROM tbb_usuarios WHERE Email = ?";
+        $check_user_query = "SELECT Persona_ID, Email, 'Password', Tipo FROM tbb_usuarios WHERE Email = ?";
         $stmt = mysqli_prepare($conn, $check_user_query);
 
         if ($stmt) {
