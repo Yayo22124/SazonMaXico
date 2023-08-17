@@ -63,6 +63,7 @@
                 } else {
                     header("Location: index.php");
                 }
+                $notification = array("iniciando sesion");
                 exit();
             } else {
                 $notification = array("status" => "error", "message" => "Contraseña incorrecta.");
