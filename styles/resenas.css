@@ -36,7 +36,7 @@ header {
   background-size: fill;
   background-position: center;
   filter: saturate(135%);
-
+}
   /* ---- Tittle Header (H1) ---- */
   & > h1 {
       /* font styles */
@@ -54,7 +54,7 @@ header {
       cursor: pointer;
       
   }
-}
+
 
 .contenedor{
   width: 1205px;
