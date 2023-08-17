@@ -21,12 +21,56 @@
     <link rel="stylesheet" href="./styles/parallax.css">
     <link rel="stylesheet" href="./styles/footer-styles.css">
     <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/politica.css">
 
     <!-- Tittle Page -->
     <title>Sazón MáXico | Postres</title>
 </head>
 
 <body>
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Política de Privacidad</h2>
+            <p>
+                Esta Política de Privacidad describe cómo se recopilan y utilizan los datos personales que proporcionas
+                en
+                nuestra aplicación web. Al utilizar esta aplicación, aceptas los términos descritos en esta política.
+            </p>
+            <h3>Datos Recopilados</h3>
+            <p>
+                Recopilamos los siguientes datos personales:
+            <ul>
+                <li>Nombre completo</li>
+                <li>Correo electrónico</li>
+                <li>Edad</li>
+                <li>Fecha de nacimiento</li>
+                <li>Historial en la aplicación</li>
+            </ul>
+            </p>
+            <h3>Uso de Datos</h3>
+            <p>
+                Utilizamos los datos recopilados para:
+            <ul>
+                <li>Personalizar tu experiencia en la aplicación</li>
+                <li>Proporcionar servicios y funciones solicitadas</li>
+                <li>Mejorar nuestros servicios y comunicaciones</li>
+            </ul>
+            </p>
+            <h3>Confidencialidad y Seguridad</h3>
+            <p>
+                Mantenemos tus datos personales confidenciales y aplicamos medidas de seguridad para protegerlos de
+                acceso no
+                autorizado.
+            </p>
+            <h3>Consentimiento</h3>
+            <p>
+                Al utilizar esta aplicación, das tu consentimiento para la recopilación y uso de tus datos personales
+                según lo
+                descrito en esta política.
+            </p>
+        </div>
+    </div>
     <!-- conexion a BD -->
     <?php include "conexion.php" ?>
     <!-- usuarios logueados -->
@@ -68,9 +112,11 @@
             <hr class="dropdown-line">
             <li class="settings"><a href="/login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar
                     Sesión</a></li>
-            <li class="settings"><a href="#" id="privacy-link"><img src="./img/navbar-icons/documento.png" alt="user">Política y
+            <li class="settings"><a href="#" id="privacy-link"><img src="./img/navbar-icons/documento.png"
+                        alt="user">Política y
                     Privacidad</a></li>
-            <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+            <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img
+                        src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
         </ul>
     </nav>
 
@@ -196,7 +242,8 @@
     </footer>
 
 </body>
-    <!-- Scripts -->
- <script src="./js/nav-bar.js"></script>
+<!-- Scripts -->
+<script src="./js/nav-bar.js"></script>
 <script src="./js/politica.js"></script>
+
 </html>
