@@ -72,15 +72,18 @@
             <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
             <!-- settings -->
             <hr class="dropdown-line">
-            <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png" alt="user"> Iniciar
+            <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png"
+                        alt="user"> Iniciar
                     Sesión</a></li>
-            <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/documento.png" alt="user">Política
+            <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/documento.png"
+                        alt="user">Política
                     y
                     Privacidad</a></li>
-            <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+            <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png"
+                        alt="help">Ayuda</a></li>
         </ul>
     </nav>
-    <header class="parallax">
+    <header class="parallax" data-src="./img/index-img/Bg-restaurante.svg">
         <h1>Sázon MáXico</h1>
     </header>
     <!-- Main Content -->
@@ -134,14 +137,14 @@
             <hr>
         </section>
         <!-- Section Combos -->
-        <section class="combos-container parallax">
+        <section class="combos-container parallax" data-src="./img/index-img/combo-1-izquierda.jpg">
             <!-- combos info -->
             <div class="combos">
                 <div class="combos-aztecas">
                     <h1>combos <br><span>aztecas</span></h1>
                     <span>nuestras recomendaciones para ti</span>
                 </div>
-                <button type="button">
+                <button type="button" id="redireccionarBtn">
                     <span>Reserva aquí</span>
                 </button>
             </div>
@@ -214,6 +217,19 @@
 
     <!-- Scripts JS -->
     <script src="./js/nav-bar.js"></script>
+
+    <!-- redireccionar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var redireccionarBtn = document.getElementById("redireccionarBtn");
+
+            redireccionarBtn.addEventListener("click", function () {
+                // URL nueva
+                window.location.href = "./reservas-inicio.html";
+            });
+        });
+    </script>
+
 </body>
 
 </html>
