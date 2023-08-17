@@ -51,6 +51,6 @@
         </h1>
        
     </main>
-<script src="/js/nav-bar.js"></script>
+<script src="./js/nav-bar.js"></script>
 </body>
 </php>
