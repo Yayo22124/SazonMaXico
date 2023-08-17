@@ -65,11 +65,11 @@
 
                         if ($result_token) {
                             // Redirigir según el tipo de usuario
-                            if ($user_data['Tipo'] === 'Cliente') {
-                                header("Location: ./index.php"); // Redirigir a la página de clientes
-                                exit();
-                            } elseif ($user_data['Tipo'] === 'Administrador') {
+                            if ($user_data['Tipo'] === 'Administrador') {
                                 header("Location: ./home-Admin.php"); // Redirigir a la página de administradores
+                                exit();
+                            } elseif ($user_data['Tipo'] === 'Cliente') {
+                                header("Location: ./index.php"); // Redirigir a la página de clientes
                                 exit();
                             } else {
                                 $notification = array("status" => "error", "message" => "Tipo de usuario desconocido.");
