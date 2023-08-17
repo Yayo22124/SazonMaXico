@@ -369,18 +369,6 @@ input:hover {
 
 }
 
-#fondo {
-  background-color: #432D1C;
-  padding: 20px;
-  width: 100%;
-}
-
-#fondo_blanco {
-  background-color: white;
-  margin: 0%;
-
-}
-
 .inicio{
   margin: 15px 10%;
   font-size: 18px;
