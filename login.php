@@ -26,7 +26,6 @@
 
     <!-- Envio de datos PHP -->
     <?php
-    session_start();
 
     // Verificar si ya existe una sesión iniciada
     if (isset($_SESSION['user_id'])) {
