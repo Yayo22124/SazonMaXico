@@ -30,6 +30,11 @@
     <?php include "auth_check.php" ?>
     <!-- conexion a BD -->
     <?php include "conexion.php" ?>
+    <!-- usuarios logueados -->
+    <?php
+    // Incluye la verificación de sesión
+    include "check_session.php";
+    ?>
 
     <!-- Nav Bar -->
     <nav class="bar">
@@ -48,7 +53,7 @@
         <?php
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
-        if (isLoggedIn($conn)) {
+        if (isset($_SESSION['user_id'])) {
             echo '<a href="./logout.php" class="login">Cerrar Sesión</a>';
         } else {
             echo '<a href="./login.php" class="login">Iniciar Sesión</a>';
@@ -72,15 +77,12 @@
             <li class="dropdown-nav"><a href="./reservas-inicio.php">Reservas</a></li>
             <!-- settings -->
             <hr class="dropdown-line">
-            <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png"
-                        alt="user"> Iniciar
+            <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar
                     Sesión</a></li>
-            <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png"
-                        alt="user">Política
+            <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política
                     y
                     Privacidad</a></li>
-            <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png"
-                        alt="help">Ayuda</a></li>
+            <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
         </ul>
     </nav>
     <header class="parallax" data-src="./img/index-img/Bg-restaurante.svg">
