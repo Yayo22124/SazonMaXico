@@ -21,7 +21,7 @@
     <nav>
         <!-- logo -->
         <a href="./home-Admin.php" class="logo">
-            <img src="./image.php?src=./img/logo.svg" alt="logo SazónMáXico">
+            <img src="./img/navbar-icons/logo-recortado.svg" alt="logo SazónMáXico">
         </a>
         
 
