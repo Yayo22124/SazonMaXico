@@ -34,7 +34,7 @@
     <!-- Links Menu -->
     <ul class="links">
       <li><a href="./index.php">Inicio</a></li>
-      <li><a href="./carta.html">Carta</a></li>
+      <li><a href="./carta.php">Carta</a></li>
       <li><a href="./menu-del-dia.php">Menú del Día</a></li>
       <li><a href="./evento1.php">Eventos</a></li>
       <li><a href="./reservas-inicio.html">Reservas</a></li>
@@ -53,7 +53,7 @@
     <!-- dropdown menu -->
     <ul class="dropdown-menu active" id="dropdown-menu">
       <li class="dropdown-nav"><a href="./index.php">Inicio</a></li>
-      <li class="dropdown-nav"><a href="./carta.html">Carta</a></li>
+      <li class="dropdown-nav"><a href="./carta.php">Carta</a></li>
       <li class="dropdown-nav"><a href="./menu-del-dia.php">Menú del Día</a></li>
       <li class="dropdown-nav"><a href="./evento1.php">Eventos</a></li>
       <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
@@ -269,7 +269,7 @@
     <div class="footer-top">
       <!-- left list -->
       <ul class="footer-list-left">
-        <li><a href="./carta.html">Carta</a></li>
+        <li><a href="./carta.php">Carta</a></li>
         <li><a href="./reservas-inicio.html">Reserva</a></li>
         <li><a href="#">Política de Privacidad</a></li>
       </ul>
