@@ -74,7 +74,6 @@ _ _ _
 - MariaDB
 - HTML: 5
 - CSS: 3
-- Python: 3.11
 - JavaScript
 - PHP
 - Figma
