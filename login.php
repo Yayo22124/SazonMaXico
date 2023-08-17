@@ -58,7 +58,7 @@
 
                 // Redirigir al home correspondiente (administrador o cliente)
                 if ($tipo_usuario == 'Administrador') {
-                    header("Location: carta.php");
+                    header("Location: home-Admin.php");
                     $notification = array('error');
                 } else {
                     header("Location: index.php");
