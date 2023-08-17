@@ -21,15 +21,15 @@
     <nav>
         <!-- logo -->
         <a href="./home-Admin.php" class="logo">
-            <img src="/img/logo.svg" alt="logo SazónMáXico">
+            <img src="./image.php?src=./img/logo.svg" alt="logo SazónMáXico">
         </a>
         
 
          <!-- Dropdown button -->
          <div class="dropdown-button-container">
-          <img src="/img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
+          <img src="./image.php?src=./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
 
-          <img src="/img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
+          <img src="./image.php?src=./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
       </div>
 
       <!-- dropdown menu -->
@@ -40,7 +40,7 @@
           <li class="dropdown-nav"><a href="#">Estadísticas</a></li>
           <!-- settings -->
           <hr class="dropdown-line">
-          <li class="settings"><a href="./login.php"><img src="/img/navbar-icons/usuario.png" alt="user"> Cerrar Sesión</a></li>
+          <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png" alt="user"> Cerrar Sesión</a></li>
       </ul>
     </nav>
 
