@@ -72,15 +72,18 @@
             <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
             <!-- settings -->
             <hr class="dropdown-line">
-            <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png" alt="user"> Iniciar
+            <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png"
+                        alt="user"> Iniciar
                     Sesión</a></li>
-            <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/documento.png" alt="user">Política
+            <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/documento.png"
+                        alt="user">Política
                     y
                     Privacidad</a></li>
-            <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+            <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png"
+                        alt="help">Ayuda</a></li>
         </ul>
     </nav>
-    <header class="parallax">
+    <header class="parallax" data-src="./img/index-img/Bg-restaurante.svg">
         <h1>Sázon MáXico</h1>
     </header>
     <!-- Main Content -->
@@ -134,7 +137,7 @@
             <hr>
         </section>
         <!-- Section Combos -->
-        <section class="combos-container parallax">
+        <section class="combos-container parallax" data-src="./img/index-img/combo-1-izquierda.jpg">
             <!-- combos info -->
             <div class="combos">
                 <div class="combos-aztecas">
@@ -214,6 +217,18 @@
 
     <!-- Scripts JS -->
     <script src="./js/nav-bar.js"></script>
+    <!-- image compress -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-src]').each(function () {
+                var $elemento = $(this);
+                var src = $elemento.data('src');
+                $elemento.css('background-image', 'url(image.php?src=' + src + ')');
+            });
+        });
+    </script>
+
 </body>
 
 </html>
