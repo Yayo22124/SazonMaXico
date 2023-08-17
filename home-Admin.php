@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- links -->
-    <link rel="shortcut icon" href="/img/Xicote.svg" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/home-admin.css">
-    <link rel="stylesheet" href="/styles/scroll-styles.css">
-    <link rel="stylesheet" href="/styles/parallax.css">
-    <link rel="stylesheet" href="/styles/navbar-admin.css">
+    <link rel="shortcut icon" href="./img/Xicote.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/home-admin.css">
+    <link rel="stylesheet" href="./styles/scroll-styles.css">
+    <link rel="stylesheet" href="./styles/parallax.css">
+    <link rel="stylesheet" href="./styles/navbar-admin.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
     <!-- Header -->
     <nav>
         <!-- logo -->
-        <a href="/home-Admin.html" class="logo">
+        <a href="./home-Admin.php" class="logo">
             <img src="/img/logo.svg" alt="logo SazónMáXico">
         </a>
         
@@ -34,13 +34,13 @@
 
       <!-- dropdown menu -->
       <ul class="dropdown-menu active" id="dropdown-menu">
-          <li class="dropdown-nav"><a href="/home-Admin.html">Inicio</a></li>
-          <li class="dropdown-nav"><a href="/reservas-Admin.html">Administrar Reservas</a></li>
+          <li class="dropdown-nav"><a href="./home-Admin.php">Inicio</a></li>
+          <li class="dropdown-nav"><a href="./reservas-Admin.php">Administrar Reservas</a></li>
           <li class="dropdown-nav"><a href="#">Administrar Eventos</a></li>
           <li class="dropdown-nav"><a href="#">Estadísticas</a></li>
           <!-- settings -->
           <hr class="dropdown-line">
-          <li class="settings"><a href="/login.html"><img src="/img/navbar-icons/usuario.png" alt="user"> Cerrar Sesión</a></li>
+          <li class="settings"><a href="./login.php"><img src="/img/navbar-icons/usuario.png" alt="user"> Cerrar Sesión</a></li>
       </ul>
     </nav>
 
@@ -53,4 +53,4 @@
     </main>
 <script src="/js/nav-bar.js"></script>
 </body>
-</html>
+</php>
