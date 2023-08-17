@@ -454,6 +454,10 @@ header {
 
     }
 
+    .banquete-container > p{
+        padding: 0 25px;
+    }
+
     #redireccionarBtn {
         width: 70%;
     }
