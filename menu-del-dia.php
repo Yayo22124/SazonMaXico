@@ -30,7 +30,7 @@
   <!-- Nav Bar -->
   <nav class="bar">
     <!-- Logo -->
-    <img src="./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
+    <img src="./image.php?src=./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
     <!-- Links Menu -->
     <ul class="links">
       <li><a href="./index.php">Inicio</a></li>
@@ -43,10 +43,10 @@
     <a href="./login.php" class="login">Iniciar Sesión</a>
     <!-- Dropdown button -->
     <div class="dropdown-button-container">
-      <img src="./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
+      <img src="./image.php?src=./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
         onclick="mostrarMenu()">
 
-      <img src="./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
+      <img src="./image.php?src=./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
         onclick="ocultarMenu()">
     </div>
 
@@ -59,13 +59,13 @@
       <li class="dropdown-nav"><a href="./reservas-inicio.php">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png"
+      <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png"
             alt="user"> Iniciar Sesión</a>
       </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política y
+      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/documento.png" alt="user">Política y
           Privacidad</a>
       </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a>
+      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a>
       </li>
     </ul>
   </nav>
@@ -88,7 +88,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="./img/img-reservas-platillos/pechugas.png" alt="" class="platillos">
+                  <img src="./image.php?src=./img/img-reservas-platillos/pechugas.png" alt="" class="platillos">
                 </div>
                 <h3>Pechuga Empanizada</h3>
                 <p style="margin-top: 20px;">Con arroz a la mexicana, ensalada de lechuga con jitomate. (160 g)</p>
@@ -102,7 +102,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="./img/img-reservas-platillos/enmoladas.png" alt="" class="platillos">
+                  <img src="./image.php?src=./img/img-reservas-platillos/enmoladas.png" alt="" class="platillos">
                 </div>
                 <h3>Enchiladas Caseras</h3>
                 <p style="margin-top: 20px;">Rellenas de cerdo guisado, bañadas con salsa pasilla, verde o roja,
@@ -120,7 +120,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="./img/img-reservas-platillos/tostadas.png" alt="" class="platillos">
+                  <img src="./image.php?src=./img/img-reservas-platillos/tostadas.png" alt="" class="platillos">
                 </div>
                 <h3>TOSTADAS CON CHORIZO</h3>
                 <p style="margin-top: 20px;">Con salsas incluidas y mas condimentos al gusto del cliente(5 piezas)</p>
@@ -141,7 +141,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="./img/img-reservas-platillos/sopa_caldo.png" alt="" class="platillos">
+                  <img src="./image.php?src=./img/img-reservas-platillos/sopa_caldo.png" alt="" class="platillos">
                 </div>
                 <h3>Consomé con arroz y pollo</h3>
                 <p style="margin-top: 20px;">Aceite de oliva,
@@ -164,7 +164,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="./img/img-reservas-platillos/sopa.png" alt="" class="platillos">
+                  <img src="./image.php?src=./img/img-reservas-platillos/sopa.png" alt="" class="platillos">
                 </div>
                 <h3>Sopa de fideos</h3>
                 <p style="margin-top: 20px;">Aceite de oliva,
@@ -186,7 +186,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="./img/img-reservas-platillos/sopa_letras.png" alt="" class="platillos">
+                  <img src="./image.php?src=./img/img-reservas-platillos/sopa_letras.png" alt="" class="platillos">
                 </div>
                 <h3>Sopa de letras</h3>
                 <p style="margin-top: 20px;">Cebolla,
@@ -215,7 +215,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="./img/img-reservas-platillos/refrescos.png" alt="" class="bebidas">
+                  <img src="./image.php?src=./img/img-reservas-platillos/refrescos.png" alt="" class="bebidas">
                 </div>
                 <h3>Refrescos</h3>
                 <p style="margin-top: 20px;">Todos tu refrescos favoritos estan aqui </p>
@@ -229,7 +229,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="./img/img-reservas-platillos/limonada.png" alt="" class="bebidas">
+                  <img src="./image.php?src=./img/img-reservas-platillos/limonada.png" alt="" class="bebidas">
                 </div>
                 <h3>Limonada</h3>
                 <p style="margin-top: 20px;">La limonada es una refrescante y deliciosa bebida cítrica, perfecta para
@@ -245,7 +245,7 @@
               <div class="contenido">
                 <span></span>
                 <div class="img">
-                  <img src="./img/img-reservas-platillos/naranjada.png" alt="" class="bebidas">
+                  <img src="./image.php?src=./img/img-reservas-platillos/naranjada.png" alt="" class="bebidas">
                 </div>
                 <h3>Naranjada</h3>
                 <p style="margin-top: 20px;">La naranjada es una refrescante y vibrante bebida de origen cítrico que
@@ -275,7 +275,7 @@
       </ul>
       <!-- center logo -->
       <a href="./index.php">
-        <img loading="lazy" src="./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
+        <img loading="lazy" src="./image.php?src=./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
       </a>
       <!-- list right -->
       <ul class="footer-list-right">
@@ -307,17 +307,17 @@
       <ul class="social">
         <li>
           <a href="https://www.facebook.com." target="_blank">
-            <img loading="lazy" src="./img/footer-icons/facebook.png" alt="facebook">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/facebook.png" alt="facebook">
           </a>
         </li>
         <li>
           <a href="tel:764 764 3687" target="_blank">
-            <img loading="lazy" src="./img/footer-icons/tel.png" alt="teléfono">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/tel.png" alt="teléfono">
           </a>
         </li>
         <li>
           <a href="mailto:restaurantesazonmaxico@outlook.com" target="_blank">
-            <img loading="lazy" src="./img/footer-icons/mail.png" alt="correo">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/mail.png" alt="correo">
           </a>
         </li>
       </ul>

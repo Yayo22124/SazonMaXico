@@ -31,7 +31,7 @@
   <!-- Nav Bar -->
   <nav class="bar">
     <!-- Logo -->
-    <img src="./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
+    <img src="./image.php?src=./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
     <!-- Links Menu -->
     <ul class="links">
       <li><a href="./index.php">Inicio</a></li>
@@ -44,10 +44,10 @@
     <a href="./login.php" class="login">Iniciar Sesión</a>
     <!-- Dropdown button -->
     <div class="dropdown-button-container">
-      <img src="./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
+      <img src="./image.php?src=./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
         onclick="mostrarMenu()">
 
-      <img src="./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
+      <img src="./image.php?src=./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
         onclick="ocultarMenu()">
     </div>
 
@@ -60,13 +60,13 @@
       <li class="dropdown-nav"><a href="./reservas-inicio.php">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png"
+      <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png"
             alt="user"> Iniciar Sesión</a>
       </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política y
+      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/documento.png" alt="user">Política y
           Privacidad</a>
       </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a>
+      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a>
       </li>
     </ul>
   </nav>
@@ -95,9 +95,9 @@
         </div>
       </div>
       <div id="mesas">
-        <img class="mesa_circular" src="./img/img-reservas-platillos/mesa-cuatro.png" alt="">
-        <img class="mesa_circular" src="./img/img-reservas-platillos/mesa-cuatro.png" alt="">
-        <img class="mesa_circular" src="./img/img-reservas-platillos/mesa-cuatro.png" alt="">
+        <img class="mesa_circular" src="./image.php?src=./img/img-reservas-platillos/mesa-cuatro.png" alt="">
+        <img class="mesa_circular" src="./image.php?src=./img/img-reservas-platillos/mesa-cuatro.png" alt="">
+        <img class="mesa_circular" src="./image.php?src=./img/img-reservas-platillos/mesa-cuatro.png" alt="">
       </div>
 
       <!-- !Primeras mesas de la parte de arriba -->
@@ -112,8 +112,8 @@
         </div>
       </div>
       <div id="mesas_rectangulares">
-        <img class="mesa_rectangular" src="./img/img-reservas-platillos/mesa-ocho.png" alt="">
-        <img class="mesa_rectangular" src="./img/img-reservas-platillos/mesa-ocho.png" alt="">
+        <img class="mesa_rectangular" src="./image.php?src=./img/img-reservas-platillos/mesa-ocho.png" alt="">
+        <img class="mesa_rectangular" src="./image.php?src=./img/img-reservas-platillos/mesa-ocho.png" alt="">
 
       </div>
       <div id="numeros2">
@@ -128,8 +128,8 @@
       </div>
 
       <div id="mesas_rectangulares">
-        <img class="mesa_rectangular" src="./img/img-reservas-platillos/mesa-ocho.png" alt="">
-        <img class="mesa_rectangular" src="./img/img-reservas-platillos/mesa-ocho.png" alt="">
+        <img class="mesa_rectangular" src="./image.php?src=./img/img-reservas-platillos/mesa-ocho.png" alt="">
+        <img class="mesa_rectangular" src="./image.php?src=./img/img-reservas-platillos/mesa-ocho.png" alt="">
       </div>
 
 
@@ -148,9 +148,9 @@
       </div>
       <div id="mesas">
 
-        <img class="mesa_circular" src="./img/img-reservas-platillos/mesa-cuatro.png" alt="">
-        <img class="mesa_circular" src="./img/img-reservas-platillos/mesa-cuatro.png" alt="">
-        <img class="mesa_circular" src="./img/img-reservas-platillos/mesa-cuatro.png" alt="">
+        <img class="mesa_circular" src="./image.php?src=./img/img-reservas-platillos/mesa-cuatro.png" alt="">
+        <img class="mesa_circular" src="./image.php?src=./img/img-reservas-platillos/mesa-cuatro.png" alt="">
+        <img class="mesa_circular" src="./image.php?src=./img/img-reservas-platillos/mesa-cuatro.png" alt="">
 
       </div>
       <!-- !Primeras mesas de la parte de abajo -->
@@ -245,7 +245,7 @@
         </ul>
         <!-- center logo -->
         <a href="./index.php">
-          <img loading="lazy" src="./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
+          <img loading="lazy" src="./image.php?src=./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
         </a>
         <!-- list right -->
         <ul class="footer-list-right">
@@ -277,17 +277,17 @@
         <ul class="social">
           <li>
             <a href="https://www.facebook.com." target="_blank">
-              <img loading="lazy" src="./img/footer-icons/facebook.png" alt="facebook">
+              <img loading="lazy" src="./image.php?src=./img/footer-icons/facebook.png" alt="facebook">
             </a>
           </li>
           <li>
             <a href="tel:764 764 3687" target="_blank">
-              <img loading="lazy" src="./img/footer-icons/tel.png" alt="teléfono">
+              <img loading="lazy" src="./image.php?src=./img/footer-icons/tel.png" alt="teléfono">
             </a>
           </li>
           <li>
             <a href="mailto:restaurantesazonmaxico@outlook.com" target="_blank">
-              <img loading="lazy" src="./img/footer-icons/mail.png" alt="correo">
+              <img loading="lazy" src="./image.php?src=./img/footer-icons/mail.png" alt="correo">
             </a>
           </li>
         </ul>

@@ -93,11 +93,11 @@
             <header>
                 <!-- icon (return) -->
                 <a href="./index.php">
-                    <img src="./img/return.svg" alt="back">
+                    <img src="./image.php?src=./img/return.svg" alt="back">
                 </a>
                 <!-- logo -->
                 <a href="./index.php">
-                    <img src="./img/logo-header.svg" alt="logo SazónMaXico">
+                    <img src="./image.php?src=./img/logo-header.svg" alt="logo SazónMaXico">
                 </a>
             </header>
 
@@ -156,10 +156,10 @@
                     <label>Contraseña</label>
                     <div class="mostrar-ocultar">
                         <!-- ver contraseña -->
-                        <img src="./img/login-register-img/ver.svg" alt="ver contraseña" id="ver"
+                        <img src="./image.php?src=./img/login-register-img/ver.svg" alt="ver contraseña" id="ver"
                             onclick="verContrasenia()">
                         <!-- ocultar contraseña -->
-                        <img src="./img/login-register-img/ocultar.svg" alt="Ocultar contraseña" id="ocultar"
+                        <img src="./image.php?src=./img/login-register-img/ocultar.svg" alt="Ocultar contraseña" id="ocultar"
                             onclick="ocultarContrasenia()">
                     </div>
                 </div>

@@ -35,7 +35,7 @@
   <!-- Nav Bar -->
   <nav class="bar">
     <!-- Logo -->
-    <img src="./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
+    <img src="./image.php?src=./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
     <!-- Links Menu -->
     <ul class="links">
       <li><a href="./index.php">Inicio</a></li>
@@ -62,11 +62,11 @@
       <li class="dropdown-nav"><a href="./reservas-inicio.php">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar Sesión</a>
+      <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png" alt="user"> Iniciar Sesión</a>
       </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política y Privacidad</a>
+      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/documento.png" alt="user">Política y Privacidad</a>
       </li>
-      <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
     </ul>
   </nav>
   <!-- END NAV BAR -->
@@ -152,7 +152,7 @@
       </ul>
       <!-- center logo -->
       <a href="./index.php">
-        <img loading="lazy" src="./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
+        <img loading="lazy" src="./image.php?src=./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
       </a>
       <!-- list right -->
       <ul class="footer-list-right">
@@ -184,17 +184,17 @@
       <ul class="social">
         <li>
           <a href="https://www.facebook.com." target="_blank">
-            <img loading="lazy" src="./img/footer-icons/facebook.png" alt="facebook">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/facebook.png" alt="facebook">
           </a>
         </li>
         <li>
           <a href="tel:764 764 3687" target="_blank">
-            <img loading="lazy" src="./img/footer-icons/tel.png" alt="teléfono">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/tel.png" alt="teléfono">
           </a>
         </li>
         <li>
           <a href="mailto:restaurantesazonmaxico@outlook.com" target="_blank">
-            <img loading="lazy" src="./img/footer-icons/mail.png" alt="correo">
+            <img loading="lazy" src="./image.php?src=./img/footer-icons/mail.png" alt="correo">
           </a>
         </li>
       </ul>
