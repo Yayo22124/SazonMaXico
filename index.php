@@ -16,21 +16,9 @@
     <!-- CSS Link -->
     <link rel="stylesheet" href="./styles/index-styles.css">
     <link rel="stylesheet" href="./styles/scroll-styles.css">
-    <!-- <link rel="stylesheet" href="./styles/.css -->
+    <link rel="stylesheet" href="./styles/parallax.css">
     <link rel="stylesheet" href="./styles/footer-styles.css">
     <link rel="stylesheet" href="./styles/navbar.css">
-
-    <!-- image compress -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('[data-src]').each(function () {
-                var $elemento = $(this);
-                var src = $elemento.data('src');
-                $elemento.css('background-image', 'url(image.php?src=' + src + ')');
-            });
-        });
-    </script>
 
     <!-- Tittle Page -->
     <title>Sazón MáXico | Inicio</title>
@@ -95,7 +83,7 @@
                         alt="help">Ayuda</a></li>
         </ul>
     </nav>
-    <header class="" data-src="./img/index-img/Bg-restaurante.svg">
+    <header class="parallax" data-src="./img/index-img/Bg-restaurante.svg">
         <h1>Sázon MáXico</h1>
     </header>
     <!-- Main Content -->
@@ -149,7 +137,7 @@
             <hr>
         </section>
         <!-- Section Combos -->
-        <section class="combos-container " data-src="./img/index-img/combo-1-izquierda.jpg">
+        <section class="combos-container parallax" data-src="./img/index-img/combo-1-izquierda.jpg">
             <!-- combos info -->
             <div class="combos">
                 <div class="combos-aztecas">
@@ -229,6 +217,7 @@
 
     <!-- Scripts JS -->
     <script src="./js/nav-bar.js"></script>
+
     <!-- redireccionar -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
