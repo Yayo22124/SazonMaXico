@@ -49,7 +49,7 @@ header {
     background-size: 5px 5px; */
     /* background */
     background-image: url('../img/index-img/Bg-restaurante.svg');
-    background-size: cover;
+    background-size: contain;
     filter: saturate(135%);
 
     /* ---- Tittle Header (H1) ---- */
