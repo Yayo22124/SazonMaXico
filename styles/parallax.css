@@ -2,7 +2,7 @@
     /* parallax */
     background-size: cover;
     background-attachment: fixed;
-    background-position:  bottom; /* Ajusta la altura según tus necesidades */
+    background-position:  bottom;
     
     filter: saturate(105%);
 }
