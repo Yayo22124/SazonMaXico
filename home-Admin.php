@@ -2,6 +2,10 @@
 <php lang="en">
 
     <head>
+        <!-- amcharts -->
+        <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- links -->
@@ -21,6 +25,27 @@
     </head>
 
     <body>
+        <!-- conexion a BD -->
+        <?php include "conexion.php" ?>
+        <!-- usuarios logueados -->
+        <?php
+        // Incluye la verificación de sesión
+        include "check_session.php";
+        ?>
+        <?php
+        // Obtener los datos de la vista desde la base de datos
+        $query = "SELECT cliente_id, nombre_cliente, email_cliente, total_reservas FROM vw_historial_clientes_frecuentes ORDER BY total_reservas DESC LIMIT 5";
+        $result = mysqli_query($conn, $query);
+
+        // Preparar los datos para la gráfica
+        $datos = [];
+        while ($fila = mysqli_fetch_assoc($result)) {
+            $datos[] = [
+                "cliente" => $fila["nombre_cliente"],
+                "frecuencia" => $fila["total_reservas"]
+            ];
+        }
+        ?>
         <!-- Header -->
         <nav>
             <!-- logo -->
@@ -56,8 +81,57 @@
             <h1 class="phrase">
                 Conoce tu Negocio
             </h1>
+            <p>Estos son tus clientes más frecuentes en la aplicación.</p>
+            <div class="chart-container">
+                <!-- div grafica -->
+                <div id="chartdiv" style="width: 95%; height: 500px;"></div>
+            </div>
 
         </main>
-        <script src="./js/nav-bar.js"></script>
+
     </body>
+    <script src="./js/nav-bar.js"></script>
+    <!-- amcharts -->
+    <script>
+        // Usar los datos obtenidos de la base de datos
+        var chart = am4core.create("chartdiv", am4charts.XYChart);
+        chart.data = <?php echo json_encode($datos); ?>;
+
+        // Configurar categoría y valor
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "cliente";
+        categoryAxis.renderer.grid.template.location = 0;
+
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.min = 0;
+        valueAxis.max = 10;
+
+        // Crear la serie de columnas
+        var series = chart.series.push(new am4charts.ColumnSeries());
+        series.dataFields.valueY = "frecuencia";
+        series.dataFields.categoryX = "cliente";
+        series.name = "Total Reservas";
+        series.columns.template.tooltipText = "Cliente: {categoryX}\nTotal Reservas: {valueY}";
+
+        // Configurar etiquetas en las columnas
+        series.columns.template.width = am4core.percent(50);
+        series.columns.template.column.cornerRadiusTopLeft = 10;
+        series.columns.template.column.cornerRadiusTopRight = 10;
+        series.columns.template.strokeOpacity = 0;
+
+        // Aplicar colores personalizados alternados
+        series.columns.template.adapter.add("fill", function (fill, target) {
+            return target.dataItem.index % 2 === 0 ? am4core.color("#F9B338") : am4core.color("#794531");
+        });
+
+        // Aplicar colores neutros en tooltips
+        series.columns.template.tooltip.getFillFromObject = false;
+        series.columns.template.tooltip.background.fill = am4core.color("#E0E0E0");
+
+        // Agregar efecto de animación
+        chart.events.on("ready", function () {
+            chart.animate({ opacity: 1 }, 1000);
+        });
+    </script>
+
 </php>
