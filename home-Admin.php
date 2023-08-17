@@ -101,7 +101,10 @@
         var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
         categoryAxis.dataFields.category = "cliente";
         categoryAxis.renderer.grid.template.location = 0;
-        categoryAxis.renderer.labels.template.fill = am4core.color("#FFFFFF");
+
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.min = 0;
+        valueAxis.max = 10;
 
         // Título lateral
         chart.leftAxesContainer.layout = "vertical";
@@ -109,7 +112,6 @@
         title.text = "Número de reservas";
         title.fontSize = 14;
         title.align = "center";
-        title.fill = am4core.color("#FFFFFF");
 
         // Crear la serie de columnas
         var series = chart.series.push(new am4charts.ColumnSeries());
