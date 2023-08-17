@@ -1,0 +1,549 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+
+  /* Añadido por Haziel: Fuente */
+  font-family: 'Inter';
+}
+
+/* *Arriba esta todo el estilo de la barra de navegacion */
+
+#lol{
+  margin-top: 20px;
+  text-align: center;
+}
+
+#fondo {
+  background-color: #432D1C;
+  padding: 20px;
+  width: 100%;
+}
+
+#fondo_blanco {
+  background-color: white;
+  margin-top: 10px;
+}
+
+/* * */
+
+#title {
+  text-align: center;
+  color: #F9B338;
+  text-shadow: 1px 1px #432D1C;
+  font-size: 60px;
+
+}
+
+.sub_title {
+  font-size: 30px;
+  margin-left: 100px;
+}
+
+.texto {
+  text-align: justify;
+  margin-top: 40px;
+  font-size: 23px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* !Arriba solo tenemos los textos de la parte de arriba de la pagina */
+
+#mesas{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mesa_circular{
+  width: 30%;
+}
+
+#mesas_rectangulares{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #F9B338;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+.circle2 {
+  width: 100px;
+  height: 100px;
+  background-color: #F9B338;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 80px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.number {
+  font-family: Arial, sans-serif;
+}
+
+#numeros {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-bottom: -80px;
+}
+
+#numeros2 {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-bottom: -80px;
+}
+
+/* ! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+
+#solicitud {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 30px;
+}
+
+form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  margin-bottom: 25px;
+}
+
+input:hover {
+  border-color: #F9B338;
+  border-style: solid;
+}
+
+#registro {
+  padding: 0;
+  margin-top: 5%;
+  margin-left: 40%;
+  margin-bottom: 20px;
+  width: 20%;
+
+
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #ffffff;
+  background-color: #432D1C;
+
+  outline: none;
+  cursor: pointer;
+
+  border: solid 1px #432D1C;
+  border-top: none;
+}
+
+#registro:hover {
+  color: #e2dedb;
+  border: solid 1px #F9B338;
+  background: #F9B338;
+}
+
+#submit {
+  padding: 0;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #ffffff;
+  background-color: #432D1C;
+
+  outline: none;
+  cursor: pointer;
+
+  border: solid 1px #432D1C;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #e2dedb;
+  border: solid 1px #F9B338;
+  background: #F9B338;
+}
+
+/* *---------------------------------------------------------*/
+
+/* Añadido por Haziel estilos numero de telefono*/
+.phone {
+  /* font styles */
+  color: #F9B338;
+  font-weight: 600;
+  font-size: 18px;
+  
+  /* animation */
+  transition: 0.5s ease-in-out all;
+}
+
+.phone:hover {
+  transform: scale(1.05);
+}
+
+.phone:active {
+  transform: scale(0.95);
+}
+
+.contenedor{
+  width: 1205px;
+  border: #432D1C;
+  border-style: solid;
+  margin-left: 10% ;
+  margin-top: -40px;
+  background-color: white;
+  position: relative;
+}
+
+.links{
+  margin: 10px 10px;
+}
+
+.links a{
+  margin: 10px 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.links a:hover{
+  color: #F9B338;
+}
+
+#title{
+  margin-left: 20px;
+}
+
+.linea{
+  height: 3px;
+  margin: 0px 15px;
+  background-color: rgba(131, 131, 131, 0.364);
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#contenedor-resena{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.puntuacion{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.estrella {
+  font-size: 24px;
+  color: gray;
+  cursor: pointer;
+  margin-left: 10px;
+
+}
+
+.estrella.pintada {
+  color: yellow;
+}
+
+.reseña textarea {
+  width: 95%;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.reseña button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #432D1C;
+  margin-left: 10px;
+  color: white;
+}
+
+.reseña button:hover{
+  background-color: #F9B338;
+  border-color: white;
+}
+
+#content {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+#expand-button {
+  cursor: pointer;
+  color: blue;
+}
+
+#expand-button{
+  margin: 0 120px;
+}
+
+#expand-button:hover{
+  color: #F9B338;
+}
+
+.inicio{
+  margin: 15px 10%;
+  font-size: 18px;
+}
+
+header {
+  /* sizing */
+  width: 100%;
+  height: 65vh;
+
+  /* display */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  /* background: linear-gradient(90deg, rgba(139, 0, 0, 0.6) 50%, transparent 0),
+      linear-gradient(rgba(139, 0, 0, 0.6) 50%, transparent 0);
+  background-size: 5px 5px; */
+  /* background */
+  background-image: url('../img/index-img/Bg-restaurante.svg');
+  background-size: cover;
+  filter: saturate(135%);
+
+  /* ---- Tittle Header (H1) ---- */
+  &>h1 {
+      /* font styles */
+      font-family: 'Pacifico';
+      font-size: 4em;
+      font-weight: 400;
+      color: var(--font-blanco);
+      text-shadow: 0px 6px 3px #432D1C;
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-70%);
+
+      /* effects */
+      cursor: pointer;
+  }
+}
+
+@media (max-width: 900px) {
+
+  #fondo {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sub_title {
+    margin-left: 8px;
+    font-size: 25px;
+  }
+
+  .texto {
+    margin: 20px 10px;
+    font-size: 20px;
+  }
+
+  #mesas{
+    margin-top: 25%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .mesa_circular{
+    width: 30%;
+  }
+  
+  #mesas_rectangulares{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #F9B338;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #ffffff;    margin-bottom: 0px;
+  }
+  
+  .circle2 {
+    width: 30px;
+    height: 30px;
+    background-color: #F9B338;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 40px 105px; 
+  }
+  
+  .number {
+    font-family: Arial, sans-serif;
+  }
+  
+  #numeros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #numeros2 {
+  
+    margin-left: -75px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+  }
+  
+  .mesa_rectangular{
+    width: 30%;
+  }
+
+  /* TODO: Mesas Rectangulares */
+
+
+  #solicitud {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  form {
+    margin-left: 15%;
+  }
+
+  input {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    width: 240px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  input:hover {
+    border-color: #F9B338;
+    border-style: solid;
+  }
+
+  #registro {
+    padding: 0;
+    margin-top: 5%;
+    margin-left: 34%;
+    width: 35%;
+
+
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    color: #ffffff;
+    background-color: #432D1C;
+
+    outline: none;
+    cursor: pointer;
+
+    border: solid 1px #432D1C;
+    border-top: none;
+  }
+
+  #registro:hover {
+    color: #e2dedb;
+    border: solid 1px #F9B338;
+    background: #F9B338;
+  }
+
+  #submit {
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    color: #ffffff;
+    background-color: #432D1C;
+
+    outline: none;
+    cursor: pointer;
+
+    border: solid 1px #432D1C;
+    border-top: none;
+  }
+
+  #submit:hover {
+    color: #e2dedb;
+    border: solid 1px #F9B338;
+    background: #F9B338;
+  }
+
+  .contenedor{
+    width: 100%;
+    margin: 0;
+  }
+
+  .links{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links a{
+    margin: 70px;
+  }
+
+  #title{
+    font-size: 40px;
+  }
+
+  .inicio{
+    font-size: 14px;
+  }
+
+  .estrella{
+    font-size: 30px;
+  }
+  
+  #contenedor-resena{
+    display: block;
+    margin-left: 15px;
+  }
+
+  #contenedor-resena p{
+    margin: 15px 0;
+  }
+
+
+}
+
