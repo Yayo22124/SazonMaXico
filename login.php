@@ -54,10 +54,10 @@
             if (password_verify($password, $user_data['Password'])) {
                 // Inicio de sesión exitoso
                 $_SESSION['user_id'] = $user_data['Persona_ID'];
-                $_SESSION['user_type'] = $user_data['Tipo'];
+                $tipo_usuario = $user_data['Tipo'];
 
                 // Redirigir al home correspondiente (administrador o cliente)
-                if ($_SESSION['user_type'] === 'Administrador') {
+                if ($tipo_usuario == 'Administrador') {
                     header("Location: carta.php");
                 } else {
                     header("Location: index.php");
