@@ -77,10 +77,12 @@
             <hr class="dropdown-line">
             <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar
                     Sesión</a></li>
-            <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img src="./img/navbar-icons/documento.png" alt="user">Política
+            <li class="settings"><a href="#" id="privacy-link"><img src="./img/navbar-icons/documento.png"
+                        alt="user">Política
                     y
                     Privacidad</a></li>
-            <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+            <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img
+                        src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
         </ul>
     </nav>
     <header class="parallax" data-src="./img/index-img/Bg-restaurante.svg">
@@ -162,7 +164,7 @@
             <ul class="footer-list-left">
                 <li><a href="./carta.php">Carta</a></li>
                 <li><a href="./reservas-inicio.php">Reserva</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#" id="privacy-link">Política de Privacidad</a></li>
             </ul>
             <!-- center logo -->
             <a href="./index.php">
@@ -217,7 +219,7 @@
 
     <!-- Scripts JS -->
     <script src="./js/nav-bar.js"></script>
-
+    <script src="./js/politica.js"></script>
     <!-- redireccionar -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {

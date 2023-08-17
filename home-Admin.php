@@ -42,8 +42,6 @@
             <ul class="dropdown-menu active" id="dropdown-menu">
                 <li class="dropdown-nav"><a href="./home-Admin.php">Inicio</a></li>
                 <li class="dropdown-nav"><a href="./reservas-Admin.php">Administrar Reservas</a></li>
-                <li class="dropdown-nav"><a href="#">Administrar Eventos</a></li>
-                <li class="dropdown-nav"><a href="#">Estadísticas</a></li>
                 <!-- settings -->
                 <hr class="dropdown-line">
                 <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png"
