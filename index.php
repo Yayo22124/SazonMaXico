@@ -40,7 +40,7 @@
             <li><a href="./index.php">Inicio</a></li>
             <li><a href="./carta.html">Carta</a></li>
             <li><a href="./menu-del-dia.php">Menú del Día</a></li>
-            <li><a href="./evento1.html">Eventos</a></li>
+            <li><a href="./evento1.php">Eventos</a></li>
             <li><a href="./reservas-inicio.html">Reservas</a></li>
         </ul>
         <!-- Iniciar sesion button -->
@@ -68,7 +68,7 @@
             <li class="dropdown-nav"><a href="./index.php">Inicio</a></li>
             <li class="dropdown-nav"><a href="./carta.html">Carta</a></li>
             <li class="dropdown-nav"><a href="./menu-del-dia.php">Menú del Día</a></li>
-            <li class="dropdown-nav"><a href="./evento1.html">Eventos</a></li>
+            <li class="dropdown-nav"><a href="./evento1.php">Eventos</a></li>
             <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
             <!-- settings -->
             <hr class="dropdown-line">
