@@ -119,8 +119,13 @@
             <li class="dropdown-nav"><a href="./reservas-inicio.php">Reservas</a></li>
             <!-- settings -->
             <hr class="dropdown-line">
-            <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar
-                    Sesión</a></li>
+            <?php
+            if (isset($_SESSION['user_id'])) {
+                echo '<li class="settings"><a href="./logout.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Cerrar Sesión</a></li>';
+            } else {
+                echo '<li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar Sesión</a></li>';
+            }
+            ?>
             <li class="settings"><a href="#" id="privacy-link"><img src="./img/navbar-icons/documento.png"
                         alt="user">Política
                     y

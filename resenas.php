@@ -86,22 +86,31 @@
   <!-- Nav Bar -->
   <nav class="bar">
     <!-- Logo -->
-    <img src="./image.php?src=./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
+    <img src="./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
     <!-- Links Menu -->
     <ul class="links">
       <li><a href="./index.php">Inicio</a></li>
       <li><a href="./carta.php">Carta</a></li>
       <li><a href="./menu-del-dia.php">Menú del Día</a></li>
-      <li><a href="./evento1.phps">Eventos</a></li>
+      <li><a href="./evento1.php">Eventos</a></li>
       <li><a href="./reservas-inicio.php">Reservas</a></li>
     </ul>
     <!-- Iniciar sesion button -->
-    <a href="./login.php" class="login">Iniciar Sesión</a>
+    <!-- <a href="./login.php" class="login">Iniciar Sesión</a> -->
+    <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    if (isset($_SESSION['user_id'])) {
+      echo '<a href="./logout.php" class="login">Cerrar Sesión</a>';
+    } else {
+      echo '<a href="./login.php" class="login">Iniciar Sesión</a>';
+    }
+    ?>
     <!-- Dropdown button -->
     <div class="dropdown-button-container">
-      <img src="/img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
+      <img src="./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
 
-      <img src="/img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
+      <img src="./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
     </div>
 
     <!-- dropdown menu -->
@@ -113,14 +122,18 @@
       <li class="dropdown-nav"><a href="./reservas-inicio.php">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png" alt="user">
-          Iniciar Sesión</a>
-      </li>
-      <li class="settings"><a href="#" id="privacy-link"><img src="./image.php?src=./img/navbar-icons/documento.png"
-            alt="user">Política y Privacidad</a>
-      </li>
-      <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img
-            src="./image.php?src=./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+      <?php
+      if (isset($_SESSION['user_id'])) {
+        echo '<li class="settings"><a href="./logout.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Cerrar Sesión</a></li>';
+      } else {
+        echo '<li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar Sesión</a></li>';
+      }
+      ?>
+      <li class="settings"><a href="#" id="privacy-link"><img src="./img/navbar-icons/documento.png" alt="user">Política
+          y
+          Privacidad</a></li>
+      <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img src="./img/navbar-icons/interrogatorio.png"
+            alt="help">Ayuda</a></li>
     </ul>
   </nav>
   <!-- END NAV BAR -->
