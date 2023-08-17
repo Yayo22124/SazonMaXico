@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="stylesheet" href="/Normalize.css"> -->
-  <link rel="shortcut icon" href="./image.php?src=./Xicote.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="./image.php?src=./img/Xicote.svg" type="image/x-icon">
   <link rel="stylesheet" href="./styles/menu-del-dia.css">
   <link rel="stylesheet" href="./styles/evento1.css">
   <link rel="stylesheet" href="./styles/eventos2.css">
@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <!-- icon page -->
-  <link rel="shortcut icon" href="./image.php?src=./Xicote.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="./image.php?src=./img/Xicote.svg" type="image/x-icon">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,23 +36,23 @@
   <!-- Nav Bar -->
   <nav class="bar">
     <!-- Logo -->
-    <img src="./image.php?src=./navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
+    <img src="./image.php?src=./img/navbar-icons/logo-recortado.svg" alt="SázonMáXico" class="logo">
     <!-- Links Menu -->
     <ul class="links">
       <li><a href="./index.php">Inicio</a></li>
       <li><a href="./carta.html">Carta</a></li>
       <li><a href="./menu-del-dia.php">Menú del Día</a></li>
-      <li><a href="./evento1.html">Eventos</a></li>
+      <li><a href="./evento1.php">Eventos</a></li>
       <li><a href="./reservas-inicio.html">Reservas</a></li>
     </ul>
     <!-- Iniciar sesion button -->
     <a href="./login.php" class="login">Iniciar Sesión</a>
     <!-- Dropdown button -->
     <div class="dropdown-button-container">
-      <img src="./image.php?src=./navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
+      <img src="./image.php?src=./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
         onclick="mostrarMenu()">
 
-      <img src="./image.php?src=./navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
+      <img src="./image.php?src=./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
         onclick="ocultarMenu()">
     </div>
 
@@ -65,13 +65,13 @@
       <li class="dropdown-nav"><a href="./reservas-inicio.html">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="./login.php"><img src="./image.php?src=./navbar-icons/usuario.png"
+      <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png"
             alt="user"> Iniciar Sesión</a>
       </li>
-      <li class="settings"><a href="#"><img src="./image.php?src=./navbar-icons/documento.png" alt="user">Política y
+      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/documento.png" alt="user">Política y
           Privacidad</a>
       </li>
-      <li class="settings"><a href="#"><img src="./image.php?src=./navbar-icons/interrogatorio.png" alt="help">Ayuda</a>
+      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a>
       </li>
     </ul>
   </nav>
@@ -80,7 +80,7 @@
   <div id="fondo">
     <div id="fondo_blanco" style="background-color: rgb(255, 228, 196)">
       <p>Eventos</p>
-      <div class="imgevento1"><img src="./image.php?src=./img-enventos/image 23.svg" alt=""></div>
+      <div class="imgevento1"><img src="./image.php?src=./img/img-enventos/image 23.svg" alt=""></div>
       <div class="fondo3">
         <p>
           ¡Una gran opción para ti y para tu dia especial!
@@ -94,14 +94,14 @@
 
           Correo Electronico: sazonmaxico@outlook.com</p> <br> <br>
       </div>
-      <div class="imgevento1"><img src="./image.php?src=./img-enventos/image 25.svg" alt=""></div>
+      <div class="imgevento1"><img src="./image.php?src=./img/img-enventos/image 25.svg" alt=""></div>
       <div class="recuadro1">
         <p>Familiar</p>
-        <div class="iconofamilia"><img src="./image.php?src=./img-enventos/family.png" alt=""></div>
+        <div class="iconofamilia"><img src="./image.php?src=./img/img-enventos/family.png" alt=""></div>
       </div>
       <div class="bloquefamilia1">
-        <div class="familia1"><img src="./image.php?src=./img-enventos/FB_IMG_1687126322003.jpg" alt=""></div>
-        <div class="familia2"><img src="./image.php?src=./img-enventos/FB_IMG_1687126477911.jpg" alt=""></div>
+        <div class="familia1"><img src="./image.php?src=./img/img-enventos/FB_IMG_1687126322003.jpg" alt=""></div>
+        <div class="familia2"><img src="./image.php?src=./img/img-enventos/FB_IMG_1687126477911.jpg" alt=""></div>
       </div>
       <p>Social</p>
       <p class="texto">VEN, Y DISFRUTA DE LA
@@ -110,12 +110,12 @@
 
         COMPAÑIA DE TUS SERES QUERIDOS.</p>
       <div class="bloquefamilia2">
-        <div class="familia3"><img src="./image.php?src=./img-enventos/FB_IMG_1687123199865.jpg" alt=""></div>
+        <div class="familia3"><img src="./image.php?src=./img/img-enventos/FB_IMG_1687123199865.jpg" alt=""></div>
       </div>
       <p>Educativo</p>
       <div class="bloquefamilia3">
-        <div class="familia1"><img src="./image.php?src=./img-enventos/FB_IMG_1687126407369.jpg" alt=""></div>
-        <div class="familia2"><img src="./image.php?src=./img-enventos/FB_IMG_1687132314814.jpg" alt=""></div>
+        <div class="familia1"><img src="./image.php?src=./img/img-enventos/FB_IMG_1687126407369.jpg" alt=""></div>
+        <div class="familia2"><img src="./image.php?src=./img/img-enventos/FB_IMG_1687132314814.jpg" alt=""></div>
       </div>
       <div class="agendacion">
         <p>¡agenda tu evento ya!</p>
@@ -151,7 +151,7 @@
         </ul>
         <!-- center logo -->
         <a href="./index.php">
-          <img loading="lazy" src="./image.php?src=./index-img/logo-footer.svg" alt="logo SazónMáXico">
+          <img loading="lazy" src="./image.php?src=./img/index-img/logo-footer.svg" alt="logo SazónMáXico">
         </a>
         <!-- list right -->
         <ul class="footer-list-right">
@@ -183,17 +183,17 @@
         <ul class="social">
           <li>
             <a href="https://www.facebook.com." target="_blank">
-              <img loading="lazy" src="./image.php?src=./footer-icons/facebook.png" alt="facebook">
+              <img loading="lazy" src="./image.php?src=./img/footer-icons/facebook.png" alt="facebook">
             </a>
           </li>
           <li>
             <a href="tel:764 764 3687" target="_blank">
-              <img loading="lazy" src="./image.php?src=./footer-icons/tel.png" alt="teléfono">
+              <img loading="lazy" src="./image.php?src=./img/footer-icons/tel.png" alt="teléfono">
             </a>
           </li>
           <li>
             <a href="mailto:restaurantesazonmaxico@outlook.com" target="_blank">
-              <img loading="lazy" src="./image.php?src=./footer-icons/mail.png" alt="correo">
+              <img loading="lazy" src="./image.php?src=./img/footer-icons/mail.png" alt="correo">
             </a>
           </li>
         </ul>
