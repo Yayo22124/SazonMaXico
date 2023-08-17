@@ -20,6 +20,18 @@
     <link rel="stylesheet" href="./styles/footer-styles.css">
     <link rel="stylesheet" href="./styles/navbar.css">
 
+    <!-- image compress -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-src]').each(function () {
+                var $elemento = $(this);
+                var src = $elemento.data('src');
+                $elemento.css('background-image', 'url(image.php?src=' + src + ')');
+            });
+        });
+    </script>
+
     <!-- Tittle Page -->
     <title>Sazón MáXico | Inicio</title>
 
@@ -217,17 +229,6 @@
 
     <!-- Scripts JS -->
     <script src="./js/nav-bar.js"></script>
-    <!-- image compress -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('[data-src]').each(function () {
-                var $elemento = $(this);
-                var src = $elemento.data('src');
-                $elemento.css('background-image', 'url(image.php?src=' + src + ')');
-            });
-        });
-    </script>
     <!-- redireccionar -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {

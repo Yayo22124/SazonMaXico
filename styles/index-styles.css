@@ -48,7 +48,7 @@ header {
         linear-gradient(rgba(139, 0, 0, 0.6) 50%, transparent 0);
     background-size: 5px 5px; */
     /* background */
-    background-image: url('../img/index-img/Bg-restaurante.svg');
+    background-image: url('../img/restaurant.png');
     background-size: contain;
     filter: saturate(135%);
 
