@@ -144,7 +144,7 @@
                     <h1>combos <br><span>aztecas</span></h1>
                     <span>nuestras recomendaciones para ti</span>
                 </div>
-                <button type="button">
+                <button type="button" id="redireccionarBtn">
                     <span>Reserva aquí</span>
                 </button>
             </div>
@@ -225,6 +225,17 @@
                 var $elemento = $(this);
                 var src = $elemento.data('src');
                 $elemento.css('background-image', 'url(image.php?src=' + src + ')');
+            });
+        });
+    </script>
+    <!-- redireccionar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var redireccionarBtn = document.getElementById("redireccionarBtn");
+
+            redireccionarBtn.addEventListener("click", function () {
+                // URL nueva
+                window.location.href = "./reservas-inicio.html";
             });
         });
     </script>
