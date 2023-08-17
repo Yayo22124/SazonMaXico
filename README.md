@@ -71,13 +71,16 @@ _ _ _
 
 ## :white_check_mark:Tecnologías Utilizadas
 
-- MySQL: 8.0
+- MariaDB
 - HTML: 5
 - CSS: 3
 - Python: 3.11
 - JavaScript
 - PHP
 - Figma
+- Composer
+- Hostinger
+- Git
 - - -
 
 ## Alcance del Producto / Software
@@ -91,11 +94,8 @@ La plataforma web y la aplicación móvil pueden adaptarse a diferentes grupos d
 ## :hammer: Funcionalidades del Producto
 ##### Registro de Reservas
 El usuario completará un formulario en línea con la fecha, hora y número de personas para su reserva. Después de enviar la solicitud, el usuario recibirá una confirmación de disponibilidad de mesas.
-##### Descarga del Menú PDF
-El usuario accederá a la plataforma web o la aplicación móvil para descargar el menú en formato PDF. Esto le permitirá explorar el menú completo, incluyendo categorías, descripciones y precios, antes de visitar el
-restaurante.
-##### Generación de Código QR
-El usuario recibirá un código QR único en su dispositivo móvil después de realizar una reserva. Al llegar al restaurante, mostrará el código QR al personal para verificar y confirmar la reserva.
+##### Generación de Código de Barras
+El usuario recibirá un código de barras único en su dispositivo móvil después de realizar una reserva. Al llegar al restaurante, mostrará el código QR al personal para verificar y confirmar la reserva.
 ##### Registro de Reseñas
 Después de visitar el restaurante, el usuario podrá escribir y enviar una reseña detallada sobre su experiencia culinaria, el servicio y el ambiente del restaurante. Esto proporcionará retroalimentación y ayudará a otros usuarios a tomar decisiones informadas.
 
