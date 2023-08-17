@@ -26,8 +26,6 @@
 </head>
 
 <body>
-    <!-- autenticacion de usuarios -->
-    <?php include "auth_check.php" ?>
     <!-- conexion a BD -->
     <?php include "conexion.php" ?>
     <!-- usuarios logueados -->
@@ -79,10 +77,10 @@
             <hr class="dropdown-line">
             <li class="settings"><a href="./login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar
                     Sesión</a></li>
-            <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política
+            <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img src="./img/navbar-icons/documento.png" alt="user">Política
                     y
                     Privacidad</a></li>
-            <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+            <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
         </ul>
     </nav>
     <header class="parallax" data-src="./img/index-img/Bg-restaurante.svg">

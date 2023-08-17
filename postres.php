@@ -27,6 +27,13 @@
 </head>
 
 <body>
+    <!-- conexion a BD -->
+    <?php include "conexion.php" ?>
+    <!-- usuarios logueados -->
+    <?php
+    // Incluye la verificación de sesión
+    include "check_session.php";
+    ?>
     <!-- Nav Bar -->
     <nav class="bar">
         <!-- Logo -->
@@ -61,9 +68,9 @@
             <hr class="dropdown-line">
             <li class="settings"><a href="/login.php"><img src="./img/navbar-icons/usuario.png" alt="user"> Iniciar
                     Sesión</a></li>
-            <li class="settings"><a href="#"><img src="./img/navbar-icons/documento.png" alt="user">Política y
+            <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img src="./img/navbar-icons/documento.png" alt="user">Política y
                     Privacidad</a></li>
-            <li class="settings"><a href="#"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+            <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img src="./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
         </ul>
     </nav>
 

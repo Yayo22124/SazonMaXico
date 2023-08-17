@@ -30,6 +30,14 @@
 </head>
 
 <body>
+  
+  <!-- conexion a BD -->
+  <?php include "conexion.php" ?>
+  <!-- usuarios logueados -->
+  <?php
+  // Incluye la verificación de sesión
+  include "check_session.php";
+  ?>
   <!-- Nav Bar -->
   <nav class="bar">
     <!-- Logo -->
@@ -46,9 +54,11 @@
     <a href="./login.php" class="login">Iniciar Sesión</a>
     <!-- Dropdown button -->
     <div class="dropdown-button-container">
-      <img src="./image.php?src=./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton" onclick="mostrarMenu()">
+      <img src="./image.php?src=./img/navbar-icons/menu.png" alt="menu" class="dropdown" id="activar-boton"
+        onclick="mostrarMenu()">
 
-      <img src="./image.php?src=./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton" onclick="ocultarMenu()">
+      <img src="./image.php?src=./img/navbar-icons/close.png" alt="menu" class="dropdown" id="desactivar-boton"
+        onclick="ocultarMenu()">
     </div>
 
     <!-- dropdown menu -->
@@ -60,11 +70,14 @@
       <li class="dropdown-nav"><a href="./reservas-inicio.php">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png" alt="user"> Iniciar Sesión</a>
+      <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png" alt="user">
+          Iniciar Sesión</a>
       </li>
-      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/documento.png" alt="user">Política y Privacidad</a>
+      <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img src="./image.php?src=./img/navbar-icons/documento.png" alt="user">Política y
+          Privacidad</a>
       </li>
-      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a></li>
+      <li class="settings"><a href="mailto:220087@utxicotepec.edu.mx"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png"
+            alt="help">Ayuda</a></li>
     </ul>
   </nav>
   <!-- END NAV BAR -->
@@ -73,7 +86,8 @@
 
       <div class="imagenes">
         <div class="reboso"> <img
-            src="./image.php?src=./img/carta-desayuno/750e6aa8ed4747450cb2b08ea329e89e-removebg-preview (1) 3Reboso.svg" alt=""></div>
+            src="./image.php?src=./img/carta-desayuno/750e6aa8ed4747450cb2b08ea329e89e-removebg-preview (1) 3Reboso.svg"
+            alt=""></div>
         <div class="menu1"><img src="./image.php?src=./img/carta-desayuno/menu.svg" alt=""></div>
 
       </div>
@@ -123,8 +137,9 @@
       <div class="imgultimas">
         <img src="./image.php?src=./img/carta-desayuno/gorro-de-cocinero 2.svg" alt="" class="img1">
         <img src="./image.php?src=./img/carta-desayuno/postre_chocolate_avellana 2.svg" alt="" class="img2">
-        <img src="./image.php?src=./img/carta-desayuno/750e6aa8ed4747450cb2b08ea329e89e-removebg-preview (1) 3Reboso.svg" alt=""
-          class="img3">
+        <img
+          src="./image.php?src=./img/carta-desayuno/750e6aa8ed4747450cb2b08ea329e89e-removebg-preview (1) 3Reboso.svg"
+          alt="" class="img3">
       </div>
 
 

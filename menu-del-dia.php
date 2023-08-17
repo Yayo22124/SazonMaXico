@@ -27,6 +27,13 @@
 </head>
 
 <body>
+  <!-- conexion a BD -->
+  <?php include "conexion.php" ?>
+  <!-- usuarios logueados -->
+  <?php
+  // Incluye la verificación de sesión
+  include "check_session.php";
+  ?>
   <!-- Nav Bar -->
   <nav class="bar">
     <!-- Logo -->
@@ -59,13 +66,14 @@
       <li class="dropdown-nav"><a href="./reservas-inicio.php">Reservas</a></li>
       <!-- settings -->
       <hr class="dropdown-line">
-      <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png"
-            alt="user"> Iniciar Sesión</a>
+      <li class="settings"><a href="./login.php"><img src="./image.php?src=./img/navbar-icons/usuario.png" alt="user">
+          Iniciar Sesión</a>
       </li>
       <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/documento.png" alt="user">Política y
           Privacidad</a>
       </li>
-      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png" alt="help">Ayuda</a>
+      <li class="settings"><a href="#"><img src="./image.php?src=./img/navbar-icons/interrogatorio.png"
+            alt="help">Ayuda</a>
       </li>
     </ul>
   </nav>
@@ -329,23 +337,23 @@
 <script>
   // Agregar un evento al botón para activar la generación del PDF
   document.getElementById('downloadPdfButton').addEventListener('click', () => {
-        // URL del archivo PDF que deseas descargar
-        const pdfUrl = './pdf/menu-del-dia.pdf';
+    // URL del archivo PDF que deseas descargar
+    const pdfUrl = './pdf/menu-del-dia.pdf';
 
-        // Crea un enlace temporal
-        const downloadLink = document.createElement('a');
-        downloadLink.href = pdfUrl;
+    // Crea un enlace temporal
+    const downloadLink = document.createElement('a');
+    downloadLink.href = pdfUrl;
 
-        // Establece el nombre del archivo que se descargará
-        downloadLink.download = 'menu-del-dia-pdf.pdf';
+    // Establece el nombre del archivo que se descargará
+    downloadLink.download = 'menu-del-dia-pdf.pdf';
 
-        // Agrega el enlace al documento y haz clic en él para iniciar la descarga
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
+    // Agrega el enlace al documento y haz clic en él para iniciar la descarga
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
 
-        // Elimina el enlace temporal del documento
-        document.body.removeChild(downloadLink);
-    });
+    // Elimina el enlace temporal del documento
+    document.body.removeChild(downloadLink);
+  });
 </script>
 
 </html>
