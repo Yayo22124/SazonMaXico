@@ -26,51 +26,51 @@
 
     <!-- Envio de datos PHP -->
     <?php
-session_start();
+    session_start();
 
-// Verificar si ya existe una sesión iniciada
-if (isset($_SESSION['user_id'])) {
-    // Redirigir al home correspondiente (administrador o cliente)
-    if ($_SESSION['user_type'] === 'Administrador') {
-        header("Location: admin_home.php");
-    } else {
-        header("Location: index.php");
-    }
-    exit();
-}
-
-// Realizar la verificación de inicio de sesión si se envió el formulario
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtener los datos del formulario
-    $correo = $_POST["correo"];
-    $password = $_POST["password"];
-
-    // Realizar la consulta para verificar el correo y contraseña
-    $login_query = "SELECT * FROM tbb_usuarios WHERE Email = '$correo'";
-    $result = mysqli_query($conn, $login_query);
-    
-    if ($result && mysqli_num_rows($result) > 0) {
-        $user_data = mysqli_fetch_assoc($result);
-        if (password_verify($password, $user_data['Password'])) {
-            // Inicio de sesión exitoso
-            $_SESSION['user_id'] = $user_data['Persona_ID'];
-            $_SESSION['user_type'] = $user_data['Tipo'];
-
-            // Redirigir al home correspondiente (administrador o cliente)
-            if ($_SESSION['user_type'] === 'Administrador') {
-                header("Location: admin_home.php");
-            } else {
-                header("Location: index.php");
-            }
-            exit();
+    // Verificar si ya existe una sesión iniciada
+    if (isset($_SESSION['user_id'])) {
+        // Redirigir al home correspondiente (administrador o cliente)
+        if ($_SESSION['user_type'] === 'Administrador') {
+            header("Location: admin_home.php");
         } else {
-            $notification = array("status" => "error", "message" => "Contraseña incorrecta.");
+            header("Location: index.php");
         }
-    } else {
-        $notification = array("status" => "error", "message" => "El correo no está registrado.");
+        exit();
     }
-}
-?>
+
+    // Realizar la verificación de inicio de sesión si se envió el formulario
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Obtener los datos del formulario
+        $correo = $_POST["correo"];
+        $password = $_POST["password"];
+
+        // Realizar la consulta para verificar el correo y contraseña
+        $login_query = "SELECT * FROM tbb_usuarios WHERE Email = '$correo'";
+        $result = mysqli_query($conn, $login_query);
+
+        if ($result && mysqli_num_rows($result) > 0) {
+            $user_data = mysqli_fetch_assoc($result);
+            if (password_verify($password, $user_data['Password'])) {
+                // Inicio de sesión exitoso
+                $_SESSION['user_id'] = $user_data['Persona_ID'];
+                $_SESSION['user_type'] = $user_data['Tipo'];
+
+                // Redirigir al home correspondiente (administrador o cliente)
+                if ($_SESSION['user_type'] === 'Administrador') {
+                    header("Location: admin_home.php");
+                } else {
+                    header("Location: index.php");
+                }
+                exit();
+            } else {
+                $notification = array("status" => "error", "message" => "Contraseña incorrecta.");
+            }
+        } else {
+            $notification = array("status" => "error", "message" => "El correo no está registrado.");
+        }
+    }
+    ?>
 
     <main class="container">
         <!-- left container (form) -->
