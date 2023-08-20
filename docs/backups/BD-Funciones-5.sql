@@ -1,4 +1,4 @@
---
+USE `u147672553_sazonmaxico`;
 -- Dumping routines for database 'u117932138_bdsazonmaxico'
 --
 /*!50003 DROP FUNCTION IF EXISTS `fn_bandera_porcentaje` */;
@@ -12,7 +12,7 @@
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_bandera_porcentaje`(v_porcentaje INT) RETURNS int(11)
+CREATE  FUNCTION `fn_bandera_porcentaje`(v_porcentaje INT) RETURNS int(11)
     DETERMINISTIC
 BEGIN
    /* Declaración de una variable con un valor aleatorio de entre 0 y 100*/
@@ -42,7 +42,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_bloquear_platillo`(id INT) RETURNS tinyint(1)
+CREATE  FUNCTION `fn_bloquear_platillo`(id INT) RETURNS tinyint(1)
     DETERMINISTIC
 BEGIN
     DECLARE platillo_disponible INT;
@@ -75,7 +75,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_calcula_edad`(v_fecha_nacimiento DATE) RETURNS int(11)
+CREATE  FUNCTION `fn_calcula_edad`(v_fecha_nacimiento DATE) RETURNS int(11)
     DETERMINISTIC
 BEGIN
   /*SET @mensaje ="Calculando la edad";*/
@@ -98,7 +98,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_generar_numero_telefonico`() RETURNS varchar(20) CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci
+CREATE  FUNCTION `fn_generar_numero_telefonico`() RETURNS varchar(20) CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci
 BEGIN
     DECLARE prefijos VARCHAR(10);
     DECLARE numero_local1 INT;
@@ -137,7 +137,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_genera_apellido`() RETURNS varchar(50) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
+CREATE  FUNCTION `fn_genera_apellido`() RETURNS varchar(50) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
     DETERMINISTIC
 BEGIN
 	DECLARE v_apellido_generado VARCHAR(50) DEFAULT NULL;
@@ -174,7 +174,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_genera_email`(vnombre VARCHAR(60), vapellido_paterno VARCHAR(60)) RETURNS varchar(60) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
+CREATE  FUNCTION `fn_genera_email`(vnombre VARCHAR(60), vapellido_paterno VARCHAR(60)) RETURNS varchar(60) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
     DETERMINISTIC
 BEGIN
 
@@ -216,7 +216,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_genera_fecha_nacimiento`(fecha_inicio DATE, fecha_fin DATE) RETURNS date
+CREATE  FUNCTION `fn_genera_fecha_nacimiento`(fecha_inicio DATE, fecha_fin DATE) RETURNS date
     DETERMINISTIC
 BEGIN
     DECLARE min_dias INT;
@@ -248,7 +248,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_genera_nombre`(v_genero CHAR) RETURNS varchar(50) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
+CREATE  FUNCTION `fn_genera_nombre`(v_genero CHAR) RETURNS varchar(50) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
     DETERMINISTIC
 BEGIN
     DECLARE v_nombre_generado VARCHAR(50) DEFAULT NULL;
@@ -285,7 +285,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_genera_nombre_simple`(v_genero varchar(50)) RETURNS varchar(50) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
+CREATE  FUNCTION `fn_genera_nombre_simple`(v_genero varchar(50)) RETURNS varchar(50) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
     DETERMINISTIC
 BEGIN
     DECLARE v_nombre_generado VARCHAR(100) DEFAULT NULL;
@@ -326,7 +326,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_genera_nombre_usuario`(vnombre VARCHAR(50),
+CREATE  FUNCTION `fn_genera_nombre_usuario`(vnombre VARCHAR(50),
     vapellido VARCHAR(50)
 ) RETURNS varchar(255) CHARSET utf8mb3 COLLATE utf8mb3_general_ci
     DETERMINISTIC
@@ -350,7 +350,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_numero_aleatorio_rangos`(v_limite_inferior int,
+CREATE  FUNCTION `fn_numero_aleatorio_rangos`(v_limite_inferior int,
  v_limite_superior INT) RETURNS int(11)
     DETERMINISTIC
 BEGIN
@@ -375,7 +375,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_password_aleatorio`(min_caracteres INT, max_caracteres INT) RETURNS char(32) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
+CREATE  FUNCTION `fn_password_aleatorio`(min_caracteres INT, max_caracteres INT) RETURNS char(32) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
     DETERMINISTIC
 BEGIN
     DECLARE chars VARCHAR(255) DEFAULT 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+=-';
@@ -413,7 +413,7 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 -- #################################################################
-CREATE DEFINER=`u117932138_raul`@`%` FUNCTION `fn_remplaza_caracteres`(vpalabra VARCHAR(60)) RETURNS varchar(60) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
+CREATE  FUNCTION `fn_remplaza_caracteres`(vpalabra VARCHAR(60)) RETURNS varchar(60) CHARSET utf8mb4 COLLATE utf8mb4_general_ci
     DETERMINISTIC
 BEGIN
 

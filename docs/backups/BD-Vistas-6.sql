@@ -1,7 +1,7 @@
 -- ############################################################################################
 CREATE 
     ALGORITHM = UNDEFINED 
-    DEFINER = `u117932138_raul`@`%` 
+    
     SQL SECURITY DEFINER
 VIEW `vw_eventos_programados` AS
     SELECT 
@@ -30,7 +30,7 @@ VIEW `vw_eventos_programados` AS
 -- ############################################################################################
 CREATE 
     ALGORITHM = UNDEFINED 
-    DEFINER = `u117932138_raul`@`%` 
+    
     SQL SECURITY DEFINER
 VIEW `vw_historial_clientes_frecuentes` AS
     SELECT 
@@ -49,7 +49,7 @@ VIEW `vw_historial_clientes_frecuentes` AS
     
     CREATE 
     ALGORITHM = UNDEFINED 
-    DEFINER = `u117932138_raul`@`%` 
+    
     SQL SECURITY DEFINER
 VIEW `vw_menu_del_dia` AS
     SELECT 
@@ -76,7 +76,7 @@ VIEW `vw_menu_del_dia` AS
 
 CREATE 
     ALGORITHM = UNDEFINED 
-    DEFINER = `u117932138_raul`@`%` 
+    
     SQL SECURITY DEFINER
 VIEW `vw_promociones_ofertas` AS
     SELECT 
@@ -94,7 +94,7 @@ VIEW `vw_promociones_ofertas` AS
 -- ############################################################################################
 CREATE 
     ALGORITHM = UNDEFINED 
-    DEFINER = `u117932138_raul`@`%` 
+    
     SQL SECURITY DEFINER
 VIEW `vw_reservas_en_existencia` AS
     SELECT 

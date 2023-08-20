@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `u117932138_bdsazonmaxico` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
-USE `u117932138_bdsazonmaxico`;
+CREATE DATABASE  IF NOT EXISTS `u147672553_sazonmaxico` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
+USE `u147672553_sazonmaxico`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: 154.56.47.52    Database: u117932138_bdsazonmaxico

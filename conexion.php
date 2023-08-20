@@ -1,8 +1,8 @@
 <?php
-$servername = "154.56.47.52";
-$username = "u117932138_raul";
+$servername = "154.56.47.154";
+$username = "u147672553_Raul";
 $password = "Raul53rrb53";
-$database = "u117932138_bdsazonmaxico";
+$database = "u147672553_sazonmaxico";
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 
