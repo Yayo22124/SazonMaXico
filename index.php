@@ -71,18 +71,18 @@
         </div>
     </div>
     <!-- conexion a BD -->
-    <?php include "conexion.php";
-        // visualizacion de errores
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
-    ?>
+    <?php include "conexion.php" ?>
     <!-- usuarios logueados -->
     <?php
     // Incluye la verificación de sesión
     include "check_session.php";
     ?>
-
+    <?php
+    // visualizacion de errores
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    ?>
     <!-- Nav Bar -->
     <nav class="bar">
         <!-- Logo -->
